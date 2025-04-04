@@ -285,7 +285,7 @@ window.addEventListener('scroll', handleScroll);
 
 
 // Cycling Text
-const textOptions = ["weekend warriors", "vanlifers", "boondockers", "adVANturers", "offgriders", "RV explorers", "you"];
+const textOptions = ["weekend warriors", "vanlifers", "boondockers", "adVANturers", "offgridders", "RV explorers", "you"];
 
 document.addEventListener('DOMContentLoaded', () => {
   const cyclingTextElements = document.querySelectorAll('[data-cycling-text]');

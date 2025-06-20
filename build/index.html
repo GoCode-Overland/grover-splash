@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build - Grover Splash</title>
-    <link rel="stylesheet" href="../main.css"> 
-  
+    <title>Build Your Adventure Van - Grover Splash</title>
+    <!-- Link to your existing CSS file -->
+    <link rel="stylesheet" href="../main.css">
+    <!-- If your CSS file has a different name, update the href above -->
+    
+    <style>
+        /* Minimal additional styling using your color scheme */
+        .build-container {
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .build-title {
+            color: #66AEC0;
+            margin-bottom: 1rem;
+        }
+        
+        .build-description {
+            color: #555;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .chat-button {
+            background-color: #66AEC0;
+            color: white;
+            border: none;
+            padding: 1.5rem 4rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .chat-button:hover {
+            background-color: #5a9ba8;
+        }
+        
+        .back-link {
+            color: #66AEC0;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+
     <script>
 		(function (d) {
 			// Load the Grover Chat embed script
@@ -32,22 +81,49 @@
 	
 </head>
 <body>
-    <!-- Copy navigation or header from your main page -->
-    <nav>
-        <!-- Your existing navigation structure -->
-    </nav>
+    <!-- Copy your existing header/nav structure here -->
     
-    <main>
-        <h1>Build Page</h1>
-        <p>Want to try out </p>
-    </main>
-    
-    <!-- Copy footer if you have one -->
-    <footer>
-        <!-- Your existing footer structure -->
-    </footer>
+    <div class="build-container">
+        <h1 class="build-title">Build Your Adventure Van</h1>
+        
+        <p class="build-description">
+            Chat with SAM, and we'll build you a custom assistant.
+            Get personalized information for troubleshooting and traveling in your van!
+        </p>
+
+        <button class="chat-button" id="startChatButton">
+            Start Building Now
+        </button>
+        
+        <div>
+            <a href="../" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Copy your existing footer here -->
     
     <!-- Link to your existing JS files if needed -->
-    <script src="../main.js"></script> <!-- Common name -->
+    <script src="../script.js"></script>
+    
+    <script>
+function waitForChatWidget(callback) {
+  const interval = setInterval(() => {
+    const groverWidget = document.querySelector('grover-chat-widget'); // Host element
+    if (groverWidget && groverWidget.shadowRoot) {
+      const widgetButton = groverWidget.shadowRoot.querySelector('.chat-toggle-button');
+      if (widgetButton) {
+        clearInterval(interval);
+        callback(widgetButton);
+      }
+    }
+  }, 300); // Check every 300ms
+}
+
+waitForChatWidget(function(widgetButton) {
+  document.getElementById('startChatButton').addEventListener('click', function() {
+    widgetButton.click();
+  });
+});
+</script>
 </body>
 </html>

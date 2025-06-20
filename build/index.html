@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build - Grover Splash</title>
+    <link rel="stylesheet" href="../main.css"> 
+  
+    <script>
+		(function (d) {
+			// Load the Grover Chat embed script
+			var s = d.createElement('script');
+			s.src = 'https://ops.getgrover.ai/embed';
+			s.async = true;
+			d.head.appendChild(s);
+
+			// Initialize once loaded
+			s.onload = function () {
+				if (window.GroverChat) {
+					window.GroverChat.init({
+						assistantId: '8c7b77ac-5b4c-4c8d-95c6-4702c3997a1a',
+						apiUrl: 'https://ops.getgrover.ai' 
+					}).catch(function (error) {
+						console.error('Failed to initialize GroverChat:', error);
+					});
+				} else {
+					console.error('GroverChat failed to load');
+				}
+			};
+		})(document);
+	</script>
+	
+</head>
+<body>
+    <!-- Copy navigation or header from your main page -->
+    <nav>
+        <!-- Your existing navigation structure -->
+    </nav>
+    
+    <main>
+        <h1>Build Page</h1>
+        <p>Want to try out </p>
+    </main>
+    
+    <!-- Copy footer if you have one -->
+    <footer>
+        <!-- Your existing footer structure -->
+    </footer>
+    
+    <!-- Link to your existing JS files if needed -->
+    <script src="../main.js"></script> <!-- Common name -->
+</body>
+</html>

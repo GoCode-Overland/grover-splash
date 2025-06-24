@@ -1,0 +1,181 @@
+/* Blog-specific styles to enhance the main design */
+
+/* Smooth hover effects for blog cards */
+.blog-card-hover {
+  transition: all 0.3s var(--ease-out-sine);
+}
+
+.blog-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Category badge styling */
+.category-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.category-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.category-badge:hover::before {
+  left: 100%;
+}
+
+/* Featured article animations */
+.featured-article {
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-article::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+  transform: rotate(45deg);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.featured-article:hover::before {
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+  .hero-mobile-spacing {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .blog-grid-mobile {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-accent-color);
+}
+
+/* Loading animation for Load More button */
+.load-more-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.load-more-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.load-more-btn:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Newsletter signup enhanced styling */
+.newsletter-input {
+  transition: box-shadow 0.3s ease;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 174, 192, 0.3);
+}
+
+/* Article image placeholder styling */
+.article-image-placeholder {
+  background: linear-gradient(45deg, 
+    var(--blue-accent-color) 0%, 
+    var(--yellow-accent-color) 50%, 
+    var(--red-accent-color) 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Icon animations */
+.article-icon {
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Subtle text animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation delays for blog cards */
+.blog-card:nth-child(1) { animation-delay: 0.1s; }
+.blog-card:nth-child(2) { animation-delay: 0.2s; }
+.blog-card:nth-child(3) { animation-delay: 0.3s; }
+.blog-card:nth-child(4) { animation-delay: 0.4s; }
+.blog-card:nth-child(5) { animation-delay: 0.5s; }
+.blog-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Print styles */
+@media print {
+  .newsletter-section,
+  footer,
+  .load-more-btn {
+    display: none;
+  }
+  
+  .blog-card {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+}

@@ -234,26 +234,30 @@
             margin: 0 auto;
             padding: 15px 20px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 15px;
             align-items: center;
         }
         
         .nav-links {
             display: flex;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
             list-style: none;
             margin: 0;
             padding: 0;
+            justify-content: center;
         }
         
         .nav-links a {
             text-decoration: none;
             color: #66AEC0;
             font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 20px;
-            transition: background-color 0.3s ease;
-            font-size: 0.9rem;
+            padding: 6px 12px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+            white-space: nowrap;
         }
         
         .nav-links a:hover {
@@ -289,25 +293,19 @@
             }
             
             .nav-links {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            
-            .nav-menu-content {
-                flex-direction: column;
-                gap: 15px;
+                gap: 8px;
             }
             
             .nav-links a {
-                font-size: 0.8rem;
-                padding: 6px 12px;
+                font-size: 0.75rem;
+                padding: 4px 8px;
             }
         }
     </style>
 </head>
 <body class="font-body text-gray-800 leading-relaxed m-0 p-0">
     <!-- Header -->
-    <header class="bg-primary py-6">
+    <header class="bg-primary py-10">
         <div class="container mx-auto px-4 max-w-6xl lg:max-w-[1400px]">
             <nav class="flex items-center justify-between">
                 <a href="../index.html">
@@ -342,14 +340,14 @@
     <main class="blog-container">
         <header class="blog-header">
             <h1 class="blog-title">How to Plan the Perfect Van Trip in 2024: A Step-by-Step Guide from Van Life Experts</h1>
-            <p class="blog-meta">Published January 15, 2024 | 12 min read</p>
+            <p class="blog-meta">Published June 26, 2025 | 12 min read</p>
         </header>
 
         <article class="blog-content">
             <section id="introduction" class="introduction">
                 <p>The difference between a magical van adventure and a stressful disaster often comes down to one thing: planning. But here's the secret successful vanlifers know—you don't need to plan every detail, just the right details.</p>
 
-                <p>After helping thousands of vanlifers create their perfect trips through <a href="https://getgrover.ai">Grover's expert planning platform</a>, we've identified the exact steps that transform chaotic road trips into joyful adventures. This isn't about rigid itineraries or over-planning—it's about smart preparation that maximizes spontaneity.</p>
+                <p>After helping thousands of vanlifers create their perfect trips through <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Grover's expert planning platform</a>, we've identified the exact steps that transform chaotic road trips into joyful adventures. This isn't about rigid itineraries or over-planning—it's about smart preparation that maximizes spontaneity.</p>
 
                 <p>Whether you're planning your first weekend getaway or a months-long journey, this step-by-step guide will help you create trips that flow seamlessly from one amazing experience to the next.</p>
             </section>
@@ -698,12 +696,12 @@
                 <div class="cta-box">
                     <h3>Ready to Plan Your Perfect Van Adventure?</h3>
                     <p>Stop spending hours researching and start having expert conversations about your trip. Grover's chat-based planning makes it easy to create amazing van adventures.</p>
-                    <a href="https://getgrover.ai" class="cta-button">Start Planning with Grover</a>
+                    <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button">Download Grover App</a>
                 </div>
             </section>
 
             <footer>
-                <p><em>This guide is based on real experiences from thousands of successful van trips planned through Grover's expert platform. For personalized trip planning and expert support, chat with Grover at <a href="https://getgrover.ai">getgrover.ai</a>.</em></p>
+                <p><em>This guide is based on real experiences from thousands of successful van trips planned through Grover's expert platform. For personalized trip planning and expert support, <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">download the Grover app</a>.</em></p>
             </footer>
         </article>
     </main>

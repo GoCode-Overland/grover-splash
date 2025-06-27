@@ -1,16 +1,8 @@
 /* Blog-specific styles to enhance the main design */
 
-/* Square card layout styles */
-.aspect-square {
-  aspect-ratio: 1 / 1;
-}
-
-/* Text clamping for consistent card heights */
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+/* Clean blog card layout styles */
+.aspect-\[16\/9\] {
+  aspect-ratio: 16 / 9;
 }
 
 /* Smooth hover effects for blog cards */
@@ -79,29 +71,16 @@
     gap: 1.5rem;
   }
   
-  /* Mobile-specific square card adjustments */
-  .aspect-square {
-    aspect-ratio: 1 / 1;
-    min-height: 280px;
-  }
-  
-  /* Ensure proper spacing on mobile */
+  /* Mobile responsive grid spacing */
   .grid.grid-cols-1 {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 }
 
-/* Tablet responsive adjustments */
-@media (min-width: 769px) and (max-width: 1023px) {
-  .aspect-square {
-    min-height: 320px;
-  }
-}
-
-/* Desktop responsive adjustments */
-@media (min-width: 1024px) {
-  .aspect-square {
-    min-height: 360px;
+/* Enhanced blog card hover effects */
+@media (hover: hover) {
+  .blog-card:hover {
+    transform: translateY(-4px) scale(1.02);
   }
 }
 

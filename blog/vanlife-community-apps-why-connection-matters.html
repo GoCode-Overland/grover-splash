@@ -101,7 +101,7 @@
             color: #34495e;
         }
         .cta-box {
-            background: #66AEC0;
+            background: #f8e5c1;
             color: white;
             padding: 40px;
             border-radius: 20px;
@@ -162,22 +162,83 @@
             background-color: #f8f9fa;
             font-weight: bold;
         }
+        
+        /* Navigation Menu */
+        .nav-menu {
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 100;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-menu-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #66AEC0;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 15px;
+            transition: background-color 0.3s ease;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+        
+        .nav-links a:hover {
+            background: #f8f9fa;
+        }
+        
+        .nav-links a.active {
+            background: #66AEC0;
+            color: white;
+        }
+        
         @media (max-width: 768px) {
             .blog-title {
                 font-size: 2rem;
+            }
+            
+            .nav-links {
+                gap: 8px;
+            }
+            
+            .nav-links a {
+                font-size: 0.75rem;
+                padding: 4px 8px;
             }
         }
     </style>
 </head>
 <body class="font-body text-gray-800 leading-relaxed m-0 p-0">
     <!-- Header -->
-    <header class="bg-primary py-10">
+    <header class="bg-primary py-6">
         <div class="container mx-auto px-4 max-w-6xl lg:max-w-[1400px]">
             <nav class="flex items-center justify-between">
                 <a href="../index.html">
                     <img src="../img/grover-combomark-white.svg" alt="grover logo" class="h-10 md:h-14">
                 </a>
-                <div class="flex items-center gap-8">
+                <div class="flex items-center gap-6">
                     <a href="index.html" class="text-white hover:underline font-heading text-base">← All Posts</a>
                     <a href="../index.html" class="text-white hover:underline font-heading text-base">Home</a>
                 </div>

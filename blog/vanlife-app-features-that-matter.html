@@ -285,25 +285,100 @@
             font-weight: bold;
         }
         
+        .faq-section {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .faq-section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .faq-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
         /* Mobile responsiveness */
         @media (max-width: 768px) {
             .blog-title {
                 font-size: 2rem;
             }
             
-            .nav-links {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            
             .nav-menu-content {
                 flex-direction: column;
                 gap: 15px;
+                padding: 10px 20px;
+            }
+            
+            .nav-links {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+                width: 100%;
+            }
+            
+            .nav-links a {
+                font-size: 0.75rem;
+                padding: 8px 12px;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .faq-section {
+                padding: 30px 15px;
+            }
+            
+            .faq-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .faq-item {
+                padding: 15px;
+            }
+            
+            .faq-question {
+                font-size: 1.1rem;
+            }
+            
+            .faq-answer {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-links {
+                grid-template-columns: 1fr;
+                gap: 5px;
             }
             
             .nav-links a {
                 font-size: 0.8rem;
-                padding: 6px 12px;
+                padding: 10px 15px;
             }
         }
     </style>
@@ -335,7 +410,7 @@
                 <li><a href="#nice-to-have-features">Nice-to-Have</a></li>
                 <li><a href="#red-flags">Red Flags</a></li>
                 <li><a href="#choosing-features">Choosing Features</a></li>
-                <li><a href="#bottom-line">Bottom Line</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </div>
     </nav>
@@ -551,31 +626,51 @@
 
             <p>At Grover, we've built our entire platform around this philosophy: providing the features that actually matter, executed exceptionally well, with the expert knowledge and community support that makes vanlife more joyful. Because at the end of the day, the best vanlife app is the one that gets out of your way and helps you focus on what really matters – the adventure itself.</p>
 
-            <h1>Frequently Asked Questions: Vanlife App Features</h1>
+            <section id="faq" class="faq-section">
+                <h2>Frequently Asked Questions: Vanlife App Features</h2>
 
-            <h2>1. What's the most important feature to look for in a vanlife app?</h2>
+                <div class="faq-item">
+                    <h3 class="faq-question">1. What's the most important feature to look for in a vanlife app?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Reliable offline functionality is absolutely essential.</strong> When you're exploring remote areas with spotty or no cell service, you need access to campsite information, maps, and navigation without depending on an internet connection. Look for apps that download comprehensive data including photos, reviews, and detailed site information rather than just basic maps. At Grover, we've designed our offline capabilities around real vanlife scenarios, ensuring you have access to expert knowledge and community insights even when you're completely off-grid.</p>
+                    </div>
+                </div>
 
-            <p><strong>Reliable offline functionality is absolutely essential.</strong> When you're exploring remote areas with spotty or no cell service, you need access to campsite information, maps, and navigation without depending on an internet connection. Look for apps that download comprehensive data including photos, reviews, and detailed site information rather than just basic maps. At Grover, we've designed our offline capabilities around real vanlife scenarios, ensuring you have access to expert knowledge and community insights even when you're completely off-grid.</p>
+                <div class="faq-item">
+                    <h3 class="faq-question">2. How can I tell if a vanlife app has accurate location data?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Check for multiple verification sources and recent updates.</strong> Reliable apps combine official campground databases with verified community submissions and regular field updates. Red flags include locations that lead to private property, closed roads, or sites that don't match their descriptions. Look for apps that provide context with their coordinates, such as access road conditions, clearance requirements, and current accessibility status. We recommend testing a few known locations first to gauge an app's accuracy before relying on it for remote destinations.</p>
+                    </div>
+                </div>
 
-            <h2>2. How can I tell if a vanlife app has accurate location data?</h2>
+                <div class="faq-item">
+                    <h3 class="faq-question">3. Are subscription-based vanlife apps worth the cost?</h3>
+                    <div class="faq-answer">
+                        <p><strong>It depends on what features are behind the paywall.</strong> Subscriptions are justified when they support ongoing services like real-time updates, expert support, or continuously maintained databases. However, be wary of apps that charge for basic functionality like offline maps or essential campsite information. The best vanlife apps offer substantial free features with premium options that provide clear additional value. Consider your travel frequency and needs when evaluating whether premium features justify the ongoing cost.</p>
+                    </div>
+                </div>
 
-            <p><strong>Check for multiple verification sources and recent updates.</strong> Reliable apps combine official campground databases with verified community submissions and regular field updates. Red flags include locations that lead to private property, closed roads, or sites that don't match their descriptions. Look for apps that provide context with their coordinates, such as access road conditions, clearance requirements, and current accessibility status. We recommend testing a few known locations first to gauge an app's accuracy before relying on it for remote destinations.</p>
+                <div class="faq-item">
+                    <h3 class="faq-question">4. What's the difference between chat-based apps and traditional vanlife apps?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Chat-based apps let you describe what you need in natural language instead of navigating complex menus and filters.</strong> Instead of clicking through dozens of options to find "a quiet spot near Moab with level parking for a 25-foot van," you can simply ask that question directly. This conversational approach is more intuitive and allows for follow-up questions and personalized recommendations. Traditional apps require you to learn their specific interface and search methods, while chat-based apps adapt to how you naturally communicate your needs.</p>
+                    </div>
+                </div>
 
-            <h2>3. Are subscription-based vanlife apps worth the cost?</h2>
+                <div class="faq-item">
+                    <h3 class="faq-question">5. How important are community features in vanlife apps?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Community features are valuable when they're well-moderated and focused on practical information sharing.</strong> The best community features provide real-time updates about road conditions, detailed trip reports with photos, and the ability to connect with other travelers for safety or social reasons. However, unmoderated community content often becomes cluttered with outdated information or irrelevant posts. Look for apps that curate community contributions and focus on quality over quantity. Effective community integration should enhance your decision-making rather than overwhelm you with information.</p>
+                    </div>
+                </div>
 
-            <p><strong>It depends on what features are behind the paywall.</strong> Subscriptions are justified when they support ongoing services like real-time updates, expert support, or continuously maintained databases. However, be wary of apps that charge for basic functionality like offline maps or essential campsite information. The best vanlife apps offer substantial free features with premium options that provide clear additional value. Consider your travel frequency and needs when evaluating whether premium features justify the ongoing cost.</p>
-
-            <h2>4. What's the difference between chat-based apps and traditional vanlife apps?</h2>
-
-            <p><strong>Chat-based apps let you describe what you need in natural language instead of navigating complex menus and filters.</strong> Instead of clicking through dozens of options to find "a quiet spot near Moab with level parking for a 25-foot van," you can simply ask that question directly. This conversational approach is more intuitive and allows for follow-up questions and personalized recommendations. Traditional apps require you to learn their specific interface and search methods, while chat-based apps adapt to how you naturally communicate your needs.</p>
-
-            <h2>5. How important are community features in vanlife apps?</h2>
-
-            <p><strong>Community features are valuable when they're well-moderated and focused on practical information sharing.</strong> The best community features provide real-time updates about road conditions, detailed trip reports with photos, and the ability to connect with other travelers for safety or social reasons. However, unmoderated community content often becomes cluttered with outdated information or irrelevant posts. Look for apps that curate community contributions and focus on quality over quantity. Effective community integration should enhance your decision-making rather than overwhelm you with information.</p>
-
-            <h2>6. Should I use multiple vanlife apps or find one that does everything?</h2>
-
-            <p><strong>Most successful vanlifers use 2-3 specialized apps rather than trying to find one perfect solution.</strong> Focus on apps that excel at their core functions rather than those that try to do everything mediocrely. For example, you might use one app for campsite discovery, another for route planning, and a third for real-time support and expert advice. The key is choosing apps that work well together and complement each other's strengths. At Grover, we've designed our platform to integrate seamlessly with other tools you might already use while excelling at conversational trip planning and expert support.</p>
+                <div class="faq-item">
+                    <h3 class="faq-question">6. Should I use multiple vanlife apps or find one that does everything?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Most successful vanlifers use 2-3 specialized apps rather than trying to find one perfect solution.</strong> Focus on apps that excel at their core functions rather than those that try to do everything mediocrely. For example, you might use one app for campsite discovery, another for route planning, and a third for real-time support and expert advice. The key is choosing apps that work well together and complement each other's strengths. At Grover, we've designed our platform to integrate seamlessly with other tools you might already use while excelling at conversational trip planning and expert support.</p>
+                    </div>
+                </div>
+            </section>
         </article>
     </main>
 

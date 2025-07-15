@@ -24,6 +24,29 @@
   <!-- General SEO -->
   <meta name="description" content="Grover makes RV ownership seamless—helping you plan trips, solve issues, and connect with your community, all in one place.">
   <link rel="canonical" href="https://getgrover.ai/">
+    <script>
+		(function (d) {
+			// Load the Grover Chat embed script
+			var s = d.createElement('script');
+			s.src = 'https://ops.getgrover.ai/embed';
+			s.async = true;
+			d.head.appendChild(s);
+
+			// Initialize once loaded
+			s.onload = function () {
+				if (window.GroverChat) {
+					window.GroverChat.init({
+						assistantId: '3eb69271-d883-440b-944c-c40afa7725df',
+						apiUrl: 'https://ops.getgrover.ai' 
+					}).catch(function (error) {
+						console.error('Failed to initialize GroverChat:', error);
+					});
+				} else {
+					console.error('GroverChat failed to load');
+				}
+			};
+		})(document);
+	</script>
 </head>
 <body class="font-body text-gray-800 leading-relaxed m-0 p-0 overflow-x-hidden">
   <header class="relative hero py-8 overflow-hidden">

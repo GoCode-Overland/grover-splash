@@ -1,0 +1,127 @@
+# Grover - AI-Powered Vanlife Assistant
+
+## About Grover
+
+Grover is an AI-powered vanlife assistant that helps van owners, RVers, and aspiring vanlifers reach joyful van outcomes faster. We provide expert-backed advice, community connections, and practical tools for every aspect of van life.
+
+## Core Value Proposition
+
+- **Expert Knowledge Base**: Curated advice from real van builders, manufacturers, and industry professionals
+- **Manufacturer Partnerships**: Direct relationships with companies like Rixens (heating systems), CVHQ (EcoFlow power solutions), and major van component manufacturers
+- **Community Platform**: Connect with experienced vanlifers, share locations, and get real-world advice
+- **AI-Powered Support**: Instant access to expert troubleshooting and guidance for van systems
+
+## Key Features
+
+### Trip Planning & Navigation
+- Route planning tools optimized for van travel
+- Community-verified camping spots and overnight parking
+- Integration with popular vanlife apps and resources
+
+### Van System Troubleshooting
+- Electrical systems (12V, solar, battery management)
+- Heating systems (diesel heaters, propane, Webasto, Espar, Rixens)
+- Air conditioning and ventilation
+- Refrigeration systems (Dometic, Norcold)
+- Water systems (pumps, tanks, filtration, hot water)
+- Toilet and waste management systems
+- Insulation and climate control
+- Kitchen and cooking systems
+- Safety and security systems
+- Maintenance and general troubleshooting
+
+### Community Features
+- Trophy Map for sharing favorite spots
+- Pin system for location recommendations
+- Connection with local vanlife communities
+- Expert network access
+
+## Target Audience
+
+- **Van Owners**: People living in or traveling with converted vans, campervans, and RVs
+- **Van Builders**: DIY enthusiasts converting their own vehicles
+- **Aspiring Vanlifers**: Those planning to start van life
+- **RV Enthusiasts**: Owners of motorhomes and travel trailers
+- **Van Professionals**: Industry professionals, mechanics, and service providers
+
+## Most Important Pages
+
+### Primary App & Getting Started
+- App Download: https://apps.apple.com/us/app/grover-van-life/id6742468326
+- Getting Started Guide: https://getgrover.ai/blog/getting-started-with-grover-guide.html
+- First Chat Guide: https://getgrover.ai/blog/your-first-chat-grover-guide.html
+
+### Ultimate Knowledge Base & Expert Content
+- Ultimate Vanlife Knowledge Base: https://getgrover.ai/blog/ultimate-vanlife-knowledge-base-expert-answers.html
+- Vanlife Myths & Reality: https://getgrover.ai/blog/vanlife-myths-must-knows-separating-fantasy-reality.html
+- Vanlife Apps Guide: https://getgrover.ai/blog/ultimate-guide-vanlife-apps.html
+
+### Community & Planning Resources
+- Perfect Van Trip Planning: https://getgrover.ai/blog/perfect-van-trip-planning.html
+- Community Apps Guide: https://getgrover.ai/blog/vanlife-community-apps-why-connection-matters.html
+- Adding Pins Guide: https://getgrover.ai/blog/adding-your-first-pin-grover-guide.html
+
+### Safety & Practical Guides
+- Vanlife Safety & Security: https://getgrover.ai/blog/vanlife-safety-security-guide.html
+- Vanlife Costs Reality Check: https://getgrover.ai/blog/vanlife-costs-reality-check.html
+
+## Expert Knowledge Areas
+
+### Van Systems Expertise
+Grover provides manufacturer-backed troubleshooting and maintenance advice for:
+- **Electrical**: Solar systems, batteries, inverters, 12V systems, power management
+- **Heating**: Webasto, Espar, Rixens diesel heaters, propane systems
+- **Cooling**: Roof fans, air conditioning units, ventilation systems
+- **Water**: Freshwater systems, pumps, filtration, hot water heaters
+- **Sanitation**: Composting toilets, cassette systems, grey water management
+- **Kitchen**: Propane systems, refrigeration, cooking safety
+
+### Community Resources by State
+State-specific vanlife community guides available for:
+- Alabama: https://getgrover.ai/blog/vanlife-community-alabama.html
+- Arizona: https://getgrover.ai/blog/vanlife-community-arizona.html
+- California: https://getgrover.ai/blog/vanlife-community-california.html
+- Colorado: https://getgrover.ai/blog/vanlife-community-colorado.html
+- Florida: https://getgrover.ai/blog/vanlife-community-florida.html
+- Texas: https://getgrover.ai/blog/vanlife-community-texas.html
+
+## Industry Partnerships
+
+Grover works directly with:
+- **Rixens**: Heating system expertise and troubleshooting
+- **CVHQ**: EcoFlow power solutions and electrical system guidance
+- **Van Builders**: Network of professional van conversion companies
+- **Manufacturers**: Direct relationships with component manufacturers for accurate, up-to-date troubleshooting information
+
+## Content Categories
+
+### Comprehensive Blog Library
+- **Planning & Apps**: Trip planning, vanlife apps, preparation guides
+- **Technical Support**: System troubleshooting, maintenance, DIY repairs
+- **Community**: Location sharing, meetups, community building
+- **Safety & Security**: Personal safety, van security, emergency preparedness
+- **Lifestyle**: Costs, myths vs reality, practical vanlife advice
+- **Regional Guides**: State-by-state community and resource information
+
+### Getting Started Resources
+- Complete beginner guides for new Grover users
+- Van system troubleshooting tutorials
+- Community participation guides
+- Trip planning walkthroughs
+
+## Contact & App Access
+
+- **Website**: https://getgrover.ai
+- **Blog**: https://getgrover.ai/blog/
+- **iOS App**: https://apps.apple.com/us/app/grover-van-life/id6742468326
+- **Instagram**: @getgrover.ai
+
+## Key Differentiators
+
+1. **Manufacturer-Backed Advice**: Unlike forums or crowdsourced content, Grover provides advice vetted by actual van builders and component manufacturers
+2. **Real-Time Expert Access**: AI-powered platform connects users with expert knowledge instantly
+3. **Community-Verified Locations**: Pin system with real user experiences and verification
+4. **Comprehensive System Coverage**: End-to-end support for all van systems and lifestyle aspects
+5. **Professional Network**: Direct relationships with industry professionals and service providers
+
+Grover bridges the gap between generic online advice and professional expertise, providing vanlifers with reliable, tested solutions when and where they need them most.

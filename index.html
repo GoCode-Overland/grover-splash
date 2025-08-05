@@ -4,6 +4,7 @@
   <!-- Google tag (gtag.js) - Optimized loading -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://ops.getgrover.ai">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN0EK30SS7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,9 +16,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grover - Reach joyful van outcomes. Faster.</title>
   <link rel="preload" href="fonts/PlantinInfantBold/font.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="img/hero-phone.jpg" as="image">
+  <link rel="preload" href="img/hero-phone.jpg" as="image" media="(max-width: 768px)">
+  <link rel="preload" href="img/hero-phone.jpg" as="image" media="(min-width: 769px)">
   <link rel="preload" href="img/grover-combomark-white.svg" as="image">
-  <link rel="stylesheet" href="main.css">
+  
+  <!-- Critical CSS for above-the-fold content -->
+  <style>
+    body{font-family:"Avenir","Avenir Book",Figtree,Montserrat,Corbel,'URW Gothic',source-sans-pro,sans-serif;margin:0;padding:0;overflow-x:hidden;color:#374151;line-height:1.625}
+    .hero{background-image:radial-gradient(50% 50% at 50% 50%,#66aec0 0,#477682 100%);background-size:100% 470px;background-position:top center;background-repeat:no-repeat;position:relative;padding:2rem 0;overflow:hidden}
+    .container{max-width:1536px;margin:0 auto;padding:0 1rem}
+    .font-heading{font-family:'PlantinInfantBold','Plantin Infant MT Std','Plantin Infant','Plantin','Georgia','Palatino Linotype','Times New Roman',serif}
+    .text-white{color:#fff}
+    .text-3xl{font-size:1.875rem;line-height:2.25rem}
+    .font-bold{font-weight:700}
+    .mb-6{margin-bottom:1.5rem}
+    .mb-8{margin-bottom:2rem}
+    .h-10{height:2.5rem}
+    @media(min-width:768px){.hero{background-size:100% 670px}.md\:h-14{height:3.5rem}.md\:mb-20{margin-bottom:5rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}}
+    .hero-effect-fade{opacity:0;transform:translateY(-15px) rotate(1deg);transition:transform .75s cubic-bezier(0.61,1,0.88,1),opacity 0.35s cubic-bezier(0.61,1,0.88,1)}
+    .hero-effect-fade-active{opacity:1;transform:translateY(0)}
+  </style>
+  
+  <link rel="stylesheet" href="main.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="main.css"></noscript>
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
   <!-- Open Graph / Facebook -->
@@ -163,6 +184,7 @@
           preload="metadata"
           width="300"
           height="533"
+          fetchpriority="high"
         >
           <source src="img/demo2.mp4" type="video/mp4">
         </video>

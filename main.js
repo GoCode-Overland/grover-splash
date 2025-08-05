@@ -338,15 +338,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/* Hero Effects */
-const script = document.createElement('script');
-script.src = 'https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js';
-script.integrity = 'sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==';
-script.crossOrigin = 'anonymous';
-script.referrerPolicy = 'no-referrer';
-document.head.appendChild(script);
+/* Hero Effects - Deferred loading to prevent reflow */
+function loadVivusScript() {
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js';
+  script.integrity = 'sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==';
+  script.crossOrigin = 'anonymous';
+  script.referrerPolicy = 'no-referrer';
+  script.async = true;
+  document.head.appendChild(script);
+  return script;
+}
 
-script.addEventListener('load', () => {
+// Load Vivus during idle time to prevent render blocking
+function initVivusWhenIdle() {
+  if (window.requestIdleCallback) {
+    requestIdleCallback(() => {
+      const script = loadVivusScript();
+      setupVivusAnimations(script);
+    }, { timeout: 2000 });
+  } else {
+    setTimeout(() => {
+      const script = loadVivusScript();
+      setupVivusAnimations(script);
+    }, 1000);
+  }
+}
+
+function setupVivusAnimations(script) {
+  script.addEventListener('load', () => {
   const bgSvg = document.querySelector('[data-hero-bg]');
   new Vivus(bgSvg, {
     type: 'sync', 
@@ -364,4 +384,12 @@ script.addEventListener('load', () => {
       }, 750);
     }
   });
-});
+  });
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initVivusWhenIdle);
+} else {
+  initVivusWhenIdle();
+}

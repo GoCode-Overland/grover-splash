@@ -42,24 +42,39 @@ RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
     </IfModule>
 
     # Cache Control Headers for Performance
-    # 1 Month for assets that change infrequently
-    <FilesMatch "\.(css|js|pdf|txt|xml|woff|woff2|ttf|eot)$">
-        Header set Cache-Control "max-age=2628000, public"
+    # Remove any existing cache headers first
+    Header unset Cache-Control
+    Header unset Pragma
+    Header unset Expires
+    
+    # 1 Year for fonts and static assets that rarely change
+    <FilesMatch "\.(woff|woff2|ttf|eot|otf)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+        Header set Expires "access plus 1 year"
     </FilesMatch>
 
-    # 1 Week for images
+    # 1 Month for CSS and JS
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=2628000, public"
+        Header set Expires "access plus 1 month"
+    </FilesMatch>
+
+    # 1 Month for images (they can be cached longer)
     <FilesMatch "\.(jpg|jpeg|png|gif|ico|svg|webp)$">
-        Header set Cache-Control "max-age=604800, public"
+        Header set Cache-Control "max-age=2628000, public"
+        Header set Expires "access plus 1 month"
     </FilesMatch>
 
     # 1 Day for HTML files
     <FilesMatch "\.(html|htm)$">
         Header set Cache-Control "max-age=86400, public, must-revalidate"
+        Header set Expires "access plus 1 day"
     </FilesMatch>
 
-    # 1 Hour for videos (large files, may change)
+    # 1 Week for videos
     <FilesMatch "\.(mp4|webm|ogv)$">
-        Header set Cache-Control "max-age=3600, public"
+        Header set Cache-Control "max-age=604800, public"
+        Header set Expires "access plus 1 week"
     </FilesMatch>
 
     # Security Headers

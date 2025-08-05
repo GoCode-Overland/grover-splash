@@ -1,24 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) - Optimized loading -->
+  <!-- Optimized resource hints -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://googletagmanager.com">
+  <link rel="dns-prefetch" href="https://google-analytics.com">
   <link rel="preconnect" href="https://ops.getgrover.ai">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN0EK30SS7"></script>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => console.log('SW registered'))
+          .catch(error => console.log('SW registration failed'));
+      });
+    }
+  </script>
+  
+  <!-- Optimized Google Analytics - Delayed loading -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-LN0EK30SS7');
+    gtag('config', 'G-LN0EK30SS7', { 
+      send_page_view: false,
+      custom_map: {'custom_parameter': 'page_location'}
+    });
+    
+    // Load GA after page is interactive
+    function loadGA() {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LN0EK30SS7';
+      document.head.appendChild(script);
+      script.onload = () => gtag('event', 'page_view');
+    }
+    
+    // Load GA after a delay or user interaction
+    if (document.readyState === 'complete') {
+      setTimeout(loadGA, 1000);
+    } else {
+      window.addEventListener('load', () => setTimeout(loadGA, 1000));
+    }
+    
+    // Load immediately on user interaction
+    ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(event => {
+      document.addEventListener(event, loadGA, { once: true, passive: true });
+    });
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grover - Reach joyful van outcomes. Faster.</title>
   <link rel="preload" href="fonts/PlantinInfantBold/font.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="img/hero-phone.jpg" as="image" media="(max-width: 768px)">
-  <link rel="preload" href="img/hero-phone.jpg" as="image" media="(min-width: 769px)">
-  <link rel="preload" href="img/grover-combomark-white.svg" as="image">
+  <link rel="preload" href="img/hero-phone.jpg" as="image" media="(max-width: 768px)" fetchpriority="high">
+  <link rel="preload" href="img/hero-phone.jpg" as="image" media="(min-width: 769px)" fetchpriority="high">
+  <link rel="preload" href="img/grover-combomark-white.svg" as="image" fetchpriority="high">
+  <link rel="prefetch" href="img/og.png" as="image">
+  <link rel="prefetch" href="img/favicon-32x32.png" as="image">
+  <link rel="prefetch" href="img/favicon-16x16.png" as="image">
   
   <!-- Critical CSS for above-the-fold content -->
   <style>

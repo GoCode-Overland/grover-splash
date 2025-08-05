@@ -1469,6 +1469,7 @@ video {
   font-family: "PlantinInfantBold";
 
   src: url('fonts/PlantinInfantBold/font.woff2') format('woff2'), url('fonts/PlantinInfantBold/font.woff') format('woff');
+  font-display: swap;
 }
 
 /** Variables */

@@ -12,3 +12,59 @@ RewriteRule ^([^.]+)$ $1.html [L]
 # Redirect .html requests to clean URLs
 RewriteCond %{THE_REQUEST} /([^.]+)\.html[\s?] [NC]
 RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+
+# PageSpeed Optimization - Cache Headers
+<IfModule mod_headers.c>
+    # Enable Compression
+    <IfModule mod_deflate.c>
+        # Compress HTML, CSS, JavaScript, Text, XML and fonts
+        AddOutputFilterByType DEFLATE application/javascript
+        AddOutputFilterByType DEFLATE application/rss+xml
+        AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+        AddOutputFilterByType DEFLATE application/x-font
+        AddOutputFilterByType DEFLATE application/x-font-opentype
+        AddOutputFilterByType DEFLATE application/x-font-otf
+        AddOutputFilterByType DEFLATE application/x-font-truetype
+        AddOutputFilterByType DEFLATE application/x-font-ttf
+        AddOutputFilterByType DEFLATE application/x-javascript
+        AddOutputFilterByType DEFLATE application/xhtml+xml
+        AddOutputFilterByType DEFLATE application/xml
+        AddOutputFilterByType DEFLATE font/opentype
+        AddOutputFilterByType DEFLATE font/otf
+        AddOutputFilterByType DEFLATE font/ttf
+        AddOutputFilterByType DEFLATE image/svg+xml
+        AddOutputFilterByType DEFLATE image/x-icon
+        AddOutputFilterByType DEFLATE text/css
+        AddOutputFilterByType DEFLATE text/html
+        AddOutputFilterByType DEFLATE text/javascript
+        AddOutputFilterByType DEFLATE text/plain
+        AddOutputFilterByType DEFLATE text/xml
+    </IfModule>
+
+    # Cache Control Headers for Performance
+    # 1 Month for assets that change infrequently
+    <FilesMatch "\.(css|js|pdf|txt|xml|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "max-age=2628000, public"
+    </FilesMatch>
+
+    # 1 Week for images
+    <FilesMatch "\.(jpg|jpeg|png|gif|ico|svg|webp)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+
+    # 1 Day for HTML files
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=86400, public, must-revalidate"
+    </FilesMatch>
+
+    # 1 Hour for videos (large files, may change)
+    <FilesMatch "\.(mp4|webm|ogv)$">
+        Header set Cache-Control "max-age=3600, public"
+    </FilesMatch>
+
+    # Security Headers
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY  
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

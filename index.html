@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) - Optimized loading -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN0EK30SS7"></script>
   <script>
-    window.dataLayer = window.dataLayer = [];
+    window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-LN0EK30SS7');
@@ -12,6 +14,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grover - Reach joyful van outcomes. Faster.</title>
+  <link rel="preload" href="fonts/PlantinInfantBold/font.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="img/hero-phone.jpg" as="image">
+  <link rel="preload" href="img/grover-combomark-white.svg" as="image">
   <link rel="stylesheet" href="main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
@@ -32,34 +37,39 @@
   <!-- General SEO -->
   <meta name="description" content="Grover makes RV ownership seamless—helping you plan trips, solve issues, and connect with your community, all in one place.">
   <link rel="canonical" href="https://getgrover.ai/">
+    <link rel="preconnect" href="https://ops.getgrover.ai">
     <script>
-		(function (d) {
-			// Load the Grover Chat embed script
-			var s = d.createElement('script');
-			s.src = 'https://ops.getgrover.ai/embed';
-			s.async = true;
-			d.head.appendChild(s);
+		// Defer Grover Chat loading until after page load
+		window.addEventListener('load', function() {
+			(function (d) {
+				// Load the Grover Chat embed script
+				var s = d.createElement('script');
+				s.src = 'https://ops.getgrover.ai/embed';
+				s.async = true;
+				s.defer = true;
+				d.head.appendChild(s);
 
-			// Initialize once loaded
-			s.onload = function () {
-				if (window.GroverChat) {
-					window.GroverChat.init({
-						assistantId: '3eb69271-d883-440b-944c-c40afa7725df',
-						apiUrl: 'https://ops.getgrover.ai' 
-					}).catch(function (error) {
-						console.error('Failed to initialize GroverChat:', error);
-					});
-				} else {
-					console.error('GroverChat failed to load');
-				}
-			};
-		})(document);
+				// Initialize once loaded
+				s.onload = function () {
+					if (window.GroverChat) {
+						window.GroverChat.init({
+							assistantId: '3eb69271-d883-440b-944c-c40afa7725df',
+							apiUrl: 'https://ops.getgrover.ai' 
+						}).catch(function (error) {
+							console.error('Failed to initialize GroverChat:', error);
+						});
+					} else {
+						console.error('GroverChat failed to load');
+					}
+				};
+			})(document);
+		});
 	</script>
 </head>
 <body class="font-body text-gray-800 leading-relaxed m-0 p-0 overflow-x-hidden">
   <header class="relative hero py-8 overflow-hidden">
     <div class="container mx-auto px-4 max-w-6xl lg:max-w-[1400px]">
-      <img src="img/grover-combomark-white.svg" alt="grover logo" class="h-10 md:h-14 mb-8 md:mb-20">
+      <img src="img/grover-combomark-white.svg" alt="grover logo" class="h-10 md:h-14 mb-8 md:mb-20" width="200" height="56">
       <h1
         class="text-white font-heading text-3xl md:text-4xl font-bold mb-6 leading-[1.1]" 
       >
@@ -150,6 +160,9 @@
           autoplay
           muted
           loop
+          preload="metadata"
+          width="300"
+          height="533"
         >
           <source src="img/demo2.mp4" type="video/mp4">
         </video>
@@ -163,7 +176,7 @@
   
   <!-- Feature Sections -->
   <div class="relative z-0 xl:z-10 container mx-auto px-4 max-w-7xl mb-[242px]">
-    <img src="img/arrow.svg" alt="arrow" class="hidden lg:block absolute top-0 left-1/2 -translate-x-1/2" />
+    <img src="img/arrow.svg" alt="arrow" class="hidden lg:block absolute top-0 left-1/2 -translate-x-1/2" loading="lazy" width="50" height="100" />
     <div
       data-scroll-effect="path-draw"
       data-path-draw-range="2778"
@@ -212,7 +225,7 @@
         data-scroll-bottom-offset="-50"
       >
           <div class="md:relative top-10 py-10 md:py-0 w-2/3">
-            <img src="img/loveVanGraphic.svg" alt="Illustration of a man jumping for joy atop his sprinter van" />
+            <img src="img/loveVanGraphic.svg" alt="Illustration of a man jumping for joy atop his sprinter van" loading="lazy" width="400" height="300" />
           </div>
       </div>
     </section>
@@ -246,7 +259,7 @@
         data-scroll-bottom-offset="-50"
       >
           <div class="md:relative md:left-[-80px] md:top-[83px] md:h-[500px] w-4/5 py-10 sm:py-0">
-            <img src="img/mapGraphic.svg" alt="Illustration of a journey with pins and maps" />
+            <img src="img/mapGraphic.svg" alt="Illustration of a journey with pins and maps" loading="lazy" width="400" height="300" />
           </div>
       </div>
     </section>    
@@ -280,7 +293,7 @@
         data-scroll-bottom-offset="-50"
       >
           <div class="w-4/5 md:relative md:-left-6 py-10 sm:py-0">
-            <img src="img/chatVanGraphic.svg" alt="Illustration of a person chatting with their van" />
+            <img src="img/chatVanGraphic.svg" alt="Illustration of a person chatting with their van" loading="lazy" width="400" height="300" />
           </div>
       </div>
     </section>    
@@ -314,7 +327,7 @@
         data-scroll-bottom-offset="-50"
       >
           <div class="w-4/5 py-10 md:py-0 md:w-3/4">
-            <img src="img/expertGraphic.svg" alt="Illustration of a helpful expert answering questions on his headset and laptop" />
+            <img src="img/expertGraphic.svg" alt="Illustration of a helpful expert answering questions on his headset and laptop" loading="lazy" width="400" height="300" />
           </div>
       </div>
     </section>    
@@ -348,7 +361,7 @@
         data-scroll-bottom-offset="-50"
       >
           <div class="w-3/5 py-10 md:py-0 md:w-3/5">
-            <img src="img/phoneHelpGraphic.svg" alt="Illustration of an iPhone with chat bubbles" />
+            <img src="img/phoneHelpGraphic.svg" alt="Illustration of an iPhone with chat bubbles" loading="lazy" width="300" height="400" />
           </div>
       </div>
     </section>    
@@ -382,7 +395,7 @@
         data-scroll-bottom-offset="-50"
       >
           <div class="w-full md:relative md:-top-10 py-10">
-            <img src="img/communityGraphic.svg" alt="Illustration of a community of smiling faces" />
+            <img src="img/communityGraphic.svg" alt="Illustration of a community of smiling faces" loading="lazy" width="400" height="300" />
           </div>
       </div>
     </section>  </div>
@@ -409,6 +422,9 @@
             autoplay
             muted
             loop
+            preload="metadata"
+            width="320"
+            height="568"
           >
             <source src="img/demo1.mp4" type="video/mp4">
           </video>
@@ -433,49 +449,49 @@
     
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-10 md:gap-20 my-10 place-items-center">
         <a href="https://vanlifetrader.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/vlt.svg" alt="Vanlife Trader" class="w-32">
+          <img src="/img/partner-logos/vlt.svg" alt="Vanlife Trader" class="w-32" loading="lazy" width="128" height="64">
         </a>
         <a href="https://gocodeoverland.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/gocode.svg" alt="GoCode" class="w-36">
+          <img src="/img/partner-logos/gocode.svg" alt="GoCode" class="w-36" loading="lazy" width="144" height="64">
         </a>
         <a href="https://avcrig.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/avc-rig.svg" alt="AVC Rig" class="w-32">
+          <img src="/img/partner-logos/avc-rig.svg" alt="AVC Rig" class="w-32" loading="lazy" width="128" height="64">
         </a>
         <a href="https://vandoit.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/vandoit.svg" alt="Vandoit" class="w-32">
+          <img src="/img/partner-logos/vandoit.svg" alt="Vandoit" class="w-32" loading="lazy" width="128" height="64">
         </a>
         <a href="https://www.campervan-hq.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/CVHQ.svg" alt="Campervan HQ" class="w-36">
+          <img src="/img/partner-logos/CVHQ.svg" alt="Campervan HQ" class="w-36" loading="lazy" width="144" height="64">
         </a>
         <a href="https://infinityvans.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/infinity-vans.svg" alt="Infinity Vans" class="w-32">
+          <img src="/img/partner-logos/infinity-vans.svg" alt="Infinity Vans" class="w-32" loading="lazy" width="128" height="64">
         </a>
         <a href="https://rovervans.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/rover-vans.svg" alt="Rover Vans" class="w-32">
+          <img src="/img/partner-logos/rover-vans.svg" alt="Rover Vans" class="w-32" loading="lazy" width="128" height="64">
         </a>
         <a href="https://www.vanvanoverland.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/vanvan.svg" alt="VANVAN" class="w-32">
+          <img src="/img/partner-logos/vanvan.svg" alt="VANVAN" class="w-32" loading="lazy" width="128" height="64">
         </a>
         <a href="https://www.nookvans.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/nook.svg" alt="Nook" class="w-32">
+          <img src="/img/partner-logos/nook.svg" alt="Nook" class="w-32" loading="lazy" width="128" height="64">
         </a>
         <a href="https://www.livemorecampervans.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/livemore.svg" alt="Live More" class="w-32">
+          <img src="/img/partner-logos/livemore.svg" alt="Live More" class="w-32" loading="lazy" width="128" height="64">
         </a>
         <a href="https://www.vannavans.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/vanna.svg" alt="Vanna Vans" class="w-36">
+          <img src="/img/partner-logos/vanna.svg" alt="Vanna Vans" class="w-36" loading="lazy" width="144" height="64">
         </a>
         <a href="https://rixens.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/rixens.svg" alt="Rixen's Enterprises" class="w-36">
+          <img src="/img/partner-logos/rixens.svg" alt="Rixen's Enterprises" class="w-36" loading="lazy" width="144" height="64">
         </a>
         <a href="https://venturhaus.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/venturhaus.svg" alt="Venturhaus" class="w-32">
+          <img src="/img/partner-logos/venturhaus.svg" alt="Venturhaus" class="w-32" loading="lazy" width="128" height="64">
         </a>
         <a href="https://www.gonemobilevans.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/gone_mobile.svg" alt="Gone Mobile Vans" class="w-36">
+          <img src="/img/partner-logos/gone_mobile.svg" alt="Gone Mobile Vans" class="w-36" loading="lazy" width="144" height="64">
         </a>
         <a href="https://moxievanco.com" target="_blank" rel="noopener noreferrer">
-          <img src="/img/partner-logos/moxie.svg" alt="Moxie Vans" class="w-32">
+          <img src="/img/partner-logos/moxie.svg" alt="Moxie Vans" class="w-32" loading="lazy" width="128" height="64">
         </a>
       </div>
      
@@ -512,7 +528,7 @@
         </svg>
       </div>      </div>
       <div class="text-center">
-        <img src="img/grover-combomark-black.svg" alt="grover logo" class="h-[50px] md:h-[65px] mb-8 mx-auto">
+        <img src="img/grover-combomark-black.svg" alt="grover logo" class="h-[50px] md:h-[65px] mb-8 mx-auto" loading="lazy" width="200" height="65">
         <h2 class="text-2xl md:text-3xl font-bold font-heading leading-[1.2] mb-4">From one adventurer to another, the journey is better together.</h2>
         <p>Fill this out to see your brand on grover.</p>
       </div>
@@ -527,7 +543,7 @@
   
   <footer class="py-16 text-center text-white bg-primary">
     <div class="flex flex-col items-center">
-      <img src="img/grover-combomark-white.svg" alt="grover logo" class="h-8 mb-4 mx-auto">
+      <img src="img/grover-combomark-white.svg" alt="grover logo" class="h-8 mb-4 mx-auto" loading="lazy" width="200" height="32">
       <p class="text-sm">&copy; 2025 grover. All rights reserved.</p>
     </div>
   </footer>

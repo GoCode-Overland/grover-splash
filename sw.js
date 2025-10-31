@@ -1,4 +1,4 @@
-const CACHE_NAME = 'grover-v1';
+const CACHE_NAME = 'grover-v2';
 const STATIC_ASSETS = [
   '/',
   '/main.css',
@@ -10,25 +10,23 @@ const STATIC_ASSETS = [
   '/img/favicon-16x16.png'
 ];
 
-// Install event - cache static assets
+// ✅ INSTALL: Precache static assets only
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => {
-        return cache.addAll(STATIC_ASSETS);
-      })
+      .then(cache => cache.addAll(STATIC_ASSETS))
       .then(() => self.skipWaiting())
   );
 });
 
-// Activate event - clean up old caches
+// ✅ ACTIVATE: Clean up old cache versions
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
-        cacheNames.map(cacheName => {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
+        cacheNames.map(name => {
+          if (name !== CACHE_NAME) {
+            return caches.delete(name);
           }
         })
       );
@@ -36,38 +34,20 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch event - serve from cache with network fallback
+// ✅ FETCH: Serve only listed assets from cache — ignore all others
 self.addEventListener('fetch', event => {
-  // Skip cross-origin requests
-  if (!event.request.url.startsWith(self.location.origin)) {
-    return;
-  }
+  const url = new URL(event.request.url);
+
+  // Only handle same-origin requests
+  if (url.origin !== self.location.origin) return;
+
+  // Only intercept requests that match our whitelist
+  const isStaticAsset = STATIC_ASSETS.includes(url.pathname);
+  if (!isStaticAsset) return; // Let the browser fetch it normally
 
   event.respondWith(
     caches.match(event.request)
-      .then(response => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request).then(fetchResponse => {
-          // Don't cache non-successful responses
-          if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
-            return fetchResponse;
-          }
-
-          // Clone the response for caching
-          const responseToCache = fetchResponse.clone();
-          
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(event.request, responseToCache);
-          });
-
-          return fetchResponse;
-        });
-      })
-      .catch(() => {
-        // Fallback for offline - could return a custom offline page
-        if (event.request.destination === 'document') {
-          return caches.match('/');
-        }
-      })
+      .then(response => response || fetch(event.request))
+      .catch(() => caches.match('/'))
   );
 });

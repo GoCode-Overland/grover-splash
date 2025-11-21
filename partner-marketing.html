@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grover Marketing Copy Kit</title>
+    <meta name="description" content="Marketing resources and copy templates for Grover brand partners">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: rgb(102, 174, 192);
+            --primary-dark: rgb(82, 139, 154);
+            --accent: rgb(248, 229, 193);
+            --background: #ffffff;
+            --surface: #f8f9fa;
+            --text: #1a1a1a;
+            --text-secondary: #666666;
+            --border: #e5e7eb;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--surface);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .header p { font-size: 1.125rem; opacity: 0.95; max-width: 600px; margin: 0 auto; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        
+        /* Sticky Brand Input Bar */
+        .brand-input-bar {
+            background: #fff;
+            padding: 1rem;
+            margin: -2rem auto 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: sticky;
+            top: 1rem;
+            z-index: 100;
+            max-width: 600px;
+            border: 1px solid var(--border);
+        }
+
+        .brand-placeholder-text {
+            background-color: rgba(248, 229, 193, 0.5);
+            padding: 0 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        /* Quick Start Section */
+        .quick-start {
+            background: var(--background);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .quick-start h2 { color: var(--primary-dark); font-size: 1.5rem; margin-bottom: 1rem; }
+        .quick-start p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+        
+        .note {
+            background: rgba(248, 229, 193, 0.3);
+            border-left: 4px solid var(--accent);
+            padding: 1rem 1.25rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+        
+        /* Links Section */
+        .links-section {
+            background: var(--background);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .links-section h2 { color: var(--primary-dark); font-size: 1.5rem; margin-bottom: 1.5rem; }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        
+        .link-card {
+            background: var(--surface);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            transition: all 0.2s ease;
+        }
+        
+        .link-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+        
+        .link-card h3 { color: var(--primary); font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; }
+        
+        .link-card a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            word-break: break-word;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+        
+        .link-card a:hover { text-decoration: underline; }
+        
+        /* Meeting Section */
+        .meeting-card {
+            background: var(--surface);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--primary);
+        }
+        
+        .meeting-card h3 { color: var(--primary); font-size: 1.125rem; margin-bottom: 0.5rem; }
+        .meeting-card p { color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.95rem; }
+        
+        .meetings-iframe-container {
+            min-height: 600px;
+            background: white;
+            border-radius: 6px;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: var(--background);
+            border-radius: 12px;
+            padding: 0;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .content-section details { border: none; }
+        
+        .content-section summary {
+            cursor: pointer;
+            padding: 2rem;
+            list-style: none;
+            user-select: none;
+            transition: background-color 0.2s ease;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .content-section summary:hover { background: var(--surface); }
+        .content-section summary::-webkit-details-marker { display: none; }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        
+        .section-title { flex: 1; }
+        .section-title h2 { color: var(--primary); font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .section-title p { color: var(--text-secondary); font-size: 0.95rem; margin: 0; }
+        
+        .expand-icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        details[open] .expand-icon { transform: rotate(180deg); }
+        .section-content { padding: 2rem; }
+        
+        .copy-block {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .copy-block h3 {
+            color: var(--primary-dark);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .copy-block h4 {
+            color: var(--text);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mini-copy-btn {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+        
+        .mini-copy-btn:hover { background: var(--primary); color: white; }
+        
+        .copy-text {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary);
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: var(--text);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            position: relative;
+        }
+        
+        .copy-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.625rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: all 0.2s ease;
+        }
+        
+        .copy-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(102, 174, 192, 0.3);
+        }
+        
+        .copy-btn.copied { background: var(--accent); color: var(--primary-dark); }
+        
+        .image-suggestion {
+            background: rgba(102, 174, 192, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 0.75rem 1rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Assets */
+        .assets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .asset-card {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Checkerboard background for transparency */
+        .asset-preview {
+            background-color: #f0f0f0;
+            background-image:
+              linear-gradient(45deg, #ddd 25%, transparent 25%),
+              linear-gradient(-45deg, #ddd 25%, transparent 25%),
+              linear-gradient(45deg, transparent 75%, #ddd 75%),
+              linear-gradient(-45deg, transparent 75%, #ddd 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+            padding: 1rem;
+        }
+
+        .asset-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.2s;
+        }
+        
+        .asset-card:hover .asset-preview img {
+            transform: scale(1.05);
+        }
+
+        .asset-btn {
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            margin-top: auto;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+        
+        .asset-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .links-grid { grid-template-columns: 1fr; }
+            .content-section, .links-section, .quick-start { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Grover Marketing Copy Kit</h1>
+        <p>Ready-to-use marketing materials for your brand's Circle</p>
+    </header>
+
+    <div class="brand-input-bar">
+        <label for="brandInput" style="font-size:0.95rem; color:var(--text-secondary); font-weight:600;">
+            👇 Enter your Brand Name here:
+        </label>
+        <input
+            id="brandInput"
+            type="text"
+            placeholder="e.g. GoCode"
+            style="padding:0.5rem 0.8rem; border-radius:6px; border:1px solid var(--border); font-size:1rem; min-width: 250px;"
+        />
+    </div>
+    
+    <div class="container">
+        <section class="quick-start">
+            <h2>How to Use This Kit</h2>
+            <p>This resource center contains all the marketing copy you need. <strong>Type your brand name in the box above</strong>, and the text below will automatically update to match your brand.</p>
+        </section>
+        
+        <section class="links-section">
+            <h2>🔗 Important Grover Links</h2>
+            <div class="links-grid">
+                <div class="link-card">
+                    <h3>📱 App Store</h3>
+                    <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" target="_blank">apps.apple.com/us/app/grover-van-life</a>
+                    <button class="copy-btn" onclick="copyLink('https://apps.apple.com/us/app/grover-van-life/id6742468326', this)">Copy Link</button>
+                </div>
+                <div class="link-card">
+                    <h3>🏠 Grover Homepage</h3>
+                    <a href="https://getgrover.ai" target="_blank">getgrover.ai</a>
+                    <button class="copy-btn" onclick="copyLink('https://getgrover.ai', this)">Copy Link</button>
+                </div>
+                <div class="link-card">
+                    <h3>📸 Grover Instagram</h3>
+                    <a href="https://www.instagram.com/getgrover.ai/" target="_blank">instagram.com/getgrover.ai</a>
+                    <button class="copy-btn" onclick="copyLink('https://www.instagram.com/getgrover.ai/', this)">Copy Link</button>
+                </div>
+            </div>
+            
+            <div class="meeting-card">
+                <h3>📅 Book a Grover Success Meeting</h3>
+                <p>Schedule time with co-founders Will and Josh to discuss your Circle's success.</p>
+                <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/will858/grover-success-with-josh?embed=true"></div>
+                <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <details>
+                <summary>
+                    <div class="section-header">
+                        <div class="section-title">
+                            <h2>📧 Email Campaign</h2>
+                            <p><strong>Purpose:</strong> Three-email nurture series</p>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                </summary>
+                <div class="section-content">
+            
+            <div class="copy-block">
+                <h3>Email 1: The Announcement</h3>
+                
+                <h4>Subject Line <button class="mini-copy-btn" onclick="copySingle(this)">Copy Subject</button></h4>
+                <div class="copy-text">Introducing <span class="brand-placeholder">[Brand Name]</span>'s Circle on Grover 🗺️</div>
+                
+                <h4>Email Body <button class="mini-copy-btn" onclick="copySingle(this)">Copy Body</button></h4>
+                <div class="copy-text">Hey <span class="brand-placeholder">[Brand Name]</span> family,
+
+We built something for you.
+
+It's called <span class="brand-placeholder">[Brand Name]</span>'s Circle on Grover—your new home base for adventures, answers, and everything in between.
+
+Here's what's inside:
+• Your Trophy Map – Share your favorite spots with fellow owners (or keep them secret). Every pin tells a story.
+• Your AI Assistant – Get instant answers about your specific <span class="brand-placeholder">[Brand Name]</span> van. Heater acting up at 11 PM? We've got you. Need to know your off-grid capacity before a big trip? Just ask.
+• Your Community – Connect with owners who get it. The ones hitting the same trails, asking the same questions, and living the same dream.
+
+This isn't just another app. It's built specifically for your <span class="brand-placeholder">[Brand Name]</span> rig, trained on your manuals, and packed with the knowledge we've earned building these vans.
+
+Join <span class="brand-placeholder">[Brand Name]</span>'s Circle: [CTA Link]
+
+Let's get out there,
+[Brand Signature]</div>
+            </div>
+            
+            <div class="copy-block">
+                <h3>Email 2: The Deep Dive</h3>
+                <h4>Subject Line <button class="mini-copy-btn" onclick="copySingle(this)">Copy Subject</button></h4>
+                <div class="copy-text">Your van just got smarter</div>
+                <h4>Email Body <button class="mini-copy-btn" onclick="copySingle(this)">Copy Body</button></h4>
+                <div class="copy-text">Quick question: What do you do when something goes sideways on a Friday night in the middle of nowhere?
+
+You chat with your van.
+
+<span class="brand-placeholder">[Brand Name]</span>'s Circle on Grover gives you a direct line to answers—24/7, whether we're in the shop or not. Ask anything about your rig and get responses tailored to your specific build. It's like having us in your passenger seat.
+
+Real scenarios we've solved:
+• "How do I winterize my water system?" ✓
+• "What's error code E3 on my heater?" ✓
+• "How many days can I run my fridge off-grid?" ✓
+• "How do I adjust my suspension for heavy loads?" ✓
+
+And when you do need human support? Grover creates the ticket for you so we're already in the loop.
+
+But here's the best part: while you're getting answers, you're also building your Trophy Map. Drop pins at your favorite campsites, trailheads, and hidden gems. Share them with the Circle or keep them to yourself. Either way, you're creating a legacy of adventures.
+
+Join the Circle and ask your first question: [CTA Link]
+
+See you out there,
+[Brand Signature]</div>
+            </div>
+            
+             <div class="copy-block">
+                <h3>Email 3: The Community Call</h3>
+                <h4>Subject Line <button class="mini-copy-btn" onclick="copySingle(this)">Copy Subject</button></h4>
+                <div class="copy-text">The best spots are the ones you share</div>
+                <h4>Email Body <button class="mini-copy-btn" onclick="copySingle(this)">Copy Body</button></h4>
+                <div class="copy-text">You know that feeling when you nail a campsite? Perfect view, no crowds, just right?
+
+Now imagine having a whole map of those spots—vetted by people who drive the same rig as you.
+
+That's the Trophy Map inside <span class="brand-placeholder">[Brand Name]</span>'s Circle on Grover. Our owners are out there every weekend, finding the gems and sharing them with the community. Climbers, bikers, skiers, adventurers—they're all adding pins and building something incredible together.
+
+This is your network. Your spots. Your people.
+
+Plus, you've got your AI assistant ready whenever you need it. Quick question before you hit the road? Just ask. Something weird happening with your systems? We'll walk you through it.
+
+We built this for one reason: to help you spend more time adventuring and less time troubleshooting or searching for answers.
+
+Join <span class="brand-placeholder">[Brand Name]</span>'s Circle: [CTA Link]
+
+Adventure better,
+[Brand Signature]</div>
+            </div>
+            
+                </div>
+            </details>
+        </section>
+        
+        <section class="content-section">
+            <details>
+                <summary>
+                    <div class="section-header">
+                        <div class="section-title">
+                            <h2>📱 Instagram Feed Posts</h2>
+                            <p><strong>Purpose:</strong> Ready-to-post social media content</p>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                </summary>
+                <div class="section-content">
+            
+            <div class="copy-block">
+                <h3>Post 1: The Visual Hook</h3>
+                <div class="copy-text">Your new adventure companion is here. 📍
+
+Join <span class="brand-placeholder">[Brand Name]</span>'s Circle on Grover and unlock:
+✓ Your Trophy Map of favorite spots
+✓ AI assistant that knows YOUR van
+✓ A community of fellow adventurers
+
+Chat with your van. Share your spots. Reach joyful outcomes, faster.
+
+Link in bio to join the Circle.
+
+[#BrandHashtag #VanLife #GroverApp #AdventureAwaits]</div>
+                <div class="image-suggestion"><strong>Image suggestion:</strong> Screenshot of the Trophy Map with pins or a van in an epic location</div>
+                <button class="copy-btn" onclick="copyBlock(this)">Copy Post</button>
+            </div>
+            
+            <div class="copy-block">
+                <h3>Post 2: The Problem Solver</h3>
+                <div class="copy-text">Friday night. Middle of nowhere. Heater throws an error code.
+
+This is exactly when <span class="brand-placeholder">[Brand Name]</span>'s Circle on Grover comes through.
+
+Ask your AI assistant anything about your rig and get instant, specific answers—trained on your exact build and our shop knowledge. If you need us, it creates a support ticket automatically.
+
+No more waiting. No more guessing. Just answers.
+
+Join the Circle (link in bio) 🔧
+
+[#BrandHashtag #VanLife #GroverApp]</div>
+                <div class="image-suggestion"><strong>Image suggestion:</strong> Cozy van interior at night or someone using their phone with van in background</div>
+                <button class="copy-btn" onclick="copyBlock(this)">Copy Post</button>
+            </div>
+            
+                </div>
+            </details>
+        </section>
+        
+        <section class="content-section">
+            <details>
+                <summary>
+                    <div class="section-header">
+                        <div class="section-title">
+                            <h2>🌐 Website Copy</h2>
+                            <p><strong>Purpose:</strong> Full landing page content</p>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                </summary>
+                <div class="section-content">
+            
+            <div class="copy-block">
+                <h3>Hero Section</h3>
+                <h4>Headline</h4>
+                <div class="copy-text">Welcome to <span class="brand-placeholder">[Brand Name]</span>'s Circle</div>
+                <h4>Subheadline</h4>
+                <div class="copy-text">Your community. Your van expertise. Your adventure map. All in one place.</div>
+                <h4>Body Copy</h4>
+                <div class="copy-text">We built <span class="brand-placeholder">[Brand Name]</span>'s Circle on Grover to give you everything you need to adventure with confidence. Get instant answers about your specific van, discover vetted spots from fellow owners, and connect with a community that gets it.</div>
+                <button class="copy-btn" onclick="copyBlock(this)">Copy All Section Text</button>
+            </div>
+                </div>
+            </details>
+        </section>
+
+        <section class="content-section">
+            <h2>🎨 Brand Assets</h2>
+            <p>Download Grover logos and marketing assets.</p>
+            
+            <div class="assets-grid">
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="img/marketing/combo1-bnw.svg" alt="Combo 1 (BNW)">
+                    </div>
+                    <h4>Combo 1 (BNW)</h4>
+                    <p>SVG</p>
+                    <a href="img/marketing/combo1-bnw.svg" download class="asset-btn">Download</a>
+                </div>
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="img/marketing/combo1-color.svg" alt="Combo 1 (Color)">
+                    </div>
+                    <h4>Combo 1 (Color)</h4>
+                    <p>SVG</p>
+                    <a href="img/marketing/combo1-color.svg" download class="asset-btn">Download</a>
+                </div>
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="img/marketing/combo1-white.svg" alt="Combo 1 (White)">
+                    </div>
+                    <h4>Combo 1 (White)</h4>
+                    <p>SVG</p>
+                    <a href="img/marketing/combo1-white.svg" download class="asset-btn">Download</a>
+                </div>
+
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="img/marketing/combo2-bnw.svg" alt="Combo 2 (BNW)">
+                    </div>
+                    <h4>Combo 2 (BNW)</h4>
+                    <p>SVG</p>
+                    <a href="img/marketing/combo2-bnw.svg" download class="asset-btn">Download</a>
+                </div>
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="img/marketing/combo2-color.svg" alt="Combo 2 (Color)">
+                    </div>
+                    <h4>Combo 2 (Color)</h4>
+                    <p>SVG</p>
+                    <a href="img/marketing/combo2-color.svg" download class="asset-btn">Download</a>
+                </div>
+
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="img/marketing/grover-symbol2-color.svg" alt="Grover Symbol 2 (Color)">
+                    </div>
+                    <h4>Grover Symbol 2</h4>
+                    <p>SVG</p>
+                    <a href="img/marketing/grover-symbol2-color.svg" download class="asset-btn">Download</a>
+                </div>
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="img/marketing/plate.svg" alt="Plate Graphic">
+                    </div>
+                    <h4>Plate Graphic</h4>
+                    <p>SVG</p>
+                    <a href="img/marketing/plate.svg" download class="asset-btn">Download</a>
+                </div>
+
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="img/marketing/symbol1-bnw.svg" alt="Symbol 1 (BNW)">
+                    </div>
+                    <h4>Symbol 1 (BNW)</h4>
+                    <p>SVG</p>
+                    <a href="img/marketing/symbol1-bnw.svg" download class="asset-btn">Download</a>
+                </div>
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="img/marketing/symbol1-color.svg" alt="Symbol 1 (Color)">
+                    </div>
+                    <h4>Symbol 1 (Color)</h4>
+                    <p>SVG</p>
+                    <a href="img/marketing/symbol1-color.svg" download class="asset-btn">Download</a>
+                </div>
+                <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="img/marketing/symbol1-white.svg" alt="Symbol 1 (White)">
+                    </div>
+                    <h4>Symbol 1 (White)</h4>
+                    <p>SVG</p>
+                    <a href="img/marketing/symbol1-white.svg" download class="asset-btn">Download</a>
+                </div>
+
+                 <div class="asset-card">
+                    <div class="asset-preview">
+                        <img src="img/marketing/symbol2-bnw.svg" alt="Symbol 2 (BNW)">
+                    </div>
+                    <h4>Symbol 2 (BNW)</h4>
+                    <p>SVG</p>
+                    <a href="img/marketing/symbol2-bnw.svg" download class="asset-btn">Download</a>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>Grover Marketing Copy Kit</p>
+    </footer>
+    
+    <script>
+        // 1. LIVE BRAND REPLACEMENT
+        const brandInput = document.getElementById('brandInput');
+        const placeholders = document.querySelectorAll('.brand-placeholder');
+        
+        brandInput.addEventListener('input', function(e) {
+            const newVal = e.target.value.trim();
+            placeholders.forEach(span => {
+                if (newVal === "") {
+                    span.textContent = "[Brand Name]";
+                    span.style.backgroundColor = "rgba(248, 229, 193, 0.5)";
+                } else {
+                    span.textContent = newVal;
+                    span.style.backgroundColor = "transparent";
+                    span.style.fontWeight = "bold";
+                }
+            });
+        });
+
+        // 2. COPY FUNCTIONALITY
+        async function copyTextToClipboard(text, btnElement) {
+            try {
+                await navigator.clipboard.writeText(text);
+                showSuccess(btnElement);
+            } catch (err) {
+                // Fallback for older browsers or non-HTTPS local testing
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showSuccess(btnElement);
+                } catch (err) {
+                    console.error('Copy failed', err);
+                    btnElement.textContent = "Error Copying";
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+
+        function showSuccess(btn) {
+            const originalText = btn.textContent;
+            btn.textContent = 'Copied! ✓';
+            btn.classList.add('copied');
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.classList.remove('copied');
+            }, 2000);
+        }
+
+        function copySingle(btn) {
+            const textDiv = btn.parentElement.nextElementSibling;
+            if (textDiv && textDiv.classList.contains('copy-text')) {
+                copyTextToClipboard(textDiv.textContent, btn);
+            }
+        }
+
+        function copyBlock(btn) {
+            const block = btn.closest('.copy-block');
+            const texts = block.querySelectorAll('.copy-text');
+            let combinedText = "";
+            
+            texts.forEach(div => {
+                combinedText += div.textContent + "\n\n";
+            });
+            
+            copyTextToClipboard(combinedText.trim(), btn);
+        }
+
+        function copyLink(link, btn) {
+            copyTextToClipboard(link, btn);
+        }
+    </script>
+</body>
+</html>

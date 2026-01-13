@@ -25,21 +25,99 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     }
-    .video-wrapper {
-      position: relative;
+    
+    .video-card {
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    
+    .video-card img {
       width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+    
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      animation: fadeIn 0.3s;
+    }
+    
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-content {
+      position: relative;
+      width: 90%;
+      max-width: 500px;
+      background: white;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      animation: slideUp 0.3s;
     }
-    .video-wrapper iframe {
+    
+    .modal-video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 216.5%;
+      height: 0;
+    }
+    
+    .modal-video-wrapper iframe {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+    }
+    
+    .close-modal {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+      padding: 5px 15px;
+      transition: opacity 0.2s;
+    }
+    
+    .close-modal:hover {
+      opacity: 0.7;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from { 
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -48,7 +126,9 @@
   <!-- Header Hero -->
   <header class="bg-primary text-white py-16 md:py-24">
     <div class="container mx-auto px-4 md:px-10 max-w-4xl text-center">
-      <img src="img/grover-combomark-black.svg" alt="grover logo" class="h-[50px] md:h-[65px] mb-8 mx-auto" loading="lazy" width="200" height="65">
+      <a href="/" class="inline-block mb-8 hover:opacity-80 transition-opacity">
+        <img src="img/grover-combomark-black.svg" alt="grover logo" class="h-[50px] md:h-[65px] mx-auto" loading="lazy" width="200" height="65">
+      </a>
       <h1 class="text-3xl md:text-5xl font-bold font-heading leading-tight mb-4 lowercase">learn the ropes. hit the road.</h1>
       <p class="text-lg md:text-xl opacity-90">Quick tutorials to help you make the most of Grover and start sharing your adventure.</p>
     </div>
@@ -61,111 +141,121 @@
     </div>
   </section>
 
-  <!-- Video 1: Joining Your Circle -->
-  <section class="py-12 md:py-20 bg-white">
-    <div class="container mx-auto px-4 md:px-10 max-w-4xl">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl md:text-4xl font-bold font-heading mb-4 lowercase">joining your circle</h2>
-        <p class="text-base md:text-lg mb-6">In this video, I guide you through the process of joining your community on Grover, which is currently invite-only.</p>
-      </div>
-      
-      <div class="video-wrapper mb-8" style="padding-bottom: 216.2962962962963%; height: 0;">
-        <iframe src="https://www.loom.com/embed/d3b2a07273ab40a09bccb9f0cbc50d08" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
-      </div>
-
-      <div class="max-w-2xl mx-auto">
-        <ol class="list-decimal list-inside space-y-2 text-left mb-6">
-          <li class="text-base md:text-lg">Request an invite using the link from your Circle's owner (your van builder or the brand's manager)</li>
-          <li class="text-base md:text-lg">Download the app and sign up using your email address</li>
-          <li class="text-base md:text-lg">Fill out your profile and select your rig</li>
-        </ol>
-        <p class="text-base md:text-lg text-center font-medium">Now you're ready to access your Trophy Map and start chatting with your van! Don't let anything stand between you and your next adventure.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Video 2: Creating and Sharing Pins -->
+  <!-- Video Grid -->
   <section class="py-12 md:py-20 bg-yellow-accent">
-    <div class="container mx-auto px-4 md:px-10 max-w-4xl">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl md:text-4xl font-bold font-heading mb-4 lowercase">creating and sharing pins</h2>
-        <p class="text-base md:text-lg mb-6">In this video, I introduce the pin creation and sharing features on Grover. You can create a shared map that only your Circle can see. To add a pin, simply upload a photo, include important details, and choose whether to share it or keep it private.</p>
-      </div>
-      
-      <div class="video-wrapper mb-8" style="padding-bottom: 216.86746987951807%; height: 0;">
-        <iframe src="https://www.loom.com/embed/940843f923db414a9b9d9546d474226d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
-      </div>
+    <div class="container mx-auto px-4 md:px-10 max-w-5xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        
+        <!-- Video 1: Joining Your Circle -->
+        <div class="video-card bg-white rounded-lg shadow-lg overflow-hidden" onclick="openModal('video1')">
+          <img src="https://cdn.loom.com/sessions/thumbnails/d3b2a07273ab40a09bccb9f0cbc50d08-a6e623e7ff80bb9b-full-play.gif" alt="Joining Your Circle Tutorial" loading="lazy">
+          <div class="p-6">
+            <h3 class="text-xl md:text-2xl font-bold font-heading mb-2 lowercase">joining your circle</h3>
+            <p class="text-gray-700">Learn how to request an invite, download the app, and set up your profile to start connecting with your community.</p>
+          </div>
+        </div>
 
-      <div class="max-w-2xl mx-auto">
-        <p class="text-base md:text-lg text-center font-medium">I encourage you to start exploring and building your shared map today!</p>
+        <!-- Video 2: Creating and Sharing Pins -->
+        <div class="video-card bg-white rounded-lg shadow-lg overflow-hidden" onclick="openModal('video2')">
+          <img src="https://cdn.loom.com/sessions/thumbnails/940843f923db414a9b9d9546d474226d-b08dc8774389fcf5-full-play.gif" alt="Creating and Sharing Pins Tutorial" loading="lazy">
+          <div class="p-6">
+            <h3 class="text-xl md:text-2xl font-bold font-heading mb-2 lowercase">creating and sharing pins</h3>
+            <p class="text-gray-700">Discover how to add pins to your shared map, upload photos, and choose what to share with your Circle.</p>
+          </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- VIDEO 3 TEMPLATE - UNCOMMENT TO ADD -->
+        <!-- ============================================ -->
+        <!--
+        <div class="video-card bg-white rounded-lg shadow-lg overflow-hidden" onclick="openModal('video3')">
+          <img src="https://cdn.loom.com/sessions/thumbnails/YOUR_VIDEO_ID-YOUR_THUMB_ID-full-play.gif" alt="Video 3 Title" loading="lazy">
+          <div class="p-6">
+            <h3 class="text-xl md:text-2xl font-bold font-heading mb-2 lowercase">your video title</h3>
+            <p class="text-gray-700">Brief description of what this tutorial covers.</p>
+          </div>
+        </div>
+        -->
+
+        <!-- ============================================ -->
+        <!-- VIDEO 4 TEMPLATE - UNCOMMENT TO ADD -->
+        <!-- ============================================ -->
+        <!--
+        <div class="video-card bg-white rounded-lg shadow-lg overflow-hidden" onclick="openModal('video4')">
+          <img src="https://cdn.loom.com/sessions/thumbnails/YOUR_VIDEO_ID-YOUR_THUMB_ID-full-play.gif" alt="Video 4 Title" loading="lazy">
+          <div class="p-6">
+            <h3 class="text-xl md:text-2xl font-bold font-heading mb-2 lowercase">your video title</h3>
+            <p class="text-gray-700">Brief description of what this tutorial covers.</p>
+          </div>
+        </div>
+        -->
+
+        <!-- ============================================ -->
+        <!-- VIDEO 5 TEMPLATE - UNCOMMENT TO ADD -->
+        <!-- ============================================ -->
+        <!--
+        <div class="video-card bg-white rounded-lg shadow-lg overflow-hidden" onclick="openModal('video5')">
+          <img src="https://cdn.loom.com/sessions/thumbnails/YOUR_VIDEO_ID-YOUR_THUMB_ID-full-play.gif" alt="Video 5 Title" loading="lazy">
+          <div class="p-6">
+            <h3 class="text-xl md:text-2xl font-bold font-heading mb-2 lowercase">your video title</h3>
+            <p class="text-gray-700">Brief description of what this tutorial covers.</p>
+          </div>
+        </div>
+        -->
+
       </div>
     </div>
   </section>
 
+  <!-- Video Modals -->
+  <div id="video1-modal" class="modal" onclick="closeModal('video1')">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-video-wrapper">
+        <iframe id="video1-iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="video2-modal" class="modal" onclick="closeModal('video2')">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-video-wrapper">
+        <iframe id="video2-iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- ============================================ -->
-  <!-- VIDEO 3 TEMPLATE - UNCOMMENT TO ADD -->
+  <!-- MODAL TEMPLATES - ADD WHEN YOU ADD VIDEOS -->
   <!-- ============================================ -->
   <!--
-  <section class="py-12 md:py-20 bg-white">
-    <div class="container mx-auto px-4 md:px-10 max-w-4xl">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl md:text-4xl font-bold font-heading mb-4 lowercase">YOUR VIDEO TITLE HERE</h2>
-        <p class="text-base md:text-lg mb-6">Your video description goes here. Explain what viewers will learn.</p>
-      </div>
-      
-      <div class="video-wrapper mb-8" style="padding-bottom: YOUR_PADDING_PERCENTAGE%; height: 0;">
-        <iframe src="https://www.loom.com/embed/YOUR_VIDEO_ID" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
-      </div>
-
-      <div class="max-w-2xl mx-auto">
-        <p class="text-base md:text-lg text-center font-medium">Optional closing statement or call-to-action for this video.</p>
+  <div id="video3-modal" class="modal" onclick="closeModal('video3')">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-video-wrapper">
+        <iframe id="video3-iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
-  </section>
-  -->
+  </div>
 
-  <!-- ============================================ -->
-  <!-- VIDEO 4 TEMPLATE - UNCOMMENT TO ADD -->
-  <!-- ============================================ -->
-  <!--
-  <section class="py-12 md:py-20 bg-yellow-accent">
-    <div class="container mx-auto px-4 md:px-10 max-w-4xl">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl md:text-4xl font-bold font-heading mb-4 lowercase">YOUR VIDEO TITLE HERE</h2>
-        <p class="text-base md:text-lg mb-6">Your video description goes here. Explain what viewers will learn.</p>
-      </div>
-      
-      <div class="video-wrapper mb-8" style="padding-bottom: YOUR_PADDING_PERCENTAGE%; height: 0;">
-        <iframe src="https://www.loom.com/embed/YOUR_VIDEO_ID" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
-      </div>
-
-      <div class="max-w-2xl mx-auto">
-        <p class="text-base md:text-lg text-center font-medium">Optional closing statement or call-to-action for this video.</p>
+  <div id="video4-modal" class="modal" onclick="closeModal('video4')">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-video-wrapper">
+        <iframe id="video4-iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
-  </section>
-  -->
+  </div>
 
-  <!-- ============================================ -->
-  <!-- VIDEO 5 TEMPLATE - UNCOMMENT TO ADD -->
-  <!-- ============================================ -->
-  <!--
-  <section class="py-12 md:py-20 bg-white">
-    <div class="container mx-auto px-4 md:px-10 max-w-4xl">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl md:text-4xl font-bold font-heading mb-4 lowercase">YOUR VIDEO TITLE HERE</h2>
-        <p class="text-base md:text-lg mb-6">Your video description goes here. Explain what viewers will learn.</p>
-      </div>
-      
-      <div class="video-wrapper mb-8" style="padding-bottom: YOUR_PADDING_PERCENTAGE%; height: 0;">
-        <iframe src="https://www.loom.com/embed/YOUR_VIDEO_ID" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
-      </div>
-
-      <div class="max-w-2xl mx-auto">
-        <p class="text-base md:text-lg text-center font-medium">Optional closing statement or call-to-action for this video.</p>
+  <div id="video5-modal" class="modal" onclick="closeModal('video5')">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-video-wrapper">
+        <iframe id="video5-iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
-  </section>
+  </div>
   -->
 
   <!-- Ready to Roll CTA -->
@@ -222,8 +312,57 @@
     </a>
   </div>
 
-  <!-- Floating CTA Script -->
+  <!-- Modal & Floating CTA Script -->
   <script>
+    // Video URLs mapping
+    const videoUrls = {
+      'video1': 'https://www.loom.com/embed/d3b2a07273ab40a09bccb9f0cbc50d08',
+      'video2': 'https://www.loom.com/embed/940843f923db414a9b9d9546d474226d',
+      // Add more video IDs here when you add videos 3-5
+      // 'video3': 'https://www.loom.com/embed/YOUR_VIDEO_ID',
+      // 'video4': 'https://www.loom.com/embed/YOUR_VIDEO_ID',
+      // 'video5': 'https://www.loom.com/embed/YOUR_VIDEO_ID',
+    };
+
+    function openModal(videoId) {
+      const modal = document.getElementById(videoId + '-modal');
+      const iframe = document.getElementById(videoId + '-iframe');
+      
+      // Set the iframe src to start loading the video
+      iframe.src = videoUrls[videoId] + '?autoplay=1';
+      
+      // Show the modal
+      modal.classList.add('active');
+      
+      // Prevent body scroll
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(videoId) {
+      const modal = document.getElementById(videoId + '-modal');
+      const iframe = document.getElementById(videoId + '-iframe');
+      
+      // Stop the video by clearing the src
+      iframe.src = '';
+      
+      // Hide the modal
+      modal.classList.remove('active');
+      
+      // Restore body scroll
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        const activeModal = document.querySelector('.modal.active');
+        if (activeModal) {
+          const videoId = activeModal.id.replace('-modal', '');
+          closeModal(videoId);
+        }
+      }
+    });
+
     // Show floating CTA on scroll
     window.addEventListener('scroll', function() {
       const floatingCta = document.getElementById('floating-cta');

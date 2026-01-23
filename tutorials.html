@@ -27,20 +27,48 @@
     }
     
     .video-card {
-      cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
     }
     
     .video-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
     }
-    
-    .video-card img {
+
+    /* Maintain 9:16 aspect ratio for vertical shorts thumbnails */
+    .thumb-container {
+      position: relative;
       width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 8px;
+      aspect-ratio: 9 / 16;
+      background: #f3f4f6;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .thumb-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: scale 0.3s ease;
+    }
+
+    .thumb-container:hover img {
+      scale: 1.05;
+    }
+
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .thumb-container:hover .play-overlay {
+      opacity: 1;
     }
     
     /* Modal Styles */
@@ -52,7 +80,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: rgba(0, 0, 0, 0.95);
       animation: fadeIn 0.3s;
     }
     
@@ -64,9 +92,9 @@
     
     .modal-content {
       position: relative;
-      width: 90%;
-      max-width: 500px;
-      background: white;
+      width: 95%;
+      max-width: 400px; /* Thinner for vertical shorts */
+      background: black;
       border-radius: 12px;
       overflow: hidden;
       animation: slideUp 0.3s;
@@ -75,7 +103,7 @@
     .modal-video-wrapper {
       position: relative;
       width: 100%;
-      padding-bottom: 216.5%;
+      padding-bottom: 177.77%; /* 9:16 Aspect Ratio */
       height: 0;
     }
     
@@ -89,14 +117,14 @@
     
     .close-modal {
       position: absolute;
-      top: -40px;
-      right: 0;
+      top: 20px;
+      right: 20px;
       color: white;
-      font-size: 32px;
-      font-weight: bold;
+      font-size: 40px;
+      line-height: 1;
+      font-weight: 300;
       cursor: pointer;
-      z-index: 1001;
-      padding: 5px 15px;
+      z-index: 1010;
       transition: opacity 0.2s;
     }
     
@@ -127,146 +155,148 @@
   <header class="bg-primary text-white py-16 md:py-24">
     <div class="container mx-auto px-4 md:px-10 max-w-4xl text-center">
       <a href="/" class="inline-block mb-8 hover:opacity-80 transition-opacity">
-        <img src="img/grover-combomark-black.svg" alt="grover logo" class="h-[50px] md:h-[65px] mx-auto" loading="lazy" width="200" height="65">
+        <img src="https://grover.vanlife.com/img/grover-combomark-black.svg" alt="grover logo" class="h-[50px] md:h-[65px] mx-auto" loading="lazy" width="200" height="65">
       </a>
       <h1 class="text-3xl md:text-5xl font-bold font-heading leading-tight mb-4 lowercase">learn the ropes. hit the road.</h1>
-      <p class="text-lg md:text-xl opacity-90">Quick tutorials to help you make the most of Grover and start sharing your adventure.</p>
+      <p class="text-lg md:text-xl opacity-90 mb-10">Quick tutorials to help you make the most of Grover and start sharing your adventure.</p>
+      
+      <!-- Playlist Button -->
+      <a href="https://www.youtube.com/playlist?list=PLtl2h-n8LEvdo7ebkwKKjMpRn9PB2V_r3" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-yellow-accent transition-all shadow-lg transform hover:-translate-y-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+        </svg>
+        access playlist
+      </a>
     </div>
   </header>
 
   <!-- Introduction -->
-  <section class="py-12 md:py-16 bg-white">
+  <section class="py-12 md:py-16 bg-white border-b border-gray-100">
     <div class="container mx-auto px-4 md:px-10 max-w-3xl text-center">
-      <p class="text-lg md:text-xl leading-relaxed">Whether you're brand new to Grover or looking to unlock more features, these tutorials will get you started. Watch, learn, and get back to what matters—your next adventure.</p>
+      <p class="text-lg md:text-xl leading-relaxed text-gray-600">Whether you're brand new to Grover or looking to unlock more features, these tutorials will get you started. Watch, learn, and get back to what matters—your next adventure.</p>
     </div>
   </section>
 
-  <!-- Video Grid -->
-  <section class="py-12 md:py-20 bg-yellow-accent">
-    <div class="container mx-auto px-4 md:px-10 max-w-5xl">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-        
-        <!-- Video 1: Joining Your Circle -->
-        <div class="video-card bg-white rounded-lg shadow-lg overflow-hidden" onclick="openModal('video1')">
-          <img src="https://cdn.loom.com/sessions/thumbnails/d3b2a07273ab40a09bccb9f0cbc50d08-a6e623e7ff80bb9b-full-play.gif" alt="Joining Your Circle Tutorial" loading="lazy">
-          <div class="p-6">
-            <h3 class="text-xl md:text-2xl font-bold font-heading mb-2 lowercase">joining your circle</h3>
-            <p class="text-gray-700">Learn how to request an invite, download the app, and set up your profile to start connecting with your community.</p>
+  <!-- Video Grid (Alternating Rows) -->
+  <section class="py-12 md:py-20 bg-yellow-accent/30">
+    <div class="container mx-auto px-4 md:px-10 max-w-5xl space-y-16 md:space-y-24">
+      
+      <!-- Video 1: Welcome to Grover -->
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+        <div class="w-full md:w-1/2 order-2 md:order-1">
+          <h3 class="text-2xl md:text-4xl font-bold font-heading mb-4 lowercase text-primary">welcome to grover!</h3>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">This video will walk you through the steps to get your account set up so you can start exploring your trophy map and chatting with your rig. With Grover, you can adventure with confidence knowing that you have the answers to your questions and the support of your community.</p>
+          <button onclick="openModal('video1')" class="font-bold text-primary hover:text-sky-600 flex items-center gap-2 group">
+            <span class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+            </span>
+            Watch Tutorial
+          </button>
+        </div>
+        <div class="w-full max-w-[280px] md:w-1/2 order-1 md:order-2">
+          <div class="video-card bg-white rounded-2xl shadow-xl overflow-hidden p-2">
+            <div class="thumb-container rounded-xl" onclick="openModal('video1')">
+              <img src="https://img.youtube.com/vi/hyLjTTH_iu0/maxresdefault.jpg" alt="Welcome to Grover">
+              <div class="play-overlay">
+                <div class="bg-white/90 p-4 rounded-full shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- Video 2: Creating and Sharing Pins -->
-        <div class="video-card bg-white rounded-lg shadow-lg overflow-hidden" onclick="openModal('video2')">
-          <img src="https://cdn.loom.com/sessions/thumbnails/940843f923db414a9b9d9546d474226d-b08dc8774389fcf5-full-play.gif" alt="Creating and Sharing Pins Tutorial" loading="lazy">
-          <div class="p-6">
-            <h3 class="text-xl md:text-2xl font-bold font-heading mb-2 lowercase">creating and sharing pins</h3>
-            <p class="text-gray-700">Discover how to add pins to your shared map, upload photos, and choose what to share with your Circle.</p>
-          </div>
-        </div>
-
-        <!-- ============================================ -->
-        <!-- VIDEO 3 TEMPLATE - UNCOMMENT TO ADD -->
-        <!-- ============================================ -->
-        <!--
-        <div class="video-card bg-white rounded-lg shadow-lg overflow-hidden" onclick="openModal('video3')">
-          <img src="https://cdn.loom.com/sessions/thumbnails/YOUR_VIDEO_ID-YOUR_THUMB_ID-full-play.gif" alt="Video 3 Title" loading="lazy">
-          <div class="p-6">
-            <h3 class="text-xl md:text-2xl font-bold font-heading mb-2 lowercase">your video title</h3>
-            <p class="text-gray-700">Brief description of what this tutorial covers.</p>
-          </div>
-        </div>
-        -->
-
-        <!-- ============================================ -->
-        <!-- VIDEO 4 TEMPLATE - UNCOMMENT TO ADD -->
-        <!-- ============================================ -->
-        <!--
-        <div class="video-card bg-white rounded-lg shadow-lg overflow-hidden" onclick="openModal('video4')">
-          <img src="https://cdn.loom.com/sessions/thumbnails/YOUR_VIDEO_ID-YOUR_THUMB_ID-full-play.gif" alt="Video 4 Title" loading="lazy">
-          <div class="p-6">
-            <h3 class="text-xl md:text-2xl font-bold font-heading mb-2 lowercase">your video title</h3>
-            <p class="text-gray-700">Brief description of what this tutorial covers.</p>
-          </div>
-        </div>
-        -->
-
-        <!-- ============================================ -->
-        <!-- VIDEO 5 TEMPLATE - UNCOMMENT TO ADD -->
-        <!-- ============================================ -->
-        <!--
-        <div class="video-card bg-white rounded-lg shadow-lg overflow-hidden" onclick="openModal('video5')">
-          <img src="https://cdn.loom.com/sessions/thumbnails/YOUR_VIDEO_ID-YOUR_THUMB_ID-full-play.gif" alt="Video 5 Title" loading="lazy">
-          <div class="p-6">
-            <h3 class="text-xl md:text-2xl font-bold font-heading mb-2 lowercase">your video title</h3>
-            <p class="text-gray-700">Brief description of what this tutorial covers.</p>
-          </div>
-        </div>
-        -->
-
       </div>
+
+      <!-- Video 2: Documenting Adventures -->
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+        <div class="w-full max-w-[280px] md:w-1/2 order-1">
+          <div class="video-card bg-white rounded-2xl shadow-xl overflow-hidden p-2">
+            <div class="thumb-container rounded-xl" onclick="openModal('video2')">
+              <img src="https://img.youtube.com/vi/h94W4K6PuwA/maxresdefault.jpg" alt="Documenting Adventures">
+              <div class="play-overlay">
+                <div class="bg-white/90 p-4 rounded-full shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 order-2">
+          <h3 class="text-2xl md:text-4xl font-bold font-heading mb-4 lowercase text-primary">documenting your journey</h3>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">It's never been easier to document your adventures and share them with just the right people. Take a photo of your rig in an amazing place, upload it, and share that spot with your Circle on Grover.</p>
+          <button onclick="openModal('video2')" class="font-bold text-primary hover:text-sky-600 flex items-center gap-2 group">
+            <span class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+            </span>
+            Watch Tutorial
+          </button>
+        </div>
+      </div>
+
+      <!-- Video 3: Chat with your Rig -->
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+        <div class="w-full md:w-1/2 order-2 md:order-1">
+          <h3 class="text-2xl md:text-4xl font-bold font-heading mb-4 lowercase text-primary">chat with your rig</h3>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">Ever wanted to chat with your rig? With Grover, you can ask questions about maintenance, support, and troubleshooting for your RV or van with Grover. We work with your van builder to create an AI assistant that knows your van inside and out, with manuals and expert knowledge powering it.</p>
+          <button onclick="openModal('video3')" class="font-bold text-primary hover:text-sky-600 flex items-center gap-2 group">
+            <span class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+            </span>
+            Watch Tutorial
+          </button>
+        </div>
+        <div class="w-full max-w-[280px] md:w-1/2 order-1 md:order-2">
+          <div class="video-card bg-white rounded-2xl shadow-xl overflow-hidden p-2">
+            <div class="thumb-container rounded-xl" onclick="openModal('video3')">
+              <img src="https://img.youtube.com/vi/zKcpjB2XR1k/maxresdefault.jpg" alt="Chat with your Rig">
+              <div class="play-overlay">
+                <div class="bg-white/90 p-4 rounded-full shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 4: Trip Planning -->
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+        <div class="w-full max-w-[280px] md:w-1/2 order-1">
+          <div class="video-card bg-white rounded-2xl shadow-xl overflow-hidden p-2">
+            <div class="thumb-container rounded-xl" onclick="openModal('video4')">
+              <img src="https://img.youtube.com/vi/DRWZYS4rfIo/maxresdefault.jpg" alt="Trip Planning">
+              <div class="play-overlay">
+                <div class="bg-white/90 p-4 rounded-full shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 order-2">
+          <h3 class="text-2xl md:text-4xl font-bold font-heading mb-4 lowercase text-primary">smarter trip planning</h3>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">A quick overview of the trip planning tools on Grover. With simple chat, plan your next adventure in seconds. Grover leverages extremely sophisticated tools to make it easy to find new places, explore the places from your Circle, and get all the details you need to adventure with confidence.</p>
+          <button onclick="openModal('video4')" class="font-bold text-primary hover:text-sky-600 flex items-center gap-2 group">
+            <span class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+            </span>
+            Watch Tutorial
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Video Modals -->
-  <div id="video1-modal" class="modal" onclick="closeModal('video1')">
+  <!-- Single Modal Container (Reuse for all videos) -->
+  <div id="video-modal" class="modal" onclick="closeVideoModal()">
     <span class="close-modal">&times;</span>
     <div class="modal-content" onclick="event.stopPropagation()">
       <div class="modal-video-wrapper">
-        <iframe id="video1-iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe id="modal-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
-
-  <div id="video2-modal" class="modal" onclick="closeModal('video2')">
-    <span class="close-modal">&times;</span>
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <div class="modal-video-wrapper">
-        <iframe id="video2-iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============================================ -->
-  <!-- MODAL TEMPLATES - ADD WHEN YOU ADD VIDEOS -->
-  <!-- ============================================ -->
-  <!--
-  <div id="video3-modal" class="modal" onclick="closeModal('video3')">
-    <span class="close-modal">&times;</span>
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <div class="modal-video-wrapper">
-        <iframe id="video3-iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-
-  <div id="video4-modal" class="modal" onclick="closeModal('video4')">
-    <span class="close-modal">&times;</span>
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <div class="modal-video-wrapper">
-        <iframe id="video4-iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-
-  <div id="video5-modal" class="modal" onclick="closeModal('video5')">
-    <span class="close-modal">&times;</span>
-    <div class="modal-content" onclick="event.stopPropagation()">
-      <div class="modal-video-wrapper">
-        <iframe id="video5-iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-  -->
-
-  <!-- Ready to Roll CTA -->
-  <section class="py-16 md:py-24 bg-primary text-white">
-    <div class="container mx-auto px-4 md:px-10 max-w-3xl text-center">
-      <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 lowercase">ready to roll?</h2>
-      <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="inline-block bg-white text-primary font-bold py-4 px-8 md:py-5 md:px-12 rounded-md hover:bg-yellow-accent transition-colors text-lg md:text-xl shadow-lg">
-        get grover
-      </a>
-    </div>
-  </section>
 
   <!-- Signup Section -->
   <section id="signup" class="md:mb-32">
@@ -283,8 +313,8 @@
         </div>
       </div>
       <div class="text-center">
-        <img src="img/grover-combomark-black.svg" alt="grover logo" class="h-[50px] md:h-[65px] mb-8 mx-auto" loading="lazy" width="200" height="65">
-        <h2 class="text-2xl md:text-3xl font-bold font-heading leading-[1.2] mb-4">From one adventurer to another, the journey is better together.</h2>
+        <img src="https://grover.vanlife.com/img/grover-combomark-black.svg" alt="grover logo" class="h-[50px] md:h-[65px] mb-8 mx-auto" loading="lazy" width="200" height="65">
+        <h2 class="text-2xl md:text-3xl font-bold font-heading leading-[1.2] mb-4 lowercase">better together.</h2>
         <p>Fill this out to see your brand on grover.</p>
       </div>
       <script src="https://js.hsforms.net/forms/embed/48485789.js" defer></script>
@@ -300,7 +330,7 @@
   <!-- Footer -->
   <footer class="py-16 text-center text-white bg-primary">
     <div class="flex flex-col items-center">
-      <img src="img/grover-combomark-white.svg" alt="grover logo" class="h-8 mb-4 mx-auto" loading="lazy" width="200" height="32">
+      <img src="https://grover.vanlife.com/img/grover-combomark-white.svg" alt="grover logo" class="h-8 mb-4 mx-auto" loading="lazy" width="200" height="32">
       <p class="text-sm">&copy; 2025 grover. All rights reserved.</p>
     </div>
   </footer>
@@ -312,64 +342,50 @@
     </a>
   </div>
 
-  <!-- Modal & Floating CTA Script -->
+  <!-- Script for Modal Logic -->
   <script>
-    // Video URLs mapping
-    const videoUrls = {
-      'video1': 'https://www.loom.com/embed/d3b2a07273ab40a09bccb9f0cbc50d08',
-      'video2': 'https://www.loom.com/embed/940843f923db414a9b9d9546d474226d',
-      // Add more video IDs here when you add videos 3-5
-      // 'video3': 'https://www.loom.com/embed/YOUR_VIDEO_ID',
-      // 'video4': 'https://www.loom.com/embed/YOUR_VIDEO_ID',
-      // 'video5': 'https://www.loom.com/embed/YOUR_VIDEO_ID',
+    const videoIds = {
+      'video1': 'hyLjTTH_iu0',
+      'video2': 'h94W4K6PuwA',
+      'video3': 'zKcpjB2XR1k',
+      'video4': 'DRWZYS4rfIo'
     };
 
-    function openModal(videoId) {
-      const modal = document.getElementById(videoId + '-modal');
-      const iframe = document.getElementById(videoId + '-iframe');
+    function openModal(id) {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('modal-iframe');
+      const videoId = videoIds[id];
       
-      // Set the iframe src to start loading the video
-      iframe.src = videoUrls[videoId] + '?autoplay=1';
+      // YouTube embed with autoplay
+      // Note: Browsers usually require mute for autoplay, but for a user-initiated click, 
+      // we attempt standard autoplay.
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
       
-      // Show the modal
       modal.classList.add('active');
-      
-      // Prevent body scroll
       document.body.style.overflow = 'hidden';
     }
 
-    function closeModal(videoId) {
-      const modal = document.getElementById(videoId + '-modal');
-      const iframe = document.getElementById(videoId + '-iframe');
+    function closeVideoModal() {
+      const modal = document.getElementById('video-modal');
+      const iframe = document.getElementById('modal-iframe');
       
-      // Stop the video by clearing the src
-      iframe.src = '';
-      
-      // Hide the modal
+      iframe.src = ''; // Stop video
       modal.classList.remove('active');
-      
-      // Restore body scroll
       document.body.style.overflow = 'auto';
     }
 
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        const activeModal = document.querySelector('.modal.active');
-        if (activeModal) {
-          const videoId = activeModal.id.replace('-modal', '');
-          closeModal(videoId);
-        }
-      }
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeVideoModal();
     });
 
-    // Show floating CTA on scroll
-    window.addEventListener('scroll', function() {
-      const floatingCta = document.getElementById('floating-cta');
+    // Floating CTA on Scroll
+    window.addEventListener('scroll', () => {
+      const cta = document.getElementById('floating-cta');
       if (window.scrollY > 500) {
-        floatingCta.style.transform = 'translateY(0)';
+        cta.style.transform = 'translateY(0)';
       } else {
-        floatingCta.style.transform = 'translateY(200%)';
+        cta.style.transform = 'translateY(200%)';
       }
     });
   </script>

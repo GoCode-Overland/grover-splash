@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account or Data — Grover by GoCode LLC</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      padding: 32px 16px 64px;
+      line-height: 1.55;
+    }
+
+    .card {
+      max-width: 560px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 36px 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .sub {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .intro {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 24px;
+    }
+
+    .steps {
+      background: #f9f9f9;
+      border-left: 3px solid #4a90e2;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      margin-bottom: 28px;
+      font-size: 14px;
+    }
+
+    .steps strong { display: block; margin-bottom: 6px; }
+
+    .steps ol { padding-left: 18px; }
+    .steps li { margin-bottom: 4px; }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    input[type="email"]:focus,
+    textarea:focus { border-color: #4a90e2; }
+
+    textarea { resize: vertical; min-height: 80px; }
+
+    .field { margin-bottom: 22px; }
+
+    .field-hint {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .request-type { margin-bottom: 22px; }
+
+    .radio-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 8px;
+      transition: border-color 0.15s;
+    }
+
+    .radio-option:hover { border-color: #4a90e2; }
+
+    .radio-option input[type="radio"] {
+      margin-top: 2px;
+      flex-shrink: 0;
+      accent-color: #4a90e2;
+    }
+
+    .radio-option .opt-label { font-size: 14px; font-weight: 600; }
+    .radio-option .opt-desc { font-size: 13px; color: #555; margin-top: 2px; }
+
+    .checkboxes { margin-bottom: 22px; }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      padding: 6px 0;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: #4a90e2;
+      flex-shrink: 0;
+    }
+
+    .retention-note {
+      font-size: 13px;
+      background: #fffbea;
+      border: 1px solid #f0d060;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 24px;
+      color: #555;
+    }
+
+    .confirm-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      margin-bottom: 24px;
+      background: #fff4f4;
+      border: 1px solid #f7c5c5;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+
+    .confirm-row input[type="checkbox"] {
+      margin-top: 2px;
+      width: 16px;
+      height: 16px;
+      accent-color: #d9534f;
+      flex-shrink: 0;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 13px;
+      background: #d9534f;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    button[type="submit"]:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    button[type="submit"]:not(:disabled):hover { background: #c0413d; }
+
+hr { border: none; border-top: 1px solid #eee; margin: 28px 0; }
+
+    .footer { font-size: 12px; color: #999; text-align: center; margin-top: 24px; }
+  </style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">Grover</div>
+  <div class="sub">Published by GoCode LLC</div>
+
+  <h1>Delete Account or Data</h1>
+  <p class="intro">
+    Use this form to request deletion of your Grover account and/or personal data.
+    Requests are reviewed within <strong>30 days</strong>. You will receive a
+    confirmation email once your request is processed.
+  </p>
+
+  <div class="steps">
+    <strong>How to submit a deletion request:</strong>
+    <ol>
+      <li>Enter the email address linked to your Grover account.</li>
+      <li>Choose whether to delete your full account or specific data only.</li>
+      <li>Select the data types you want deleted.</li>
+      <li>Check the confirmation box and submit.</li>
+    </ol>
+  </div>
+
+  <form id="deleteForm" novalidate>
+
+    <div class="field">
+      <label for="email">Email address on your Grover account *</label>
+      <input type="email" id="email" name="email" required placeholder="you@example.com" />
+    </div>
+
+    <div class="request-type">
+      <label>What would you like to delete? *</label>
+
+      <label class="radio-option">
+        <input type="radio" name="requestType" value="full_account" required />
+        <div>
+          <div class="opt-label">Delete my account and all associated data</div>
+          <div class="opt-desc">Your Grover account will be permanently closed. All data listed below will be deleted.</div>
+        </div>
+      </label>
+
+      <label class="radio-option">
+        <input type="radio" name="requestType" value="data_only" />
+        <div>
+          <div class="opt-label">Delete specific data only (keep my account)</div>
+          <div class="opt-desc">Your account remains active. Only the selected data types below will be deleted.</div>
+        </div>
+      </label>
+    </div>
+
+    <div class="checkboxes">
+      <label>Data types to delete *</label>
+
+      <label class="checkbox-item">
+        <input type="checkbox" name="data" value="chat_messages" />
+        Past chat messages and conversation history
+      </label>
+      <label class="checkbox-item">
+        <input type="checkbox" name="data" value="pins" />
+        Saved pins and favorite locations
+      </label>
+      <label class="checkbox-item">
+        <input type="checkbox" name="data" value="usage_info" />
+        Usage information and app activity logs
+      </label>
+      <label class="checkbox-item">
+        <input type="checkbox" name="data" value="profile" />
+        Profile information (name, preferences, settings)
+      </label>
+      <label class="checkbox-item">
+        <input type="checkbox" name="data" value="all" />
+        All data (select all of the above)
+      </label>
+    </div>
+
+    <div class="retention-note">
+      <strong>What is deleted and what is kept:</strong><br />
+      Upon a verified request, GoCode LLC will delete the selected data types from active
+      systems within <strong>30 days</strong>. Anonymized aggregate analytics that cannot
+      be linked back to you may be retained. Backup copies are purged within
+      <strong>90 days</strong>. If required by law (e.g. tax records), certain transactional
+      records may be retained for up to <strong>7 years</strong>.
+    </div>
+
+    <div class="field">
+      <label for="notes">Additional notes (optional)</label>
+      <textarea id="notes" name="notes" placeholder="Anything else we should know…"></textarea>
+    </div>
+
+    <hr />
+
+    <div class="confirm-row">
+      <input type="checkbox" id="confirm" name="confirm" />
+      <label for="confirm" style="font-weight:normal;">
+        I understand this action is <strong>irreversible</strong>. Deleted data cannot be
+        recovered, and a deleted account cannot be restored.
+      </label>
+    </div>
+
+    <button type="submit" id="submitBtn" disabled>Submit Deletion Request</button>
+
+  </form>
+
+  <div class="footer">
+    Grover &mdash; GoCode LLC &middot;
+    <a href="mailto:accounts@getgrover.ai">accounts@getgrover.ai</a>
+  </div>
+</div>
+
+<script>
+  const confirmBox = document.getElementById("confirm");
+  const submitBtn = document.getElementById("submitBtn");
+  const form = document.getElementById("deleteForm");
+
+  confirmBox.addEventListener("change", () => {
+    submitBtn.disabled = !confirmBox.checked;
+  });
+
+  const allBox = document.querySelector('input[value="all"]');
+  const dataBoxes = document.querySelectorAll('input[name="data"]:not([value="all"])');
+  allBox.addEventListener("change", () => {
+    dataBoxes.forEach(cb => cb.checked = allBox.checked);
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const requestType = form.querySelector('input[name="requestType"]:checked')?.value;
+    const selectedData = [...form.querySelectorAll('input[name="data"]:checked')]
+      .map(cb => cb.parentElement.textContent.trim())
+      .join("\n- ");
+    const notes = document.getElementById("notes").value.trim();
+
+    if (!email || !requestType || !selectedData) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    const requestLabel = requestType === "full_account"
+      ? "Delete account and all data"
+      : "Delete specific data only (keep account)";
+
+    const body = `Grover Deletion Request\n\nEmail: ${email}\nRequest type: ${requestLabel}\n\nData to delete:\n- ${selectedData}${notes ? `\n\nAdditional notes:\n${notes}` : ""}`;
+
+    window.location.href = `mailto:accounts@getgrover.ai?subject=${encodeURIComponent("Deletion Request — " + email)}&body=${encodeURIComponent(body)}`;
+  });
+</script>
+</body>
+</html>

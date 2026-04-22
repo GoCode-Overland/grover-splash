@@ -20,8 +20,11 @@
       custom_map: {'custom_parameter': 'page_location'}
     });
     
-    // Load GA after page is interactive
+    // Load GA after page is interactive — guarded to fire at most once
+    let gaLoaded = false;
     function loadGA() {
+      if (gaLoaded) return;
+      gaLoaded = true;
       const script = document.createElement('script');
       script.async = true;
       script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LN0EK30SS7';

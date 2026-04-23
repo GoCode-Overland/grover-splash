@@ -1,6 +1,5 @@
-const CACHE_NAME = 'grover-v3';
+const CACHE_NAME = 'grover-v4';
 const STATIC_ASSETS = [
-  '/',
   '/main.css',
   '/main.js',
   '/fonts/PlantinInfantBold/font.woff2',

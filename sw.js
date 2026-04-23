@@ -1,4 +1,4 @@
-const CACHE_NAME = 'grover-v2';
+const CACHE_NAME = 'grover-v3';
 const STATIC_ASSETS = [
   '/',
   '/main.css',

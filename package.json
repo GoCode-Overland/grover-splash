@@ -1,0 +1,10 @@
+{
+  "name": "grover-splash",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "stamp-blog": "node scripts/stamp-blog.js"
+  }
+}

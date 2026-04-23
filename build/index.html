@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Build Your Adventure Van — Grover</title>
-    <!-- Link to your existing CSS file -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN0EK30SS7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LN0EK30SS7');
+    </script>
+    <link rel="canonical" href="https://getgrover.ai/build/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://getgrover.ai/build/">
+    <meta property="og:title" content="Build Your Adventure Van — Grover">
+    <meta property="og:description" content="Chat with Grova and build a custom vanlife assistant tailored to your rig. Get personalized troubleshooting and travel support.">
+    <meta property="og:image" content="https://getgrover.ai/img/og.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Build Your Adventure Van — Grover">
+    <meta property="twitter:description" content="Chat with Grova and build a custom vanlife assistant tailored to your rig.">
+    <meta property="twitter:image" content="https://getgrover.ai/img/og.png">
+    <!-- General SEO -->
+    <meta name="description" content="Chat with Grova and build a custom vanlife assistant tailored to your rig. Get personalized troubleshooting and travel support.">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
     <link rel="stylesheet" href="../main.css">
-    <!-- If your CSS file has a different name, update the href above -->
     
     <style>
         /* Minimal additional styling using your color scheme */
@@ -81,8 +103,15 @@
 	
 </head>
 <body>
-    <!-- Copy your existing header/nav structure here -->
-    
+    <header class="bg-primary py-6">
+        <div class="container mx-auto px-4 max-w-6xl flex items-center justify-between">
+            <a href="/">
+                <img src="../img/grover-combomark-white.svg" alt="grover logo" class="h-10" width="200" height="40">
+            </a>
+            <a href="/" class="text-white hover:underline font-heading text-base">← Back to Home</a>
+        </div>
+    </header>
+
     <div class="build-container">
         <h1 class="build-title">Build Your Adventure Van</h1>
         
@@ -95,12 +124,14 @@
             Start Building Now
         </button>
         
-        <div>
-            <a href="../" class="back-link">← Back to Home</a>
-        </div>
     </div>
 
-    <!-- Copy your existing footer here -->
+    <footer class="py-16 text-center text-white bg-primary">
+        <div class="flex flex-col items-center">
+            <img src="../img/grover-combomark-white.svg" alt="grover logo" class="h-8 mb-4 mx-auto" loading="lazy" width="200" height="32">
+            <p class="text-sm">&copy; 2026 grover. All rights reserved.</p>
+        </div>
+    </footer>
     
     <script>
 function waitForChatWidget(callback) {

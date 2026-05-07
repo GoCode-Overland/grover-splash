@@ -364,22 +364,53 @@
         /* Physical Materials Viewer */
         .materials-viewer { user-select: none; }
 
+        .materials-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
         .materials-stage {
-            background: linear-gradient(145deg, #e4ecf0 0%, #d6e2ea 100%);
-            border-radius: 12px;
-            padding: 2.5rem 2rem 2rem;
+            background: linear-gradient(145deg, #e4ecf0 0%, #d0dce6 100%);
+            padding: 3rem 4rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 340px;
+            min-height: 540px;
+            position: relative;
         }
 
-        .material-item { display: none; flex-direction: column; align-items: center; gap: 1rem; }
+        .stage-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: 2px solid rgba(255,255,255,0.9);
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            color: var(--text);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.14);
+            z-index: 5;
+        }
+        .stage-arrow:hover { border-color: var(--primary); color: var(--primary); box-shadow: 0 4px 14px rgba(0,0,0,0.18); }
+        .stage-arrow.prev { left: 1rem; }
+        .stage-arrow.next { right: 1rem; }
+
+        .material-item { display: none; flex-direction: column; align-items: center; gap: 1.25rem; }
         .material-item.active { display: flex; }
 
         .paper-mat {
             position: relative;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.20), 0 2px 6px rgba(0,0,0,0.10);
+            box-shadow: 0 16px 56px rgba(0,0,0,0.24), 0 4px 14px rgba(0,0,0,0.12);
             border-radius: 2px;
             overflow: hidden;
             background: white;
@@ -402,72 +433,89 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 0.4rem;
+            gap: 0.5rem;
             background: linear-gradient(135deg, #eef2f5 0%, #dde6ed 100%);
             color: var(--text-secondary);
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
         }
-
-        .paper-placeholder .ph-icon { font-size: 1.5rem; }
+        .paper-placeholder .ph-icon { font-size: 2.5rem; }
         .paper-placeholder .ph-filename {
             font-family: 'SF Mono', 'Monaco', monospace;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             background: rgba(255,255,255,0.65);
-            padding: 2px 6px;
+            padding: 3px 8px;
             border-radius: 4px;
             word-break: break-all;
         }
         .paper-placeholder small { opacity: 0.7; font-size: 0.7rem; }
 
-        .poster-mat      { width: 195px; height: 260px; }
-        .one-sheet-mat   { width: 201px; height: 260px; }
-        .postcard-portrait-mat  { width: 156px; height: 260px; }
-        .postcard-landscape-mat { width: 280px; height: 168px; }
+        .poster-mat             { width: 330px; height: 440px; }
+        .one-sheet-mat          { width: 340px; height: 440px; }
+        .postcard-portrait-mat  { width: 264px; height: 440px; }
+        .postcard-landscape-mat { width: 440px; height: 264px; }
 
         .flip-btn {
             background: white;
             border: 2px solid var(--primary);
             color: var(--primary);
-            padding: 0.4rem 1.1rem;
+            padding: 0.5rem 1.25rem;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
         }
         .flip-btn:hover { background: var(--primary); color: white; }
 
-        .materials-controls {
-            margin-top: 1.25rem;
+        .materials-info-panel {
+            background: white;
+            border-left: 1px solid var(--border);
+            padding: 2.5rem 2rem;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .materials-nav { display: flex; align-items: center; gap: 0.75rem; }
-
-        .materials-nav-btn {
-            background: white;
-            border: 2px solid var(--border);
-            width: 38px; height: 38px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.4rem;
-            line-height: 1;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            transition: all 0.2s;
-            color: var(--text);
+            gap: 1.25rem;
         }
-        .materials-nav-btn:hover { border-color: var(--primary); color: var(--primary); }
 
-        .mat-dots { display: flex; gap: 0.5rem; align-items: center; }
+.material-info { display: none; }
+        .material-info.active { display: block; }
+
+        .mat-info-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 12px;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .material-info h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+            line-height: 1.25;
+        }
+
+        .material-info p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.65; margin: 0; }
+
+        .mat-dots {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
         .mat-dot {
-            width: 8px; height: 8px;
+            width: 9px; height: 9px;
             border-radius: 50%;
             background: var(--border);
             cursor: pointer;
@@ -475,39 +523,26 @@
         }
         .mat-dot.active { background: var(--primary); transform: scale(1.3); }
 
-        .material-info {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1rem 1.25rem;
-            max-width: 480px;
-            width: 100%;
-            text-align: center;
-        }
-        .mat-info-badge {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 3px 10px;
-            border-radius: 12px;
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-        .material-info p { color: var(--text-secondary); font-size: 0.9rem; margin: 0; }
-
         /* Responsive */
+        @media (max-width: 960px) {
+            .materials-layout { grid-template-columns: 1fr; }
+            .materials-info-panel { border-left: none; border-top: 1px solid var(--border); padding: 1.75rem; }
+            .materials-stage { min-height: 400px; padding: 2rem 3.5rem; }
+            .poster-mat             { width: 240px; height: 320px; }
+            .one-sheet-mat          { width: 247px; height: 320px; }
+            .postcard-portrait-mat  { width: 192px; height: 320px; }
+            .postcard-landscape-mat { width: 320px; height: 192px; }
+        }
+
         @media (max-width: 768px) {
             .container { padding: 1.5rem 1rem 3rem; }
             .links-grid { grid-template-columns: 1fr; }
             .content-section, .links-section, .quick-start { padding: 1.5rem; }
-            .poster-mat      { width: 150px; height: 200px; }
-            .one-sheet-mat   { width: 155px; height: 200px; }
-            .postcard-portrait-mat  { width: 120px; height: 200px; }
-            .postcard-landscape-mat { width: 220px; height: 132px; }
-            .materials-stage { min-height: 270px; padding: 1.5rem 1rem; }
+            .materials-stage { min-height: 320px; padding: 1.5rem 3rem; }
+            .poster-mat             { width: 188px; height: 250px; }
+            .one-sheet-mat          { width: 193px; height: 250px; }
+            .postcard-portrait-mat  { width: 150px; height: 250px; }
+            .postcard-landscape-mat { width: 250px; height: 150px; }
         }
     </style>
 </head>
@@ -750,82 +785,90 @@ Join the Circle (link in bio) 🔧
                     <p style="color:var(--text-secondary); margin-bottom:1.5rem;">Examples of print pieces Grover supplies to partner locations. Click through each item to see what's available for your space.</p>
 
                     <div class="materials-viewer">
-                        <div class="materials-stage">
+                        <div class="materials-layout">
 
-                            <!-- Slide 0: Poster -->
-                            <div class="material-item active" id="mat-0">
-                                <div class="paper-mat poster-mat">
-                                    <div class="paper-placeholder">
-                                        <span class="ph-icon">🖼️</span>
-                                        <span class="ph-filename">poster-18x24.jpg</span>
-                                        <small>img/print-materials/</small>
-                                    </div>
-                                    <img src="img/print-materials/poster-18x24.jpg" alt="18×24 Poster" onerror="this.style.display='none'">
-                                </div>
-                            </div>
+                            <!-- LEFT: large paper stage -->
+                            <div class="materials-stage">
+                                <button class="stage-arrow prev" onclick="changeMatSlide(-1)">&#8249;</button>
 
-                            <!-- Slide 1: One-Sheet -->
-                            <div class="material-item" id="mat-1">
-                                <div class="paper-mat one-sheet-mat">
-                                    <div class="paper-placeholder">
-                                        <span class="ph-icon">📄</span>
-                                        <span class="ph-filename">one-sheet-8x11.jpg</span>
-                                        <small>img/print-materials/</small>
-                                    </div>
-                                    <img src="img/print-materials/one-sheet-8x11.jpg" alt="8.5×11 One-Sheet" onerror="this.style.display='none'">
-                                </div>
-                            </div>
-
-                            <!-- Slide 2: Postcard (front + back toggle) -->
-                            <div class="material-item" id="mat-2">
-                                <div id="postcard-front-container">
-                                    <div class="paper-mat postcard-portrait-mat">
+                                <!-- Slide 0: Poster -->
+                                <div class="material-item active" id="mat-0">
+                                    <div class="paper-mat poster-mat">
                                         <div class="paper-placeholder">
-                                            <span class="ph-icon">🪪</span>
-                                            <span class="ph-filename">postcard-front.jpg</span>
+                                            <span class="ph-icon">🖼️</span>
+                                            <span class="ph-filename">poster-18x24.jpg</span>
                                             <small>img/print-materials/</small>
                                         </div>
-                                        <img src="img/print-materials/postcard-front.jpg" alt="Postcard Front" onerror="this.style.display='none'">
+                                        <img src="img/print-materials/poster-18x24.jpg" alt="18×24 Poster" onerror="this.style.display='none'">
                                     </div>
                                 </div>
-                                <div id="postcard-back-container" style="display:none">
-                                    <div class="paper-mat postcard-landscape-mat">
+
+                                <!-- Slide 1: One-Sheet -->
+                                <div class="material-item" id="mat-1">
+                                    <div class="paper-mat one-sheet-mat">
                                         <div class="paper-placeholder">
-                                            <span class="ph-icon">📬</span>
-                                            <span class="ph-filename">postcard-back.jpg</span>
+                                            <span class="ph-icon">📄</span>
+                                            <span class="ph-filename">one-sheet-8x11.jpg</span>
                                             <small>img/print-materials/</small>
                                         </div>
-                                        <img src="img/print-materials/postcard-back.jpg" alt="Postcard Back" onerror="this.style.display='none'">
+                                        <img src="img/print-materials/one-sheet-8x11.jpg" alt="8.5×11 One-Sheet" onerror="this.style.display='none'">
                                     </div>
                                 </div>
-                                <button class="flip-btn" id="postcard-flip-btn" onclick="flipPostcard()">&#8635; See Back</button>
-                            </div>
 
-                        </div>
+                                <!-- Slide 2: Postcard -->
+                                <div class="material-item" id="mat-2">
+                                    <div id="postcard-front-container">
+                                        <div class="paper-mat postcard-portrait-mat">
+                                            <div class="paper-placeholder">
+                                                <span class="ph-icon">🪪</span>
+                                                <span class="ph-filename">postcard-front.jpg</span>
+                                                <small>img/print-materials/</small>
+                                            </div>
+                                            <img src="img/print-materials/postcard-front.jpg" alt="Postcard Front" onerror="this.style.display='none'">
+                                        </div>
+                                    </div>
+                                    <div id="postcard-back-container" style="display:none">
+                                        <div class="paper-mat postcard-landscape-mat">
+                                            <div class="paper-placeholder">
+                                                <span class="ph-icon">📬</span>
+                                                <span class="ph-filename">postcard-back.jpg</span>
+                                                <small>img/print-materials/</small>
+                                            </div>
+                                            <img src="img/print-materials/postcard-back.jpg" alt="Postcard Back" onerror="this.style.display='none'">
+                                        </div>
+                                    </div>
+                                    <button class="flip-btn" id="postcard-flip-btn" onclick="flipPostcard()">&#8635; See Back</button>
+                                </div>
 
-                        <div class="materials-controls">
-                            <div class="materials-nav">
-                                <button class="materials-nav-btn" onclick="changeMatSlide(-1)">&#8249;</button>
+                                <button class="stage-arrow next" onclick="changeMatSlide(1)">&#8250;</button>
+
                                 <div class="mat-dots">
                                     <span class="mat-dot active" onclick="goToMatSlide(0)"></span>
                                     <span class="mat-dot" onclick="goToMatSlide(1)"></span>
                                     <span class="mat-dot" onclick="goToMatSlide(2)"></span>
                                 </div>
-                                <button class="materials-nav-btn" onclick="changeMatSlide(1)">&#8250;</button>
                             </div>
 
-                            <div class="material-info" id="mat-info-0">
-                                <div class="mat-info-badge">18" &times; 24" Poster</div>
-                                <p>Large-format display for your lobby, showroom, or shop wall. Introduces Grover and drives Circle sign-ups from customers already in your space.</p>
+                            <!-- RIGHT: info panel -->
+                            <div class="materials-info-panel">
+                                <div class="material-info active" id="mat-info-0">
+                                    <div class="mat-info-badge">18" &times; 24" Poster</div>
+                                    <h3>Lobby &amp; Showroom Display</h3>
+                                    <p>Large-format display for your lobby, showroom, or shop wall. Introduces Grover and drives Circle sign-ups from customers already in your space.</p>
+                                </div>
+                                <div class="material-info" id="mat-info-1">
+                                    <div class="mat-info-badge">8.5" &times; 11" One-Sheet</div>
+                                    <h3>Welcome Folders &amp; Handouts</h3>
+                                    <p>Designed for welcome folders, trade show handouts, and delivery packages. A complete overview of Grover and your brand's Circle.</p>
+                                </div>
+                                <div class="material-info" id="mat-info-2">
+                                    <div class="mat-info-badge">3" &times; 5" Postcard &middot; <span id="postcard-side-label">Front</span></div>
+                                    <h3>Mailable &amp; Handout Card</h3>
+                                    <p>Mailable or great for handouts. Front introduces Grover; back includes your Circle details and a QR code link.</p>
+                                </div>
+
                             </div>
-                            <div class="material-info" id="mat-info-1" style="display:none">
-                                <div class="mat-info-badge">8.5" &times; 11" One-Sheet</div>
-                                <p>Designed for welcome folders, trade show handouts, and delivery packages. A complete overview of Grover and your brand's Circle.</p>
-                            </div>
-                            <div class="material-info" id="mat-info-2" style="display:none">
-                                <div class="mat-info-badge">3" &times; 5" Postcard &middot; <span id="postcard-side-label">Front</span></div>
-                                <p>Mailable or great for handouts. Front introduces Grover; back includes your Circle details and a QR code link.</p>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1019,13 +1062,13 @@ Join the Circle (link in bio) 🔧
 
         function goToMatSlide(n) {
             document.getElementById(`mat-${currentMatSlide}`).classList.remove('active');
-            document.getElementById(`mat-info-${currentMatSlide}`).style.display = 'none';
+            document.getElementById(`mat-info-${currentMatSlide}`).classList.remove('active');
             document.querySelectorAll('.mat-dot')[currentMatSlide].classList.remove('active');
 
             currentMatSlide = ((n % totalMatSlides) + totalMatSlides) % totalMatSlides;
 
             document.getElementById(`mat-${currentMatSlide}`).classList.add('active');
-            document.getElementById(`mat-info-${currentMatSlide}`).style.display = 'block';
+            document.getElementById(`mat-info-${currentMatSlide}`).classList.add('active');
             document.querySelectorAll('.mat-dot')[currentMatSlide].classList.add('active');
 
             if (currentMatSlide !== 2 && postcardIsFlipped) {

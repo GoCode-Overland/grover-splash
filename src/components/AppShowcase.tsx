@@ -1,32 +1,27 @@
-import screenshotMap from "@/assets/screenshot-map-new.png";
-import screenshotChat from "@/assets/screenshot-chat.png";
-import screenshotPlan from "@/assets/screenshot-plan.png";
-import screenshotEnergy from "@/assets/screenshot-energy.png";
-
 const showcaseItems = [
   {
-    image: screenshotMap,
+    image: "/img/grover p4c5 1.png",
     title: "Discover & Navigate",
-    description: "Interactive map showing camping spots shared by the community. Get instant answers with AI-powered suggestions.",
+    description: "Interactive map with community-shared camping spots and AI-powered suggestions for your rig.",
     highlight: "Smart trip planning at your fingertips",
   },
   {
-    image: screenshotChat,
-    title: "Personalized AI Assistant",
-    description: "Chat with Grover about your specific van. Get custom trip plans, camping recommendations, and maintenance advice.",
+    image: "/img/grover p4c5 3.jpg",
+    title: "Rig-Aware AI Assistant",
+    description: "Chat with Grover about your specific van build. Get trip plans, maintenance advice, and gear recommendations.",
     highlight: "Trained on your van's specs",
   },
   {
-    image: screenshotPlan,
-    title: "Detailed Trip Intelligence",
-    description: "Receive comprehensive plans with weather forecasts, energy management tips, and campground details.",
-    highlight: "Everything you need for the journey",
+    image: "/img/grover p4c5 5.jpg",
+    title: "Pins, Layers & Bucket List",
+    description: "Drop pins, save spots, and explore community-shared locations layered over the map.",
+    highlight: "Your van life, your map",
   },
   {
-    image: screenshotEnergy,
-    title: "Energy Forecasting and Weather Data",
-    description: "Advanced battery forecasting, solar yield predictions, and weather impact analysis. Plus, discover hidden gems shared by your community circle.",
-    highlight: "Smart power management meets local wisdom",
+    image: "/img/grover p4c5 7.jpg",
+    title: "Circles & Community",
+    description: "Connect with your builder's circle and the broader van life community. Share spots and get local intel.",
+    highlight: "Built-in community, not an afterthought",
   },
 ];
 
@@ -35,11 +30,11 @@ const AppShowcase = () => {
     <section className="py-24 bg-gradient-to-b from-muted/30 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-4">
             See Grover in Action
           </h2>
           <p className="text-lg text-muted-foreground">
-            Experience how Grover makes vanlife easier with AI-powered planning, community insights, and personalized assistance.
+            AI-powered planning, community intelligence, and a rig-aware assistant — all in one app.
           </p>
         </div>
 

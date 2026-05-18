@@ -96,7 +96,7 @@ const ForOems = () => {
               The problem with generic answers
             </h2>
             <p className="text-lg text-muted-foreground">
-              Vanlifers Google "how to maintain my Rixens slide-out" and get forum guesses, YouTube rabbit holes, and conflicting advice. They call your support line frustrated. Your team answers the same questions on repeat — on Saturdays.
+              Vanlifers Google "how do I maintain my Rixens hydronic heating system" and get forum guesses, YouTube rabbit holes, and conflicting advice. They call your support line frustrated. Your team answers the same questions on repeat — on Saturdays.
             </p>
             <p className="text-lg text-muted-foreground">
               Grover solves this by putting your docs directly into the assistant layer so first-party accuracy is always one question away.

@@ -8,10 +8,10 @@ const ANDROID_APP_URL = "https://play.google.com/store/apps/details?id=ai.getgro
 const HUBSPOT_BOOKING_URL = "https://meetings.hubspot.com/will858/grover-success-with-josh";
 
 const navLinks = [
-  { label: "For Vanlifers", href: "/" },
-  { label: "For Builders", href: "/for-builders" },
-  { label: "For OEMs", href: "/for-oems" },
-  { label: "Blog", href: "/blog/" },
+  { label: "For Vanlifers", href: "/", external: false },
+  { label: "For Builders", href: "/for-builders", external: false },
+  { label: "For OEMs", href: "/for-oems", external: false },
+  { label: "Blog", href: "/blog/", external: true },
 ];
 
 const Navigation = () => {
@@ -36,7 +36,16 @@ const Navigation = () => {
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium transition-colors text-foreground hover:text-primary"
+                >
+                  {link.label}
+                </a>
+              ) : (
               <Link
                 key={link.href}
                 to={link.href}
@@ -48,7 +57,8 @@ const Navigation = () => {
               >
                 {link.label}
               </Link>
-            ))}
+              )
+            )}
           </div>
 
           {/* Desktop CTAs */}
@@ -84,7 +94,17 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border/50 animate-fade-in">
             <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
+              {navLinks.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm font-medium transition-colors text-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
                 <Link
                   key={link.href}
                   to={link.href}
@@ -97,7 +117,8 @@ const Navigation = () => {
                 >
                   {link.label}
                 </Link>
-              ))}
+                )
+              )}
               <div className="flex flex-col gap-2 pt-2 border-t border-border/50">
                 <Button size="sm" asChild>
                   <a href={IOS_APP_URL} target="_blank" rel="noopener noreferrer" className="w-full">

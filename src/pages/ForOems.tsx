@@ -3,9 +3,6 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BookOpen, Shield, Zap, ArrowRight } from "lucide-react";
-import infinityVansLogo from "@/assets/brands/infinity-vans.svg";
-import rixensLogo from "@/assets/brands/rixens.svg";
-
 const HUBSPOT_BOOKING_URL = "https://meetings.hubspot.com/will858/grover-success-with-josh";
 
 const valueProps = [
@@ -73,21 +70,6 @@ const ForOems = () => {
                 Talk to Partnerships
               </a>
             </Button>
-          </div>
-
-          {/* Partner logos */}
-          <div className="space-y-6">
-            <p className="text-center text-muted-foreground text-sm uppercase tracking-widest font-medium">
-              OEM Partners
-            </p>
-            <div className="flex flex-wrap gap-8 justify-center items-center">
-              <div className="h-16 flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <img src={infinityVansLogo} alt="Infinity Vans" className="max-h-full w-auto object-contain max-w-[160px]" />
-              </div>
-              <div className="h-16 flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <img src={rixensLogo} alt="Rixens" className="max-h-full w-auto object-contain max-w-[160px]" />
-              </div>
-            </div>
           </div>
 
           {/* Problem */}

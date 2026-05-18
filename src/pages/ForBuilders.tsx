@@ -73,7 +73,7 @@ const insights = [
     icon: Users,
     title: "Branded Community",
     description:
-      "Your customers get a branded circle and assistant that speaks your rig language, not a generic van chatbot.",
+      "Your customers get a branded circle and assistant that speaks your rig language, not a generic chatbot.",
   },
 ];
 
@@ -113,7 +113,7 @@ const ForBuilders = () => {
           {/* Partner logo marquee */}
           <div className="space-y-6">
             <h2 className="text-center text-2xl font-semibold text-foreground">
-              Trusted by respected van and RV brands
+              Trusted by respected RV and overland brands
             </h2>
             <div className="overflow-hidden">
               <div className="flex animate-marquee gap-12 w-max">

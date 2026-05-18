@@ -11,7 +11,7 @@ const steps = [
     icon: MessageCircle,
     number: "02",
     title: "Chat with Grover",
-    description: "Ask questions of your personalized digital assistant. Trained on your specific van. Get maintenance tips, or troubleshoot issues instantly.",
+    description: "Ask questions of your personalized digital assistant. Trained on your specific rig. Get maintenance tips, or troubleshoot issues instantly.",
   },
   {
     icon: Map,
@@ -22,7 +22,7 @@ const steps = [
   {
     icon: Heart,
     number: "04",
-    title: "Enjoy Vanlife",
+    title: "Hit the Road",
     description: "Focus on the adventure while Grover handles the rest.",
   },
 ];
@@ -36,7 +36,7 @@ const HowItWorks = () => {
             How Grover Works
           </h2>
           <p className="text-lg text-muted-foreground">
-            Get started in minutes and join thousands of vanlifers making their journey easier
+            Get started in minutes and join thousands of adventurers making their journey easier
           </p>
         </div>
 

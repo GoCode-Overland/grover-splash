@@ -22,7 +22,7 @@ const valueProps = [
     icon: Zap,
     title: "Instant Accuracy for Installers and Owners",
     description:
-      "When a vanlifer asks \"How do I wire my Infinity 300Ah lithium?\" they get an answer from your docs, not a hallucinated approximation. Accurate first-time, every time.",
+      "When an owner asks \"How do I wire my Infinity 300Ah lithium?\" they get an answer from your docs, not a hallucinated approximation. Accurate first-time, every time.",
   },
 ];
 
@@ -63,7 +63,7 @@ const ForOems = () => {
               <span className="text-primary">In Every Assistant.</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Component OEMs publish their product knowledge into Grover so vanlifers get accurate, brand-accurate answers — straight from the source.
+              Component OEMs publish their product knowledge into Grover so RV owners get accurate, brand-accurate answers — straight from the source.
             </p>
             <Button size="lg" className="text-lg px-8 py-6" asChild>
               <a href={HUBSPOT_BOOKING_URL} target="_blank" rel="noopener noreferrer">
@@ -78,7 +78,7 @@ const ForOems = () => {
               The problem with generic answers
             </h2>
             <p className="text-lg text-muted-foreground">
-              Vanlifers Google "how do I maintain my Rixens hydronic heating system" and get forum guesses, YouTube rabbit holes, and conflicting advice. They call your support line frustrated. Your team answers the same questions on repeat — on Saturdays.
+              RV owners Google "how do I maintain my Rixens hydronic heating system" and get forum guesses, YouTube rabbit holes, and conflicting advice. They call your support line frustrated. Your team answers the same questions on repeat — on Saturdays.
             </p>
             <p className="text-lg text-muted-foreground">
               Grover solves this by putting your docs directly into the assistant layer so first-party accuracy is always one question away.
@@ -141,7 +141,7 @@ const ForOems = () => {
               </a>
             </Button>
             <p className="text-sm text-muted-foreground">
-              Building vans too?{" "}
+              Building rigs too?{" "}
               <a href="/for-builders" className="text-primary hover:underline">
                 See the Builders programme →
               </a>

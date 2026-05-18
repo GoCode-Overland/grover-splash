@@ -16,7 +16,7 @@ const Footer = () => {
               className="h-10 w-auto"
             />
             <p className="text-background/70 text-sm">
-              Your rig-aware AI companion for the ultimate vanlife experience.
+              Your rig-aware AI companion for the ultimate adventure.
             </p>
           </div>
 

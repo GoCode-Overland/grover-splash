@@ -6,7 +6,7 @@ const features = [
     icon: MessageSquare,
     title: "Rig-Aware AI Assistant",
     description:
-      "Chat with an AI that knows your specific van build. Get troubleshooting help, maintenance guidance, and trip recommendations tuned to your rig specs — not a generic van.",
+      "Chat with an AI that knows your specific rig. Get troubleshooting help, maintenance guidance, and trip recommendations tuned to your rig specs — not a generic chatbot.",
     gradient: "from-primary to-primary/80",
   },
   {
@@ -27,7 +27,7 @@ const features = [
     icon: Users,
     title: "Circles & Community",
     description:
-      "See community pins filtered to your circles. Follow fellow vanlifers, browse the pin feed, and share your favorites with builder attribution badges.",
+      "See community pins filtered to your circles. Follow fellow adventurers, browse the pin feed, and share your favorites with builder attribution badges.",
     gradient: "from-primary/80 to-accent/80",
   },
 ];
@@ -38,10 +38,10 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-4">
-            Everything You Need for Vanlife
+            Everything You Need for Your Rig
           </h2>
           <p className="text-lg text-muted-foreground">
-            Grover combines rig-specific AI with community wisdom to make your van journey smoother, safer, and more joyful.
+            Grover combines rig-specific AI with community wisdom to make your adventure smoother, safer, and more joyful.
           </p>
         </div>
 

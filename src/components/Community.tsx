@@ -16,7 +16,7 @@ const testimonials = [
   },
   {
     name: "Emily R.",
-    role: "Van Builder",
+    role: "Rig Builder",
     content: "This is the kind of stuff I was dreaming about and you actually went out and built it",
     avatar: "ER",
   },
@@ -28,10 +28,10 @@ const Community = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Loved by Vanlifers And Van Fabricators Alike
+            Loved by Adventurers and RV Builders Alike
           </h2>
           <p className="text-lg text-muted-foreground">
-            Join a community that's making vanlife better, one adventure at a time
+            Join a community that's making the adventure better, one trip at a time
           </p>
         </div>
 

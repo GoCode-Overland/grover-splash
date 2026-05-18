@@ -19,7 +19,7 @@ const CTA = () => {
           </h2>
 
           <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Join vanlifers who use Grover to discover new spots, stay confident on the road, and share their favourite finds with their community.
+            Join adventurers who use Grover to discover new spots, stay confident on the road, and share their favourite finds with their community.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">

@@ -36,7 +36,7 @@ const Download = () => {
         Get Grover
       </h1>
       <p className="text-lg text-muted-foreground mb-10 max-w-sm">
-        The AI assistant built for van life. Know your rig. Find your spots. Travel with your people.
+        The AI assistant built for life on the road. Know your rig. Find your spots. Travel with your people.
       </p>
 
       <div className="flex flex-col gap-4 w-full max-w-xs">

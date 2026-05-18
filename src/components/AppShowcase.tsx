@@ -9,7 +9,7 @@ const showcaseItems = [
     image: "/app_screens/grover appstore image 10.3.png",
     title: "Chat With Your Rig",
     description: "Ask Grover anything about your specific build — maintenance, specs, troubleshooting. Answers from your actual docs.",
-    highlight: "Trained on your van's specs",
+    highlight: "Trained on your rig's specs",
   },
   {
     image: "/app_screens/grover appstore image 10.5.png",

@@ -8,7 +8,7 @@ const ANDROID_APP_URL = "https://play.google.com/store/apps/details?id=ai.getgro
 const HUBSPOT_BOOKING_URL = "https://meetings.hubspot.com/will858/grover-discovery-and-demo";
 
 const navLinks = [
-  { label: "For Vanlifers", href: "/", external: false },
+  { label: "For Adventurers", href: "/", external: false },
   { label: "For Builders", href: "/for-builders", external: false },
   { label: "For OEMs", href: "/for-oems", external: false },
   { label: "Blog", href: "/blog/", external: true },

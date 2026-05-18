@@ -20,11 +20,11 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold font-heading text-white leading-tight">
             Adventure Confidently.{" "}
-            <span className="text-secondary">Reach Van Joy.</span>
+            <span className="text-secondary">Reach Rig Joy.</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Grover is your rig-aware AI assistant — find the best camping spots, get answers tuned to your specific van setup, and connect with your van community.
+            Grover is your rig-aware AI assistant — find the best camping spots, get answers tuned to your specific rig, and connect with your community.
           </p>
 
           {/* Store badges */}

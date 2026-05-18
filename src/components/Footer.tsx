@@ -37,6 +37,9 @@ const Footer = () => {
               <li>
                 <a href="/blog/" className="hover:text-accent transition-colors">Blog</a>
               </li>
+              <li>
+                <a href="/tutorials.html" className="hover:text-accent transition-colors">Tutorials</a>
+              </li>
             </ul>
           </div>
 
@@ -49,6 +52,9 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/for-oems" className="hover:text-accent transition-colors">For OEMs</a>
+              </li>
+              <li>
+                <a href="/partner-marketing" className="hover:text-accent transition-colors">Partner Resources</a>
               </li>
               <li>
                 <a href={HUBSPOT_BOOKING_URL} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">

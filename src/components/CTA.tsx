@@ -34,8 +34,7 @@ const CTA = () => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 text-white border-white hover:bg-white/10 shadow-xl transition-all"
+              className="text-lg px-8 py-6 bg-transparent text-white border-2 border-white hover:bg-white/10 shadow-xl transition-all"
               asChild
             >
               <a href={ANDROID_APP_URL} target="_blank" rel="noopener noreferrer">
@@ -44,7 +43,7 @@ const CTA = () => {
             </Button>
           </div>
 
-          <p className="text-white/60 text-sm pt-2">Free to download · No credit card required</p>
+          <p className="text-white/60 text-sm pt-2">Free to download</p>
         </div>
       </div>
     </section>

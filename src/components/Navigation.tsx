@@ -1,76 +1,119 @@
-import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo.png";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+
+const IOS_APP_URL = "https://apps.apple.com/us/app/grover-van-life/id6742468326";
+const ANDROID_APP_URL = "https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app";
+const HUBSPOT_BOOKING_URL = "https://meetings.hubspot.com/will858/grover-success-with-josh";
+
+const navLinks = [
+  { label: "For Vanlifers", href: "/" },
+  { label: "For Builders", href: "/for-builders" },
+  { label: "For OEMs", href: "/for-oems" },
+  { label: "Blog", href: "/blog/" },
+];
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (href: string) =>
+    href === "/" ? location.pathname === "/" : location.pathname.startsWith(href);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-3 group">
-            <img src={logo} alt="Grover Logo" className="h-10 w-auto transition-opacity group-hover:opacity-80" />
-          </a>
+          <Link to="/" className="flex items-center group">
+            <img
+              src="/img/grover-combomark-black.svg"
+              alt="Grover"
+              className="h-8 w-auto transition-opacity group-hover:opacity-75"
+            />
+          </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <a href="/#features" className="text-foreground hover:text-primary transition-colors font-medium">
-              Features
-            </a>
-            <a href="/#how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
-              How It Works
-            </a>
-            <a href="/#community" className="text-foreground hover:text-primary transition-colors font-medium">
-              Community
-            </a>
-            <a href="https://getgrover.ai/blog/" className="text-foreground hover:text-primary transition-colors font-medium">
-              Blog
-            </a>
-            <a href="/for-brands" className="text-foreground hover:text-primary transition-colors font-medium">
-              For Brands
-            </a>
+          {/* Desktop nav links */}
+          <div className="hidden md:flex items-center gap-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={`text-sm font-medium transition-colors ${
+                  isActive(link.href)
+                    ? "text-primary"
+                    : "text-foreground hover:text-primary"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost">Sign In</Button>
-            <Button variant="default">Get Started</Button>
+          {/* Desktop CTAs */}
+          <div className="hidden md:flex items-center gap-2">
+            <Button variant="ghost" size="sm" asChild>
+              <a href={HUBSPOT_BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                Talk to us
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" asChild>
+              <a href={ANDROID_APP_URL} target="_blank" rel="noopener noreferrer">
+                Android Beta
+              </a>
+            </Button>
+            <Button size="sm" asChild>
+              <a href={IOS_APP_URL} target="_blank" rel="noopener noreferrer">
+                Download iOS
+              </a>
+            </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu toggle */}
           <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            <Menu className="w-6 h-6" />
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border/50 animate-fade-in">
             <div className="flex flex-col gap-4">
-              <a href="/#features" className="text-foreground hover:text-primary transition-colors font-medium">
-                Features
-              </a>
-              <a href="/#how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
-                How It Works
-              </a>
-              <a href="/#community" className="text-foreground hover:text-primary transition-colors font-medium">
-                Community
-              </a>
-              <a href="https://getgrover.ai/blog/" className="text-foreground hover:text-primary transition-colors font-medium">
-                Blog
-              </a>
-              <a href="/for-brands" className="text-foreground hover:text-primary transition-colors font-medium">
-                For Brands
-              </a>
-              <div className="flex flex-col gap-2 pt-2">
-                <Button variant="ghost" className="w-full">Sign In</Button>
-                <Button variant="default" className="w-full">Get Started</Button>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`text-sm font-medium transition-colors ${
+                    isActive(link.href)
+                      ? "text-primary"
+                      : "text-foreground hover:text-primary"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="flex flex-col gap-2 pt-2 border-t border-border/50">
+                <Button size="sm" asChild>
+                  <a href={IOS_APP_URL} target="_blank" rel="noopener noreferrer" className="w-full">
+                    Download for iOS
+                  </a>
+                </Button>
+                <Button variant="outline" size="sm" asChild>
+                  <a href={ANDROID_APP_URL} target="_blank" rel="noopener noreferrer" className="w-full">
+                    Android Open Beta
+                  </a>
+                </Button>
+                <Button variant="ghost" size="sm" asChild>
+                  <a href={HUBSPOT_BOOKING_URL} target="_blank" rel="noopener noreferrer" className="w-full">
+                    Talk to us
+                  </a>
+                </Button>
               </div>
             </div>
           </div>

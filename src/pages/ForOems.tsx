@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BookOpen, Shield, Zap, ArrowRight } from "lucide-react";
-const HUBSPOT_BOOKING_URL = "https://meetings.hubspot.com/will858/grover-success-with-josh";
+const HUBSPOT_BOOKING_URL = "https://meetings.hubspot.com/will858/grover-discovery-and-demo";
 
 const valueProps = [
   {

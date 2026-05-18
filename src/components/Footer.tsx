@@ -1,4 +1,4 @@
-const HUBSPOT_BOOKING_URL = "https://meetings.hubspot.com/will858/grover-success-with-josh";
+const HUBSPOT_BOOKING_URL = "https://meetings.hubspot.com/will858/grover-discovery-and-demo";
 const INSTAGRAM_URL = "https://www.instagram.com/getgrover.ai";
 
 const Footer = () => {

@@ -25,7 +25,7 @@ import livemoreLogo from "@/assets/brands/livemore.svg";
 import vanQuestLogo from "@/assets/brands/van-quest.svg";
 import nookLogo from "@/assets/brands/nook.svg";
 
-const HUBSPOT_BOOKING_URL = "https://meetings.hubspot.com/will858/grover-success-with-josh";
+const HUBSPOT_BOOKING_URL = "https://meetings.hubspot.com/will858/grover-discovery-and-demo";
 
 const brands = [
   { name: "VanLife Trail", logo: vltLogo },

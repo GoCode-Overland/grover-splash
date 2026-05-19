@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const IOS_APP_URL = "https://apps.apple.com/us/app/grover-van-life/id6742468326";
@@ -7,7 +7,9 @@ const ANDROID_APP_URL = "https://play.google.com/store/apps/details?id=ai.getgro
 const Hero = () => {
   const landscapeRef = useRef<HTMLDivElement>(null);
   const vanRef = useRef<HTMLDivElement>(null);
+  const [arrowVisible, setArrowVisible] = useState(true);
 
+  // SVG draw-in animation on first scroll
   useEffect(() => {
     let cleanup: (() => void) | null = null;
 
@@ -74,11 +76,17 @@ const Hero = () => {
     return () => cleanup?.();
   }, []);
 
+  // Arrow fades out once user scrolls past 50% of viewport height
+  useEffect(() => {
+    const onScroll = () => setArrowVisible(window.scrollY < window.innerHeight / 2);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    /* overflow-x-hidden clips the landscape bleed on mobile without blocking vertical scroll */
-    <section className="relative min-h-screen flex flex-col bg-background overflow-x-hidden">
-      {/* Text + CTAs — natural height, no flex-1, so illustration sits directly below */}
-      <div className="flex items-center justify-center px-4 pt-24 pb-10 md:pb-14">
+    <section className="relative flex flex-col bg-background overflow-x-hidden">
+      {/* Text + CTAs — z-10 so illustration can bleed up behind it */}
+      <div className="relative z-10 flex items-center justify-center px-4 pt-24 pb-10 md:pb-14">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold font-heading text-foreground leading-tight">
             Adventure Confidently.{" "}
@@ -100,7 +108,6 @@ const Hero = () => {
               </a>
             </Button>
 
-            {/* ghost + explicit border/hover to avoid white-on-white from outline variant */}
             <Button
               size="lg"
               variant="ghost"
@@ -108,7 +115,6 @@ const Hero = () => {
               asChild
             >
               <a href={ANDROID_APP_URL} target="_blank" rel="noopener noreferrer">
-                {/* Google Play icon — proper multi-path shape */}
                 <svg className="mr-2 w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12 3.84 21.85C3.34 21.6 3 21.09 3 20.5zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zM20.16 10.81c.34.27.59.69.59 1.19s-.25.92-.59 1.19L17.89 14.5 15.39 12l2.5-2.5 2.27 1.31zM6.05 2.66l10.76 6.22-2.27 2.27L6.05 2.66z" />
                 </svg>
@@ -123,12 +129,12 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Illustration zone */}
+      {/* Illustration — pulled up so the terrain peeks behind the CTAs */}
       <div
-        className="relative w-full h-[230px] sm:h-[260px] md:h-auto"
+        className="relative z-0 w-full -mt-14 md:-mt-20 h-[230px] sm:h-[260px] md:h-auto"
         aria-hidden="true"
       >
-        {/* Van — absolute bottom-center on mobile, absolute bottom-right on desktop */}
+        {/* Van */}
         <div
           ref={vanRef}
           className="
@@ -142,7 +148,7 @@ const Hero = () => {
           style={{ lineHeight: 0 }}
         />
 
-        {/* Landscape — bleeds past viewport on mobile (130vw, centered), full-width on desktop */}
+        {/* Landscape — fades in from top so it blends smoothly into the CTA area */}
         <div
           ref={landscapeRef}
           className="
@@ -150,15 +156,23 @@ const Hero = () => {
             w-[130vw]
             md:relative md:bottom-auto md:left-0 md:translate-x-0 md:w-full
           "
-          style={{ lineHeight: 0 }}
+          style={{
+            lineHeight: 0,
+            maskImage: "linear-gradient(to bottom, transparent 0%, black 40%)",
+            WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 40%)",
+          }}
         />
       </div>
 
-      {/* Scroll cue */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce z-20 pointer-events-none">
-        <div className="w-6 h-10 border-2 border-foreground/20 rounded-full flex items-start justify-center p-1.5">
-          <div className="w-1 h-2.5 bg-foreground/20 rounded-full" />
-        </div>
+      {/* Arrow scroll cue — fades out once user scrolls past 50% viewport height */}
+      <div
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none animate-bounce transition-opacity duration-500 ${arrowVisible ? "opacity-100" : "opacity-0"}`}
+      >
+        <svg width="35" height="131" viewBox="0 0 35 131" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="h-14 w-auto opacity-40">
+          <path d="M17.9993 130C18.0002 93.1429 15.7499 46.5294 18 1" stroke="black" />
+          <path d="M17.6229 129.343C16.6473 128.407 14.9636 126.52 14.0498 125.836C12.6167 124.764 11.2658 123.447 9.96679 121.994C8.03976 119.839 5.98908 118.041 3.99068 116.093C3.31168 115.431 3.31332 115.608 1.26252 113.64" stroke="black" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M17.5997 129.386C18.5753 128.449 20.2591 126.562 21.1728 125.878C22.606 124.806 23.9569 123.489 25.2559 122.037C27.1829 119.881 29.2336 118.083 31.232 116.135C31.911 115.473 31.9093 115.651 33.9601 113.682" stroke="black" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </div>
     </section>
   );

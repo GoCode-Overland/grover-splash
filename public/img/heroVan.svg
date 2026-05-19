@@ -6,7 +6,7 @@ fill: #f17438;
 }
 
 .heroVan-2 {
-fill: var(--yellow-accent-color);
+fill: #f8e5c1;
 }
 
 .heroVan-3 {
@@ -38,106 +38,3 @@ stroke-width: 1.5px;
 <path class="heroVan-3" d="M258.74,119.56s9.96,1.62,9.96,28.33M89.26,143.86s-3.63-15.33,7.33-16.54c.4,7.06,0,6.59,0,6.59l-7.33,9.95ZM588.39,173.37l7.09-1.08M595.93,196.46v-11.38"/>
 <path class="heroVan-3" d="M521.08,122.75c-.18-2.09-.48-4-.89-5.53-1.66-6.2-5.82-8.39-10.14-9.04-2.05-.31-3.77,1.32-3.57,3.4.42,4.36,2.33,8.72,8.18,10.65,1.76.58,4.03.98,6.47,1.22,2.8.27,5.81.3,8.51.12h.06c7.56.17,12.4-4.22,12.97-10.37.17-1.82-1.24-3.43-2.9-3.36-.1,0-.21,0-.31.01-5.97.29-9.27,4.42-9.81,13.71v.03c-.02.25-.03.5-.04.76-.12,2.9-.13,5.6.04,8.06v.03c.56,8.22,3.09,13.55,10.03,13.77h0c1.64.05,3-1.53,2.86-3.33,0-.08-.01-.15-.02-.23-.54-6.38-4.34-9.76-12.85-10.22h-.02c-.23,0-.47-.02-.7-.03-2.76-.09-5.38-.07-7.8.15h-.04c-8.26.75-13.97,3.74-14.62,11.97v.02c-.16,2.02,1.53,3.6,3.51,3.3,4.22-.63,8.34-2.71,10.07-8.62.53-1.8.88-4.15,1.07-6.68.21-2.76.22-5.75.04-8.53l-.13-1.28"/>
 </svg>
-</div>
-</div>    <p class="sm:hidden relative -top-5 md:top-0 text-base sm:text-xl md:text-2xl mb-8 text-center">
-made for <span data-cycling-text class="text-primary underline italic min-width-[15ch]  font-serif">weekend warriors</span>    </p>
-<div class="container mx-auto px-4 max-w-6xl lg:max-w-[1400px] mb-10">
-<div class="md:relative">
-<div class="z-20 m-auto sm:absolute right-10 bottom-0 md:bottom-20 w-2/3 sm:w-[220px] md:w-[260px] xl:w-[300px] ">
-<video 
-class="rounded-[45px] sm:rounded-[37px] md:rounded-[52px] shadow-xl relative z-10"
-poster="img/hero-phone.jpg"
-playsinline
-autoplay
-muted
-loop
-preload="metadata"
-width="300"
-height="533"
-fetchpriority="high"
->
-<source src="img/demo2.mp4" type="video/mp4">
-</video>
-<div class="hidden lg:block rounded-full w-[100px] h-[100px] md:w-[138px] md:h-[138px] absolute -top-[30px] -left-[30px] md:-top-14 md:-left-14 before:absolute before:inset-0 before:rounded-full before:bg-yellow-accent after:absolute after:inset-0 after:rounded-full after:border after:border-black after:translate-x-[2px] after:translate-y-[2px]"></div>
-</div>
-</div>
-</div>
-<p class="hidden sm:block relative -top-5 md:top-0 text-base sm:text-xl md:text-2xl mb-8 text-center">
-made for <span data-cycling-text class="text-primary underline italic min-width-[15ch]  font-serif">weekend warriors</span>    </p>
-</header>
-
-<!-- Feature Sections -->
-<div class="relative z-0 xl:z-10 container mx-auto px-4 max-w-7xl mb-[242px]">
-<img src="img/arrow.svg" alt="arrow" class="hidden lg:block absolute top-0 left-1/2 -translate-x-1/2" loading="lazy" width="50" height="100" />
-<div
-data-scroll-effect="path-draw"
-data-path-draw-range="2778"
-data-scroll-thresholds="[0, 0.25, 0.5, 0.75, 1]"
-class="hidden md:block absolute top-[460px] z-[-1] left-1/2 -translate-x-1/2"
->
-<svg width="1326" height="2854" viewBox="0 0 1326 2854" fill="none" xmlns="http://www.w3.org/2000/svg" id="pathSvg">
-<path
-d="M1325.99 0.75C1325.99 0.75 879.87 9.75 293.99 9.75C-291.89 9.75 121.99 548.75 481.34 548.75C1164.99 548.75 1440.49 863.25 1091.49 863.25C401.67 863.25 -18.0096 1358.25 459.99 1358.25C1157.94 1358.25 1212.99 1899.75 904.99 1967.75C596.99 2035.75 17.9905 1860.75 89.9905 2169.25C161.99 2477.75 1012.99 2066.75 1012.99 2238.75C1012.99 2410.75 650.19 2488.86 651.29 2793.93" 
-stroke="black" stroke-width="1.5"
-/>
-<path 
-d="M651.15 2792.21C650.68 2787.07 649.92 2782.37 648.87 2778.63C644.65 2763.56 634.24 2758.76 623.67 2757.77C618.76 2757.31 614.65 2761.38 615.13 2766.3C616.12 2776.59 620.68 2786.83 634.96 2791.21C639.33 2792.55 645.07 2793.46 651.3 2793.95C658.57 2794.52 666.51 2794.52 673.73 2793.97H673.89C694.78 2794.15 708.67 2782.47 710.32 2766.25C710.81 2761.45 706.72 2757.42 701.91 2757.82C701.61 2757.84 701.31 2757.87 701.02 2757.9C684.23 2759.48 675.21 2770.39 673.73 2793.94V2794.01C673.69 2794.64 673.65 2795.28 673.62 2795.94C673.3 2803.27 673.28 2810.1 673.72 2816.33V2816.4C675.24 2837.23 682.13 2851.08 701.64 2852.64C706.38 2853.02 710.33 2849.05 709.92 2844.31C709.9 2844.11 709.88 2843.9 709.87 2843.7C708.29 2826.9 697.36 2817.88 673.78 2816.41H673.73C673.1 2816.37 672.48 2816.33 671.83 2816.3C664.46 2815.98 657.58 2815.96 651.32 2816.41H651.22C630.47 2817.95 616.68 2824.86 615.14 2844.32V2844.38C614.76 2849.15 618.77 2853.11 623.54 2852.66C633.86 2851.69 644.15 2847.14 648.55 2832.82C649.9 2828.43 650.81 2822.67 651.3 2816.41C651.83 2809.6 651.86 2802.21 651.41 2795.37L651.07 2792.22" 
-stroke="black" stroke-width="1.5" stroke-miterlimit="10"
-class="hidden xl:block"
-/>
-</svg>    </div>
-
-<section class="flex flex-col sm:flex-row justify-between items-center mb-7 md:mb-0 md:py-8 relative">
-<div
-class="relative sm:w-1/2 md:w-auto md:max-w-[550px] mx-5 mb-5 md:mb-0 order-1 sm:order-0" 
-data-scroll-effect="fade" 
-data-scroll-offset="200"
-data-scroll-bottom-offset="-20"
-data-scroll-effect-delay="300"
->
-<div class="absolute z-[-1] inset-0 bg-blue-accent rounded-xl transform -rotate-[-1deg]"></div>
-<div class="absolute z-[-1] inset-0 transform rotate-[0.5deg] scale-[1.02]">
-<svg
-width="100%" height="100%" viewBox="0 0 546 303" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-class="transform rotate-[181deg] "
->
-<path d="M62.4495 0.983069C96.9728 3.38532 392.285 11.2907 421.124 11.8169C478.794 12.8779 519.161 13.6139 519.161 13.6139C532.486 13.8542 543.373 28.8348 543.478 47.0712L544.807 269.383C544.919 287.62 534.206 302.202 520.882 301.952C520.882 301.952 480.515 301.216 422.845 300.155C394.013 299.63 360.851 299.018 326.251 298.387C291.737 295.782 255.691 295.196 221.01 296.457C186.304 298.29 153.205 296.22 124.416 294.689C95.5554 294.837 71.07 293.713 53.7737 293.398C36.4706 293.083 26.3791 292.892 26.3791 292.892C13.0542 292.651 2.16691 277.671 2.0618 259.434L0.732737 37.123C0.620878 18.8859 11.3334 4.30374 24.6579 4.55319C24.6579 4.55319 34.7498 4.73491 52.0525 5.05988" stroke="black" stroke-miterlimit="10" vector-effect="non-scaling-stroke"/>
-</svg>
-</div>    <div class="relative px-10 sm:px-4 md:px-20 py-14">
-<h3 class="text-xl md:text-2xl leading-[1.3] mb-2 font-heading"><b>You bought an RV to make dreams come true.</b></h3>
-<p class="text-base md:text-xl">With Grover, you can fulfill those dreams and help others reach RV joy, too.</p>
-</div>
-</div>
-
-<div
-class="flex w-full sm:w-1/2 md:w-full items-center justify-center flex-grow md:min-h-[400px] mx-auto md:mx-5 order-0 sm:order-1"
-data-scroll-effect-delay="0"
-data-scroll-effect="fade" 
-data-scroll-offset="500"
-data-scroll-bottom-offset="-50"
->
-<div class="md:relative top-10 py-10 md:py-0 w-2/3">
-<img src="img/loveVanGraphic.svg" alt="Illustration of a man jumping for joy atop his sprinter van" loading="lazy" width="400" height="300" />
-</div>
-</div>
-</section>
-<section class="flex flex-col sm:flex-row justify-between items-center mb-7 md:mb-0 md:py-8 relative">
-<div
-class="relative sm:w-1/2 md:w-auto md:max-w-[550px] mx-5 mb-5 md:mb-0 order-1 " 
-data-scroll-effect="fade" 
-data-scroll-offset="200"
-data-scroll-bottom-offset="-20"
-data-scroll-effect-delay="0"
->
-<div class="absolute z-[-1] inset-0 bg-yellow-accent rounded-xl transform -rotate-[-1deg]"></div>
-<div class="absolute z-[-1] inset-0 transform rotate-[0.5deg] scale-[1.02]">
-<svg
-width="100%" height="100%" viewBox="0 0 546 303" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-class="transform rotate-[-1deg]"
->
-<path d="M62.4495 0.983069C96.9728 3.38532 392.285 11.2907 421.124 11.8169C478.794 12.8779 519.161 13.6139 519.161 13.6139C532.486 13.8542 543.373 28.8348 543.478 47.0712L544.807 269.383C544.919 287.62 534.206 302.202 520.882 301.952C520.882 301.952 480.515 301.216 422.845 300.155C394.013 299.63 360.851 299.018 326.251 298.387C291.737 295.782 255.691 295.196 221.01 296.457C186.304 298.29 153.205 296.22 124.416 294.689C95.5554 294.837 71.07 293.713 53.7737 293.398C36.4706 293.083 26.3791 292.892 26.3791 292.892C13.0542 292.651 2.16691 277.671 2.0618 259.434L0.732737 37.123C0.620878 18.8859 11.3334 4.30374 24.6579 4.55319C24.6579 4.55319 34.7498 4.73491 52.0525 5.05988" stroke="black" stroke-miterlimit="10" vector-effect="non-scaling-stroke"/>
-</svg>
-</div>    <div class="relative px-10 sm:px-4 md:px-20 py-14">
-<h3 class="text-xl md:text-2xl leading-[1.3] mb-2 font-heading"><b>Share pins, places, and beta</b> with other RV owners</h3>
-<p class="text-base md:text-xl">When you find that perfect spot, you want everyone to know about it - well, not everyone.</p>
-</div>

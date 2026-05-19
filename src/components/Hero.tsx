@@ -164,14 +164,14 @@ const Hero = () => {
         />
       </div>
 
-      {/* Arrow scroll cue — fades out once user scrolls past 50% viewport height */}
+      {/* Arrow scroll cue — fixed to viewport bottom, fades out at 50% scroll */}
       <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none animate-bounce transition-opacity duration-500 ${arrowVisible ? "opacity-100" : "opacity-0"}`}
+        className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none animate-bounce-slow transition-opacity duration-700 ${arrowVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <svg width="35" height="131" viewBox="0 0 35 131" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="h-14 w-auto opacity-40">
-          <path d="M17.9993 130C18.0002 93.1429 15.7499 46.5294 18 1" stroke="black" />
-          <path d="M17.6229 129.343C16.6473 128.407 14.9636 126.52 14.0498 125.836C12.6167 124.764 11.2658 123.447 9.96679 121.994C8.03976 119.839 5.98908 118.041 3.99068 116.093C3.31168 115.431 3.31332 115.608 1.26252 113.64" stroke="black" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M17.5997 129.386C18.5753 128.449 20.2591 126.562 21.1728 125.878C22.606 124.806 23.9569 123.489 25.2559 122.037C27.1829 119.881 29.2336 118.083 31.232 116.135C31.911 115.473 31.9093 115.651 33.9601 113.682" stroke="black" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+        <svg width="35" height="131" viewBox="0 0 35 131" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" className="h-14 w-auto opacity-70">
+          <path d="M17.9993 130C18.0002 93.1429 15.7499 46.5294 18 1" stroke="black" strokeWidth="2" />
+          <path d="M17.6229 129.343C16.6473 128.407 14.9636 126.52 14.0498 125.836C12.6167 124.764 11.2658 123.447 9.96679 121.994C8.03976 119.839 5.98908 118.041 3.99068 116.093C3.31168 115.431 3.31332 115.608 1.26252 113.64" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M17.5997 129.386C18.5753 128.449 20.2591 126.562 21.1728 125.878C22.606 124.806 23.9569 123.489 25.2559 122.037C27.1829 119.881 29.2336 118.083 31.232 116.135C31.911 115.473 31.9093 115.651 33.9601 113.682" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
     </section>

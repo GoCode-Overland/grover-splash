@@ -31,7 +31,6 @@ const Hero = () => {
       vSvg.setAttribute("width", "100%");
       vSvg.removeAttribute("height");
 
-      // Hide all stroke paths before animation
       lSvg.querySelectorAll<SVGPathElement>(".heroLandscape-1").forEach((p) => {
         const len = p.getTotalLength();
         p.style.strokeDasharray = String(len);
@@ -42,7 +41,6 @@ const Hero = () => {
         p.style.strokeDasharray = String(len);
         p.style.strokeDashoffset = String(len);
       });
-      // Hide filled van panels until strokes draw in
       vSvg.querySelectorAll<SVGElement>(".heroVan-1, .heroVan-2").forEach((el) => {
         el.style.opacity = "0";
       });
@@ -52,20 +50,15 @@ const Hero = () => {
         if (triggered) return;
         triggered = true;
 
-        // Landscape paths draw in with slight random stagger for organic feel
         lSvg.querySelectorAll<SVGPathElement>(".heroLandscape-1").forEach((p) => {
           const delay = Math.random() * 0.6;
           p.style.transition = `stroke-dashoffset 2.8s ease-out ${delay}s`;
           p.style.strokeDashoffset = "0";
         });
-
-        // Van strokes draw in sequentially
         vSvg.querySelectorAll<SVGPathElement>(".heroVan-3").forEach((p, i) => {
           p.style.transition = `stroke-dashoffset 2.2s ease-out ${0.3 + i * 0.02}s`;
           p.style.strokeDashoffset = "0";
         });
-
-        // Van fill colors fade in after the outline starts appearing
         vSvg.querySelectorAll<SVGElement>(".heroVan-1, .heroVan-2").forEach((el) => {
           el.style.transition = "opacity 1s ease-in 1.2s";
           el.style.opacity = "1";
@@ -82,9 +75,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col bg-background overflow-hidden">
-      {/* Text + CTAs */}
-      <div className="flex-1 flex items-center justify-center px-4 pt-24 pb-4">
+    /* overflow-x-hidden clips the landscape bleed on mobile without blocking vertical scroll */
+    <section className="relative min-h-screen flex flex-col bg-background overflow-x-hidden">
+      {/* Text + CTAs — natural height, no flex-1, so illustration sits directly below */}
+      <div className="flex items-center justify-center px-4 pt-24 pb-10 md:pb-14">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold font-heading text-foreground leading-tight">
             Adventure Confidently.{" "}
@@ -105,15 +99,18 @@ const Hero = () => {
                 Download for iOS
               </a>
             </Button>
+
+            {/* ghost + explicit border/hover to avoid white-on-white from outline variant */}
             <Button
               size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 bg-transparent border-foreground/30 hover:bg-foreground/5"
+              variant="ghost"
+              className="text-lg px-8 py-6 text-foreground border border-foreground/30 hover:bg-foreground/10 hover:text-foreground"
               asChild
             >
               <a href={ANDROID_APP_URL} target="_blank" rel="noopener noreferrer">
+                {/* Google Play icon — proper multi-path shape */}
                 <svg className="mr-2 w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M17.523 15.341 14.48 9.742l-1.73 3.157 1.946 3.557-2.832.047L8.5 6.148l-2.833.047 3.875 7.08-1.73 3.157-1.038-1.896L5 16.6l1.583 2.892a1.4 1.4 0 0 0 1.223.718l7.447-.123a1.4 1.4 0 0 0 1.213-.75zM8.073 3.108 9.5 5.663l1.46-2.665a1.4 1.4 0 0 0-2.887.11zm7.5.11A1.4 1.4 0 0 0 12.7 3l-1.46 2.665 1.427 2.606z" />
+                  <path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12 3.84 21.85C3.34 21.6 3 21.09 3 20.5zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zM20.16 10.81c.34.27.59.69.59 1.19s-.25.92-.59 1.19L17.89 14.5 15.39 12l2.5-2.5 2.27 1.31zM6.05 2.66l10.76 6.22-2.27 2.27L6.05 2.66z" />
                 </svg>
                 Android Open Beta
               </a>
@@ -126,24 +123,33 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Illustration zone: van sitting on landscape terrain */}
-      <div className="relative w-full mt-auto" aria-hidden="true">
-        {/* Van: normal-flow centered on mobile, absolute right on desktop */}
+      {/* Illustration zone */}
+      <div
+        className="relative w-full h-[230px] sm:h-[260px] md:h-auto"
+        aria-hidden="true"
+      >
+        {/* Van — absolute bottom-center on mobile, absolute bottom-right on desktop */}
         <div
           ref={vanRef}
           className="
-            w-[210px] mx-auto -mb-10
-            md:absolute md:mx-0 md:-mb-0
+            absolute bottom-0 left-1/2 -translate-x-1/2 z-10
+            w-[230px] sm:w-[270px]
             md:w-[360px] lg:w-[430px]
-            md:z-10 md:bottom-[4%]
+            md:left-auto md:translate-x-0
             md:right-[5%] lg:right-[10%]
+            md:bottom-[4%]
           "
           style={{ lineHeight: 0 }}
         />
-        {/* Landscape - full-width terrain */}
+
+        {/* Landscape — bleeds past viewport on mobile (130vw, centered), full-width on desktop */}
         <div
           ref={landscapeRef}
-          className="w-full relative z-0"
+          className="
+            absolute bottom-0 left-1/2 -translate-x-1/2 z-0
+            w-[130vw]
+            md:relative md:bottom-auto md:left-0 md:translate-x-0 md:w-full
+          "
           style={{ lineHeight: 0 }}
         />
       </div>

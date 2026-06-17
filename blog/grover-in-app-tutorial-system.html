@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN0EK30SS7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LN0EK30SS7');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grover Now Teaches You the App While You Use It - Grover</title>
+    <meta name="description" content="Inside Grover's new server-driven tutorial system — spotlight overlays that guide new users through key features and can evolve without shipping a new app update.">
+    <meta name="keywords" content="Grover tutorial, vanlife app onboarding, in-app tutorial, spotlight overlay, Grover features, user experience, vanlife app tips">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+
+    <link rel="canonical" href="https://getgrover.ai/blog/grover-in-app-tutorial-system.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How Grover Guides You Through the App — Without Waiting for an Update">
+    <meta property="og:description" content="Inside Grover's new server-driven tutorial system — spotlight overlays that guide new users through key features and can evolve without shipping a new app update.">
+    <meta property="og:image" content="https://getgrover.ai/img/og.png">
+    <meta property="og:url" content="https://getgrover.ai/blog/grover-in-app-tutorial-system.html">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="How Grover Guides You Through the App — Without Waiting for an Update">
+    <meta property="twitter:description" content="Inside Grover's new server-driven tutorial system — spotlight overlays that guide new users through key features and can evolve without shipping a new app update.">
+    <meta property="twitter:image" content="https://getgrover.ai/img/og.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How Grover Guides You Through the App — Without Waiting for an Update",
+        "description": "Inside Grover's server-driven tutorial overlay system that guides new users through key features without requiring a new app release.",
+        "datePublished": "2026-06-17",
+        "dateModified": "2026-06-17",
+        "author": {"@type": "Organization", "name": "Grover", "url": "https://getgrover.ai"},
+        "publisher": {"@type": "Organization", "name": "Grover", "logo": {"@type": "ImageObject", "url": "https://getgrover.ai/img/grover-combomark-white.svg"}},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://getgrover.ai/blog/grover-in-app-tutorial-system.html"},
+        "articleSection": "App Features",
+        "keywords": ["Grover app", "tutorial system", "vanlife", "onboarding", "spotlight", "in-app guidance", "user experience"]
+    }
+    </script>
+
+    <style>
+        .blog-container { font-family: 'Plantin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 0 20px; line-height: 1.6; }
+        .blog-header { text-align: center; margin: 40px 0; padding: 40px 0; border-bottom: 2px solid #f0f0f0; }
+        .blog-title { font-size: 2.5rem; font-weight: bold; color: #2c3e50; margin-bottom: 16px; line-height: 1.2; }
+        .blog-meta { color: #7f8c8d; font-size: 1rem; margin-bottom: 20px; }
+        .blog-content { margin: 40px 0; }
+        .blog-content h2 { font-size: 1.8rem; color: #2c3e50; margin: 40px 0 20px 0; font-weight: bold; }
+        .blog-content h3 { font-size: 1.4rem; color: #34495e; margin: 30px 0 15px 0; font-weight: 600; }
+        .blog-content p { margin-bottom: 20px; font-size: 1.1rem; color: #34495e; }
+        .blog-content ul, .blog-content ol { margin: 20px 0; padding-left: 30px; }
+        .blog-content li { margin-bottom: 8px; font-size: 1.1rem; color: #34495e; }
+        .cta-box { background: linear-gradient(135deg, #66AEC0, #8B5CF6); color: white; padding: 40px; border-radius: 20px; text-align: center; margin: 40px 0; }
+        .cta-box h3 { color: white; margin-bottom: 15px; }
+        .cta-button { display: inline-block; background: white; color: #66AEC0; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: transform 0.3s ease; }
+        .cta-button:hover { transform: translateY(-2px); }
+        .cta-link { color: #66AEC0; font-weight: bold; text-decoration: none; }
+        .cta-link:hover { text-decoration: underline; }
+        blockquote { border-left: 4px solid #66AEC0; padding-left: 20px; margin: 30px 0; font-style: italic; color: #34495e; }
+        .feature-highlight { background: #f0f8fb; border-left: 4px solid #66AEC0; padding: 20px 25px; border-radius: 0 12px 12px 0; margin: 30px 0; }
+        .feature-highlight p { margin-bottom: 0; }
+        .nav-menu { position: sticky; top: 0; background: white; z-index: 100; border-bottom: 1px solid #e9ecef; margin-bottom: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .nav-menu-content { max-width: 800px; margin: 0 auto; padding: 15px 20px; display: flex; flex-direction: column; gap: 10px; align-items: center; }
+        .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: #66AEC0; font-weight: 500; padding: 6px 14px; border-radius: 20px; transition: background-color 0.3s ease; font-size: 0.85rem; }
+        .nav-links a:hover { background: #f8f9fa; }
+        .nav-links a.active { background: #66AEC0; color: white; }
+        @media (max-width: 768px) { .blog-title { font-size: 2rem; } .nav-links a { font-size: 0.75rem; padding: 4px 10px; } }
+    </style>
+</head>
+<body class="font-body text-gray-800 leading-relaxed m-0 p-0">
+    <header class="bg-primary py-6">
+        <div class="container mx-auto px-4 max-w-6xl lg:max-w-[1400px]">
+            <nav class="flex items-center justify-between">
+                <a href="../index.html">
+                    <img src="../img/grover-combomark-white.svg" alt="grover logo" class="h-10 md:h-14">
+                </a>
+                <div class="flex items-center gap-6">
+                    <a href="index.html" class="text-white hover:underline font-heading text-base">← All Posts</a>
+                    <a href="../index.html" class="text-white hover:underline font-heading text-base">Home</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="nav-menu">
+        <div class="nav-menu-content">
+            <span class="font-heading text-sm text-gray-600">Jump to:</span>
+            <ul class="nav-links">
+                <li><a href="#the-problem">The Problem</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#spotlight">Spotlight System</a></li>
+                <li><a href="#server-driven">Server-Driven</a></li>
+                <li><a href="#new-users">For New Users</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="blog-container">
+        <header class="blog-header">
+            <h1 class="blog-title">Grover Now Teaches You the App While You Use It</h1>
+            <p class="blog-meta">Published June 17, 2026 · 5 min read</p>
+            <p class="blog-meta" style="margin-top: -10px;">Tags: <span style="color: #66AEC0;">app features · onboarding · user experience · Grover updates · vanlife app</span></p>
+        </header>
+
+        <article class="blog-content">
+            <figure style="margin: 0 0 40px 0; text-align: center;">
+                <img src="../img/blog-photos/Image 1.png" alt="The Grover app interface showing trip planning prompts and the conversational chat experience" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+                <figcaption style="margin-top: 10px; font-style: italic; color: #666; font-size: 0.9rem;">The Grover interface — packed with features now introduced through a guided, in-context tutorial experience.</figcaption>
+            </figure>
+
+            <section id="the-problem">
+                <p>Grover has a lot going on. There's the map with community pins, LandTrust properties, filters, and bucket list markers. There's the agent that plans routes, answers questions, and builds trip itineraries in seconds. There's pin creation, the Trophy Map, the Stats page, and everything in between.</p>
+
+                <p>That's a lot of amazing capability — and it can be hard to know where to start. We've been thinking hard about how to make sure every Grover user finds the features that are going to make their vanlife better, without making the app feel overwhelming or requiring a wall of tutorial text before you can go do the actual fun thing.</p>
+
+                <p>The answer we landed on: teach through doing.</p>
+            </section>
+
+            <section id="how-it-works">
+                <h2>Contextual Guidance, Right When You Need It</h2>
+
+                <p>We've built a new in-app tutorial system that meets you exactly where you are. Rather than a one-time walkthrough you click through at setup and immediately forget, Grover now surfaces guidance at the moments it actually matters — when you're in the part of the app where a feature lives.</p>
+
+                <p>The system uses spotlight overlays: a focused highlight on a specific button or element, with everything else gently fading back. It's like having someone tap you on the shoulder and say "hey, try this" — except the thing they're pointing at is right there, and you can tap it immediately. No simulated interface, no separate tutorial mode. The spotlight points at the real feature. You tap it and it does exactly what it always does.</p>
+
+                <div class="feature-highlight">
+                    <p><strong>The tutorial and the feature are the same thing.</strong> When the spotlight highlights a button, you tap it and you're using the actual feature — no extra steps to find it yourself afterward.</p>
+                </div>
+
+                <p>The sequence moves forward as you go. Discover one thing, get a nudge toward the next. Already know something? Move on. The system doesn't get in your way — it clears the path in front of you.</p>
+            </section>
+
+            <section id="spotlight">
+                <h2>Some of Our Favorite Moments in the Flow</h2>
+
+                <p>The tutorial walks you through the features that unlock the most joy in Grover. A few highlights:</p>
+
+                <ul>
+                    <li><strong>Your first bucket list marker.</strong> The tutorial shows you how to tap and hold on any spot on the map to save it to your bucket list — one of the most powerful (and satisfying) gestures in the app.</li>
+                    <li><strong>The + button for adding pins.</strong> The first time you add a pin to the community map is a big moment. The tutorial makes sure you find it.</li>
+                    <li><strong>Filter bar exploration.</strong> The map filters are where a lot of the magic lives — toggling layers, surfacing LandTrust properties, narrowing by place type. The tutorial pulls back the curtain.</li>
+                </ul>
+
+                <p>Each of these moments is designed to be fast. You're not sitting through a lecture — you're tapping things and watching them work. That's the whole point.</p>
+            </section>
+
+            <section id="server-driven">
+                <h2>A Tutorial That Keeps Getting Better</h2>
+
+                <p>Grover is growing fast. New features ship all the time — the LandTrust layer, the Stats page, the bucket list completion flow — and we want to make sure every one of them gets properly introduced to the people who would love it most.</p>
+
+                <p>The tutorial system is built to grow with the app. As we ship new features, we can add them to the tutorial flow so new users discover them right away and existing users get a heads-up when something important changes. It's our way of making sure the best parts of Grover never stay hidden.</p>
+
+                <blockquote>
+                    "The best tutorial gets out of the way the moment you understand what to do. We built ours around that idea."
+                </blockquote>
+            </section>
+
+            <section id="new-users">
+                <h2>What This Means for You</h2>
+
+                <p>If you're new to Grover, the tutorial is your on-ramp. You'll see spotlight moments as you navigate the app for the first time — each one pointing you toward a feature worth knowing. By the time you've followed through the sequence, you'll have tried the things that make Grover genuinely useful, not just read about them.</p>
+
+                <p>If you've been using Grover for a while, keep an eye out for tutorial moments when new features land. We'll surface them contextually so you know something new is there and exactly how to use it.</p>
+
+                <p>Either way: open the app, start exploring, and let Grover show you what it can do. Our <a href="getting-started-with-grover-guide.html" class="cta-link">Getting Started guide</a> is a great companion if you want a full overview before diving in.</p>
+            </section>
+
+            <p>We've put a lot of care into making Grover feel intuitive from the very first session. The tutorial system is one of the most important investments in that experience we've made — because the best vanlife app in the world is only useful if you actually know how to use it. Go find out what you've been missing.</p>
+
+            <section class="related-articles" style="margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 15px; border-left: 4px solid #66AEC0;">
+                <h3 style="color: #66AEC0; margin-bottom: 20px;">More from The Joy Ride Journal</h3>
+                <div style="display: grid; gap: 15px;">
+                    <div>
+                        <h4 style="margin-bottom: 5px;"><a href="getting-started-with-grover-guide.html" class="cta-link">Getting Started with Grover: Your Complete Guide</a></h4>
+                        <p style="margin: 0; color: #666; font-size: 0.9rem;">The full orientation — from download to your first adventure planned. A great complement to the in-app tutorial.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 5px;"><a href="your-first-chat-grover-guide.html" class="cta-link">Your First Chat: What to Ask Grover for Maximum Vanlife Joy</a></h4>
+                        <p style="margin: 0; color: #666; font-size: 0.9rem;">Ready to get into it? Here's how to get the most out of your first conversation with your vanlife co-pilot.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 5px;"><a href="grover-bucket-list-pin-creation.html" class="cta-link">From Dream to Done: How Grover Turns Your Bucket List into a Pin</a></h4>
+                        <p style="margin: 0; color: #666; font-size: 0.9rem;">One of the features the tutorial will walk you through — and one of the most satisfying parts of the Grover experience.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 5px;"><a href="vanlife-app-features-that-matter.html" class="cta-link">Vanlife App Features That Actually Matter</a></h4>
+                        <p style="margin: 0; color: #666; font-size: 0.9rem;">A broader look at what separates genuinely useful vanlife apps from the ones that just look good on the shelf.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cta-box">
+                <h3>See It in Action</h3>
+                <p>Download Grover and let the tutorial guide you through everything the app can do. The best way to understand a feature is to try it.</p>
+                <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button">Download Grover on the App Store</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="py-16 text-center text-white bg-primary mt-16">
+        <div class="flex flex-col items-center">
+            <img src="../img/grover-combomark-white.svg" alt="grover logo" class="h-8 mb-4 mx-auto">
+            <div class="flex items-center justify-center gap-4 mb-4">
+                <a href="https://www.instagram.com/getgrover.ai" target="_blank" rel="noopener noreferrer" class="text-white hover:text-yellow-accent transition-colors">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-sm">&copy; 2026 grover. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const navHeight = document.querySelector('.nav-menu').offsetHeight;
+                    window.scrollTo({ top: targetElement.offsetTop - navHeight - 20, behavior: 'smooth' });
+                }
+            });
+        });
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            const navHeight = document.querySelector('.nav-menu').offsetHeight;
+            let current = '';
+            sections.forEach(section => {
+                if (pageYOffset >= section.offsetTop - navHeight - 50) current = section.getAttribute('id');
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

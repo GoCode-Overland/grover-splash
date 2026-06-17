@@ -6,6 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 const IOS_APP_URL = "https://apps.apple.com/us/app/grover-van-life/id6742468326";
 const ANDROID_APP_URL = "https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app";
 const HUBSPOT_BOOKING_URL = "https://meetings.hubspot.com/will858/grover-discovery-and-demo";
+const PARTNER_ADMIN_URL = "https://admin.getgrover.ai";
 
 const navLinks = [
   { label: "For Adventurers", href: "/", external: false },
@@ -63,6 +64,11 @@ const Navigation = () => {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-2">
+            <Button variant="ghost" size="sm" asChild>
+              <a href={PARTNER_ADMIN_URL} target="_blank" rel="noopener noreferrer">
+                Partner Admin
+              </a>
+            </Button>
             <Button variant="ghost" size="sm" asChild>
               <a href={HUBSPOT_BOOKING_URL} target="_blank" rel="noopener noreferrer">
                 Talk to us
@@ -133,6 +139,11 @@ const Navigation = () => {
                 <Button variant="ghost" size="sm" asChild>
                   <a href={HUBSPOT_BOOKING_URL} target="_blank" rel="noopener noreferrer" className="w-full">
                     Talk to us
+                  </a>
+                </Button>
+                <Button variant="ghost" size="sm" asChild>
+                  <a href={PARTNER_ADMIN_URL} target="_blank" rel="noopener noreferrer" className="w-full">
+                    Partner Admin
                   </a>
                 </Button>
               </div>

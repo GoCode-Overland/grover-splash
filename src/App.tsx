@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import ForBuilders from "./pages/ForBuilders";
 import ForOems from "./pages/ForOems";
 import Download from "./pages/Download";
+import CopyKit from "./pages/CopyKit";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/for-builders" element={<ForBuilders />} />
           <Route path="/for-oems" element={<ForOems />} />
           <Route path="/download" element={<Download />} />
+          <Route path="/partners/copy-kit" element={<CopyKit />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

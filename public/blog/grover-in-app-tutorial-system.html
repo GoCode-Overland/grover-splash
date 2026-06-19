@@ -12,8 +12,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grover Now Teaches You the App While You Use It - Grover</title>
-    <meta name="description" content="Inside Grover's new server-driven tutorial system — spotlight overlays that guide new users through key features and can evolve without shipping a new app update.">
-    <meta name="keywords" content="Grover tutorial, vanlife app onboarding, in-app tutorial, spotlight overlay, Grover features, user experience, vanlife app tips">
+    <meta name="description" content="Grover's new in-app tutorial walks you through your vanlife copilot, rig setup, and bucket list — one spotlight at a time, right as you're using it.">
+    <meta name="keywords" content="Grover tutorial, vanlife app onboarding, in-app tutorial, spotlight overlay, Grover features, rig specs, bucket list, vanlife copilot">
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="blog.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
@@ -21,28 +21,28 @@
 
     <link rel="canonical" href="https://getgrover.ai/blog/grover-in-app-tutorial-system.html">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="How Grover Guides You Through the App — Without Waiting for an Update">
-    <meta property="og:description" content="Inside Grover's new server-driven tutorial system — spotlight overlays that guide new users through key features and can evolve without shipping a new app update.">
+    <meta property="og:title" content="Grover Now Teaches You the App While You Use It">
+    <meta property="og:description" content="Grover's new in-app tutorial walks you through your vanlife copilot, rig setup, and bucket list — one spotlight at a time, right as you're using it.">
     <meta property="og:image" content="https://getgrover.ai/img/og.png">
     <meta property="og:url" content="https://getgrover.ai/blog/grover-in-app-tutorial-system.html">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="How Grover Guides You Through the App — Without Waiting for an Update">
-    <meta property="twitter:description" content="Inside Grover's new server-driven tutorial system — spotlight overlays that guide new users through key features and can evolve without shipping a new app update.">
+    <meta property="twitter:title" content="Grover Now Teaches You the App While You Use It">
+    <meta property="twitter:description" content="Grover's new in-app tutorial walks you through your vanlife copilot, rig setup, and bucket list — one spotlight at a time, right as you're using it.">
     <meta property="twitter:image" content="https://getgrover.ai/img/og.png">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "How Grover Guides You Through the App — Without Waiting for an Update",
-        "description": "Inside Grover's server-driven tutorial overlay system that guides new users through key features without requiring a new app release.",
+        "headline": "Grover Now Teaches You the App While You Use It",
+        "description": "Grover's new in-app tutorial walks you through your vanlife copilot, rig setup, and bucket list — one spotlight at a time, right as you're using it.",
         "datePublished": "2026-06-17",
-        "dateModified": "2026-06-17",
+        "dateModified": "2026-06-19",
         "author": {"@type": "Organization", "name": "Grover", "url": "https://getgrover.ai"},
         "publisher": {"@type": "Organization", "name": "Grover", "logo": {"@type": "ImageObject", "url": "https://getgrover.ai/img/grover-combomark-white.svg"}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": "https://getgrover.ai/blog/grover-in-app-tutorial-system.html"},
         "articleSection": "App Features",
-        "keywords": ["Grover app", "tutorial system", "vanlife", "onboarding", "spotlight", "in-app guidance", "user experience"]
+        "keywords": ["Grover app", "tutorial system", "vanlife", "onboarding", "spotlight", "in-app guidance", "rig specs", "bucket list", "vanlife copilot"]
     }
     </script>
 
@@ -72,7 +72,61 @@
         .nav-links a { text-decoration: none; color: #66AEC0; font-weight: 500; padding: 6px 14px; border-radius: 20px; transition: background-color 0.3s ease; font-size: 0.85rem; }
         .nav-links a:hover { background: #f8f9fa; }
         .nav-links a.active { background: #66AEC0; color: white; }
-        @media (max-width: 768px) { .blog-title { font-size: 2rem; } .nav-links a { font-size: 0.75rem; padding: 4px 10px; } }
+
+        /* Screenshot styling */
+        .screenshot-frame {
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8aad 60%, #1e7090 100%);
+            border-radius: 24px;
+            padding: 32px 24px;
+            margin: 36px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 440px;
+            box-shadow: 0 12px 40px rgba(26, 95, 122, 0.35);
+        }
+        .screenshot-frame img {
+            border: 3px solid #111;
+            border-radius: 40px;
+            max-width: 260px;
+            width: 100%;
+            display: block;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+        .screenshot-caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: -20px;
+            margin-bottom: 32px;
+        }
+        .screenshot-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 36px 0;
+        }
+        .screenshot-group .screenshot-frame {
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+            margin: 0;
+        }
+        .screenshot-group .screenshot-frame img {
+            max-width: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title { font-size: 2rem; }
+            .nav-links a { font-size: 0.75rem; padding: 4px 10px; }
+            .screenshot-frame { padding: 20px 16px; }
+            .screenshot-frame img { max-width: 220px; border-radius: 32px; }
+            .screenshot-group { gap: 12px; }
+            .screenshot-group .screenshot-frame { min-width: 160px; }
+            .screenshot-group .screenshot-frame img { max-width: 160px; }
+        }
     </style>
 </head>
 <body class="font-body text-gray-800 leading-relaxed m-0 p-0">
@@ -94,11 +148,11 @@
         <div class="nav-menu-content">
             <span class="font-heading text-sm text-gray-600">Jump to:</span>
             <ul class="nav-links">
-                <li><a href="#the-problem">The Problem</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#spotlight">Spotlight System</a></li>
-                <li><a href="#server-driven">Server-Driven</a></li>
-                <li><a href="#new-users">For New Users</a></li>
+                <li><a href="#copilot">Your Copilot</a></li>
+                <li><a href="#rig">Rig as Filter</a></li>
+                <li><a href="#bucket-list">Bucket List</a></li>
+                <li><a href="#six-steps">The 6-Step Flow</a></li>
+                <li><a href="#for-you">What This Means</a></li>
             </ul>
         </div>
     </nav>
@@ -106,101 +160,124 @@
     <main class="blog-container">
         <header class="blog-header">
             <h1 class="blog-title">Grover Now Teaches You the App While You Use It</h1>
-            <p class="blog-meta">Published June 17, 2026 · 5 min read</p>
-            <p class="blog-meta" style="margin-top: -10px;">Tags: <span style="color: #66AEC0;">app features · onboarding · user experience · Grover updates · vanlife app</span></p>
+            <p class="blog-meta">Published June 17, 2026 · Updated June 19, 2026 · 5 min read</p>
+            <p class="blog-meta" style="margin-top: -10px;">Tags: <span style="color: #66AEC0;">app features · onboarding · vanlife copilot · rig setup · bucket list</span></p>
         </header>
 
         <article class="blog-content">
-            <figure style="margin: 0 0 40px 0; text-align: center;">
-                <img src="../img/blog-photos/Image 1.png" alt="The Grover app interface showing trip planning prompts and the conversational chat experience" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
-                <figcaption style="margin-top: 10px; font-style: italic; color: #666; font-size: 0.9rem;">The Grover interface — packed with features now introduced through a guided, in-context tutorial experience.</figcaption>
-            </figure>
 
-            <section id="the-problem">
-                <p>Grover has a lot going on. There's the map with community pins, LandTrust properties, filters, and bucket list markers. There's the agent that plans routes, answers questions, and builds trip itineraries in seconds. There's pin creation, the Trophy Map, the Stats page, and everything in between.</p>
+            <p>Grover has a lot going on. There's the map packed with community pins, LandTrust properties, and bucket list markers. There's the AI copilot that plans routes, scouts campsites, and troubleshoots your rig on demand. There's your Rig Specs sheet — the thing that filters every result to what your specific build can actually handle. And then there's Circles, Stats, the Trophy Map, pin creation, and more.</p>
 
-                <p>That's a lot of amazing capability — and it can be hard to know where to start. We've been thinking hard about how to make sure every Grover user finds the features that are going to make their vanlife better, without making the app feel overwhelming or requiring a wall of tutorial text before you can go do the actual fun thing.</p>
+            <p>That's a lot of power. And power without a guide is just noise.</p>
 
-                <p>The answer we landed on: teach through doing.</p>
-            </section>
+            <p>So we built one. Grover now ships with a six-step in-app tutorial that meets you exactly where you are — in the real app, on the real features, at the moment you're ready to use them. No wall of onboarding text. No simulated interface. Just a spotlight on the actual thing, and a single sentence that tells you why it matters.</p>
 
-            <section id="how-it-works">
-                <h2>Contextual Guidance, Right When You Need It</h2>
+            <section id="copilot">
+                <h2>Step 1: Meet Your Vanlife Copilot</h2>
 
-                <p>We've built a new in-app tutorial system that meets you exactly where you are. Rather than a one-time walkthrough you click through at setup and immediately forget, Grover now surfaces guidance at the moments it actually matters — when you're in the part of the app where a feature lives.</p>
+                <p>The tutorial opens on the map screen — which is where most people land when they first open Grover and think "okay, now what?" The first overlay answers that question directly.</p>
 
-                <p>The system uses spotlight overlays: a focused highlight on a specific button or element, with everything else gently fading back. It's like having someone tap you on the shoulder and say "hey, try this" — except the thing they're pointing at is right there, and you can tap it immediately. No simulated interface, no separate tutorial mode. The spotlight points at the real feature. You tap it and it does exactly what it always does.</p>
+                <div class="screenshot-frame">
+                    <img src="../img/blog-photos/tutorial-vanlife-copilot.jpeg" alt="Grover app showing the 'Your vanlife copilot' tutorial overlay on the map screen" loading="lazy">
+                </div>
+                <p class="screenshot-caption">Step 1 of 6: the AI copilot introduction on the Grover map screen.</p>
+
+                <p><strong>"Your vanlife copilot."</strong> Ask Grover to plan routes, scout campsites, and troubleshoot your rig. Share your location and current setup — the more context, the better the answer.</p>
+
+                <p>That's it. One card, one button, one clear idea. The tutorial doesn't try to explain everything the AI can do — it just gives you enough to start the conversation. You tap "Let's go" and you're in. The copilot handles the rest from there.</p>
 
                 <div class="feature-highlight">
-                    <p><strong>The tutorial and the feature are the same thing.</strong> When the spotlight highlights a button, you tap it and you're using the actual feature — no extra steps to find it yourself afterward.</p>
+                    <p><strong>Context is everything.</strong> The more Grover knows — your location, your rig, your planned route — the sharper its answers get. The tutorial is built around this idea: give you just enough to start sharing context, and let the AI take it from there.</p>
                 </div>
-
-                <p>The sequence moves forward as you go. Discover one thing, get a nudge toward the next. Already know something? Move on. The system doesn't get in your way — it clears the path in front of you.</p>
             </section>
 
-            <section id="spotlight">
-                <h2>Some of Our Favorite Moments in the Flow</h2>
+            <section id="rig">
+                <h2>Your Rig Is the Filter</h2>
 
-                <p>The tutorial walks you through the features that unlock the most joy in Grover. A few highlights:</p>
+                <p>Here's the thing about vanlife trip planning apps: most of them show you everything and let you figure out what applies to you. A beautiful campsite that requires a 38-foot approach road. A forest route with a 4-inch clearance. A spot that needs shore power and you're running solar-only.</p>
 
-                <ul>
-                    <li><strong>Your first bucket list marker.</strong> The tutorial shows you how to tap and hold on any spot on the map to save it to your bucket list — one of the most powerful (and satisfying) gestures in the app.</li>
-                    <li><strong>The + button for adding pins.</strong> The first time you add a pin to the community map is a big moment. The tutorial makes sure you find it.</li>
-                    <li><strong>Filter bar exploration.</strong> The map filters are where a lot of the magic lives — toggling layers, surfacing LandTrust properties, narrowing by place type. The tutorial pulls back the curtain.</li>
-                </ul>
+                <p>Grover does something different. It uses your rig specs to filter results before they surface. That means what you see is what you can actually run — not just what looks good on paper.</p>
 
-                <p>Each of these moments is designed to be fast. You're not sitting through a lecture — you're tapping things and watching them work. That's the whole point.</p>
-            </section>
+                <div class="screenshot-frame">
+                    <img src="../img/blog-photos/tutorial-rig-specs.jpeg" alt="Grover app showing the 'Your rig, your filter' tutorial overlay on the Rig Specs screen" loading="lazy">
+                </div>
+                <p class="screenshot-caption">The Rig Specs tutorial introduces your vehicle as Grover's core filter engine.</p>
 
-            <section id="server-driven">
-                <h2>A Tutorial That Keeps Getting Better</h2>
+                <p>The tutorial makes this explicit. When you land on the Rig Specs screen, an overlay reads: <em>"Your rig, your filter. Add your clearance, drivetrain, power, and water setup. Grover uses your build to surface routes and campsites you can actually run — not just what looks good on paper."</em></p>
 
-                <p>Grover is growing fast. New features ship all the time — the LandTrust layer, the Stats page, the bucket list completion flow — and we want to make sure every one of them gets properly introduced to the people who would love it most.</p>
-
-                <p>The tutorial system is built to grow with the app. As we ship new features, we can add them to the tutorial flow so new users discover them right away and existing users get a heads-up when something important changes. It's our way of making sure the best parts of Grover never stay hidden.</p>
+                <p>You can fill in Vehicle Details, Dimensions &amp; Capacity, Power System, Water &amp; Plumbing, Climate Control, and Custom Equipment. The more you add, the tighter Grover's results get. A Transit van and a 40-foot fifth wheel are not looking for the same campsites — and Grover knows the difference once you tell it what you're driving.</p>
 
                 <blockquote>
-                    "The best tutorial gets out of the way the moment you understand what to do. We built ours around that idea."
+                    "Add your clearance, drivetrain, power, and water setup. Grover uses your build to surface routes and campsites you can actually run — not just what looks good on paper."
                 </blockquote>
             </section>
 
-            <section id="new-users">
-                <h2>What This Means for You</h2>
+            <section id="bucket-list">
+                <h2>The Bucket List: Places You Haven't Hit Yet</h2>
 
-                <p>If you're new to Grover, the tutorial is your on-ramp. You'll see spotlight moments as you navigate the app for the first time — each one pointing you toward a feature worth knowing. By the time you've followed through the sequence, you'll have tried the things that make Grover genuinely useful, not just read about them.</p>
+                <p>Every vanlife person has a mental list. That ridge in Colorado. That beach in Baja. That forest road someone mentioned once in a Facebook group and you'll be damned if you can find the post again. Grover gives that list a home.</p>
 
-                <p>If you've been using Grover for a while, keep an eye out for tutorial moments when new features land. We'll surface them contextually so you know something new is there and exactly how to use it.</p>
+                <div class="screenshot-frame">
+                    <img src="../img/blog-photos/tutorial-bucket-list.jpeg" alt="Grover app showing the Bucket List tutorial overlay with 'Track places you haven't hit yet'" loading="lazy">
+                </div>
+                <p class="screenshot-caption">The Bucket List tutorial explains long-press pin dropping and photo completion.</p>
 
-                <p>Either way: open the app, start exploring, and let Grover show you what it can do. Our <a href="getting-started-with-grover-guide.html" class="cta-link">Getting Started guide</a> is a great companion if you want a full overview before diving in.</p>
+                <p>The Bucket List tutorial walks you through the core gesture: <strong>long-press anywhere on the map to drop a bucket list pin.</strong> You can also save any Circle pin directly to your list. When you finally make it to that spot, you complete the marker with a photo upload — turning a future goal into a documented memory.</p>
+
+                <p>It's a small thing that becomes a big thing the longer you use Grover. After a few trips, your bucket list starts looking like a map of your life's ambitions. After a few completions, it starts looking like a record of everything you've actually done.</p>
+
+                <div class="feature-highlight">
+                    <p><strong>Tip embedded in the tutorial:</strong> tap and hold anywhere on the map to drop a new bucket list pin. You don't need to find a specific menu or location first — just hold, drop, done.</p>
+                </div>
             </section>
 
-            <p>We've put a lot of care into making Grover feel intuitive from the very first session. The tutorial system is one of the most important investments in that experience we've made — because the best vanlife app in the world is only useful if you actually know how to use it. Go find out what you've been missing.</p>
+            <section id="six-steps">
+                <h2>Six Steps, Zero Friction</h2>
+
+                <p>The full tutorial is a six-step flow. The copilot intro, the rig setup, the bucket list — and three more moments that guide you through the features that unlock the most value in Grover. The sequence moves forward as you engage with each step, and you can dismiss any card if you already know what you're doing.</p>
+
+                <p>The spotlight overlays point at the real interface. There's no fake mockup, no separate "tutorial mode." When the card highlights a button, you tap it and it does the real thing. You're not learning a simulation of Grover — you're learning Grover by using it.</p>
+
+                <p>Each overlay is one idea. One headline. One short sentence. One button. That's the whole thing. We kept it tight on purpose: the goal is to get you doing, not reading. The moment you tap "Got it" or "Let's go," you're already using the feature the card was pointing at.</p>
+            </section>
+
+            <section id="for-you">
+                <h2>What This Means If You're New</h2>
+
+                <p>If you downloaded Grover recently, the tutorial is your on-ramp. You'll see the overlays as you navigate for the first time. Follow the sequence and by the time you've tapped through all six steps, you'll have set up your rig, started a conversation with your copilot, and dropped your first bucket list pin. That's not a bad first session.</p>
+
+                <p>If you've been using Grover for a while, we'll surface tutorial moments when new features land — contextually, in the part of the app where they live. You'll know something new is there and exactly how to use it before you have to go looking.</p>
+
+                <p>And if you want to go deeper before your first trip, our <a href="getting-started-with-grover-guide.html" class="cta-link">Getting Started guide</a> covers everything in one place.</p>
+            </section>
+
+            <p>We've put a lot of care into making Grover feel intuitive from the first minute. The tutorial is the most direct expression of that — because the best vanlife app in the world is only useful if you know where to start. Now you do. Open the app and let it show you the rest.</p>
 
             <section class="related-articles" style="margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 15px; border-left: 4px solid #66AEC0;">
                 <h3 style="color: #66AEC0; margin-bottom: 20px;">More from The Joy Ride Journal</h3>
                 <div style="display: grid; gap: 15px;">
                     <div>
                         <h4 style="margin-bottom: 5px;"><a href="getting-started-with-grover-guide.html" class="cta-link">Getting Started with Grover: Your Complete Guide</a></h4>
-                        <p style="margin: 0; color: #666; font-size: 0.9rem;">The full orientation — from download to your first adventure planned. A great complement to the in-app tutorial.</p>
+                        <p style="margin: 0; color: #666; font-size: 0.9rem;">The full orientation — from download to your first adventure planned. A great companion to the in-app tutorial.</p>
                     </div>
                     <div>
                         <h4 style="margin-bottom: 5px;"><a href="your-first-chat-grover-guide.html" class="cta-link">Your First Chat: What to Ask Grover for Maximum Vanlife Joy</a></h4>
-                        <p style="margin: 0; color: #666; font-size: 0.9rem;">Ready to get into it? Here's how to get the most out of your first conversation with your vanlife co-pilot.</p>
+                        <p style="margin: 0; color: #666; font-size: 0.9rem;">Once you've met your copilot, here's how to actually get the most out of the conversation.</p>
                     </div>
                     <div>
                         <h4 style="margin-bottom: 5px;"><a href="grover-bucket-list-pin-creation.html" class="cta-link">From Dream to Done: How Grover Turns Your Bucket List into a Pin</a></h4>
-                        <p style="margin: 0; color: #666; font-size: 0.9rem;">One of the features the tutorial will walk you through — and one of the most satisfying parts of the Grover experience.</p>
+                        <p style="margin: 0; color: #666; font-size: 0.9rem;">A deeper look at the bucket list feature the tutorial walks you through.</p>
                     </div>
                     <div>
                         <h4 style="margin-bottom: 5px;"><a href="vanlife-app-features-that-matter.html" class="cta-link">Vanlife App Features That Actually Matter</a></h4>
-                        <p style="margin: 0; color: #666; font-size: 0.9rem;">A broader look at what separates genuinely useful vanlife apps from the ones that just look good on the shelf.</p>
+                        <p style="margin: 0; color: #666; font-size: 0.9rem;">What separates genuinely useful vanlife apps from the ones that just look good on the shelf.</p>
                     </div>
                 </div>
             </section>
 
             <div class="cta-box">
-                <h3>See It in Action</h3>
-                <p>Download Grover and let the tutorial guide you through everything the app can do. The best way to understand a feature is to try it.</p>
+                <h3>Start the Tutorial</h3>
+                <p>Download Grover and let the six-step tutorial walk you through everything that matters. Your rig, your bucket list, your copilot — all set up in one first session.</p>
                 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
                     <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
                     <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>

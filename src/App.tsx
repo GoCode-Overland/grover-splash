@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import ForBuilders from "./pages/ForBuilders";
 import ForOems from "./pages/ForOems";
 import Download from "./pages/Download";
+import JoinCircle from "./pages/JoinCircle";
 import CopyKit from "./pages/CopyKit";
 import NotFound from "./pages/NotFound";
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/for-builders" element={<ForBuilders />} />
           <Route path="/for-oems" element={<ForOems />} />
           <Route path="/download" element={<Download />} />
+          <Route path="/join/:slug" element={<JoinCircle />} />
           <Route path="/partners/copy-kit" element={<CopyKit />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

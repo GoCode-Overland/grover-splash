@@ -101,7 +101,7 @@ const ForBuilders = () => {
               <span className="text-primary">Keep Customers Confident.</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Give every customer an AI assistant that knows your build — white-labelled to your brand, powered by your knowledge base, and backed by real usage insights.
+              Give every customer an AI assistant that knows your build — branded to you, powered by your knowledge base, and backed by real usage insights.
             </p>
             <Button size="lg" className="text-lg px-8 py-6" asChild>
               <a href={HUBSPOT_BOOKING_URL} target="_blank" rel="noopener noreferrer">

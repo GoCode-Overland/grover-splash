@@ -204,7 +204,7 @@ const ForBuilders = () => {
             <p className="text-center text-sm text-muted-foreground mt-6">
               Component OEM?{" "}
               <a href="/for-oems" className="text-primary hover:underline">
-                See the OEM programme →
+                See the OEM program →
               </a>
             </p>
           </div>

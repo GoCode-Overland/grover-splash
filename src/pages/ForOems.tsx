@@ -143,7 +143,7 @@ const ForOems = () => {
             <p className="text-sm text-muted-foreground">
               Building rigs too?{" "}
               <a href="/for-builders" className="text-primary hover:underline">
-                See the Builders programme →
+                See the Builders program →
               </a>
             </p>
           </div>

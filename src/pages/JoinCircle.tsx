@@ -6,6 +6,42 @@ const ANDROID_BASE_URL = "https://play.google.com/store/apps/details?id=ai.getgr
 const API_BASE_URL = "https://ops.getgrover.ai";
 const DEFAULT_LOGO = "/img/grover-combomark-black.svg";
 
+const hexToRgb = (hex: string): [number, number, number] | null => {
+  const match = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex.trim());
+  if (!match) return null;
+  return [parseInt(match[1], 16), parseInt(match[2], 16), parseInt(match[3], 16)];
+};
+
+const hexToRgba = (hex: string, alpha: number): string => {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return hex;
+  return `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${alpha})`;
+};
+
+// WCAG relative luminance, used to keep brand colors readable as heading text
+// on the page's light background regardless of how pale a company's hex is.
+const relativeLuminance = ([r, g, b]: [number, number, number]): number => {
+  const [rs, gs, bs] = [r, g, b].map((c) => {
+    const s = c / 255;
+    return s <= 0.03928 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+};
+
+const readableAccentColor = (hex: string): string => {
+  const rgb = hexToRgb(hex);
+  if (!rgb) return hex;
+  let [r, g, b] = rgb;
+  let iterations = 0;
+  while (relativeLuminance([r, g, b]) > 0.4 && iterations < 12) {
+    r = Math.round(r * 0.85);
+    g = Math.round(g * 0.85);
+    b = Math.round(b * 0.85);
+    iterations++;
+  }
+  return `rgb(${r}, ${g}, ${b})`;
+};
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -90,8 +126,9 @@ const JoinCircle = () => {
   const useDark = prefersDarkMode();
   const primaryHex = theme ? (useDark ? theme.darkPrimaryHex ?? theme.primaryHex : theme.primaryHex) : undefined;
   const secondaryHex = theme ? (useDark ? theme.darkSecondaryHex ?? theme.secondaryHex : theme.secondaryHex) : undefined;
+  const accentTextColor = primaryHex ? readableAccentColor(primaryHex) : undefined;
 
-  const logoSrc = !logoFailed && company?.logoUrl ? company.logoUrl : DEFAULT_LOGO;
+  const hasCompanyLogo = state.status === "success" && !!company?.logoUrl && !logoFailed;
 
   const trackDownload = (platform: "ios" | "android") => {
     window.gtag?.("event", "download_click", {
@@ -110,13 +147,23 @@ const JoinCircle = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center px-6 text-center">
       {/* Logo */}
-      <a href="/" className="mb-10">
-        <img
-          src={logoSrc}
-          onError={() => setLogoFailed(true)}
-          alt={company?.name ?? "Grover"}
-          className="h-10 w-auto max-w-[220px] object-contain opacity-80 hover:opacity-100 transition-opacity"
-        />
+      <a href="/" className="mb-8 block">
+        {hasCompanyLogo ? (
+          <div className="h-24 w-24 mx-auto rounded-2xl bg-white shadow-sm ring-1 ring-black/5 flex items-center justify-center p-3 overflow-hidden transition-transform hover:scale-105">
+            <img
+              src={company!.logoUrl!}
+              onError={() => setLogoFailed(true)}
+              alt={company!.name}
+              className="h-full w-full object-contain"
+            />
+          </div>
+        ) : (
+          <img
+            src={DEFAULT_LOGO}
+            alt="Grover"
+            className="h-8 w-auto max-w-[200px] object-contain mx-auto opacity-90 hover:opacity-100 transition-opacity"
+          />
+        )}
       </a>
 
       {state.status === "loading" && (
@@ -172,19 +219,19 @@ const JoinCircle = () => {
         <>
           <h1 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-3">
             Join {company.name}'s<br />
-            <span style={primaryHex ? { color: primaryHex } : undefined} className={primaryHex ? undefined : "text-primary"}>
+            <span style={accentTextColor ? { color: accentTextColor } : undefined} className={accentTextColor ? undefined : "text-primary"}>
               Community
             </span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8 max-w-sm">
-            Download Grover, then enter your circle code when you sign up.
+            Download Grover and enter your code below to make {company.name} your Home Circle.
           </p>
 
           {/* Code callout */}
           {codes.length <= 1 ? (
             <div
               className="bg-muted rounded-xl px-8 py-5 mb-10 inline-flex flex-col items-center gap-1"
-              style={secondaryHex ? { backgroundColor: secondaryHex, opacity: 0.12 } : undefined}
+              style={secondaryHex ? { backgroundColor: hexToRgba(secondaryHex, 0.12) } : undefined}
             >
               <span className="text-xs uppercase tracking-widest text-muted-foreground font-medium">
                 Your circle code

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
+import { Check, Copy } from "lucide-react";
 
 const IOS_APP_URL = "https://apps.apple.com/us/app/grover-van-life/id6742468326";
 const ANDROID_BASE_URL = "https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app";
@@ -83,6 +84,7 @@ const JoinCircle = () => {
   const [state, setState] = useState<LoadState>({ status: "loading" });
   const [logoFailed, setLogoFailed] = useState(false);
   const [attempt, setAttempt] = useState(0);
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -118,6 +120,33 @@ const JoinCircle = () => {
 
   const retry = useCallback(() => setAttempt((n) => n + 1), []);
 
+  const copyCode = useCallback(async (code: string) => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(code);
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = code;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+      }
+      setCopiedCode(code);
+      window.gtag?.("event", "circle_code_copy", { circle_code: code });
+    } catch {
+      // Clipboard access can fail (e.g. denied permissions); the code is still visible to copy by hand.
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!copiedCode) return;
+    const timeout = setTimeout(() => setCopiedCode(null), 1800);
+    return () => clearTimeout(timeout);
+  }, [copiedCode]);
+
   const company = state.status === "success" ? state.data.company : null;
   const codes = state.status === "success" ? state.data.builderCodes : [];
   const trackingCode = codes.join(",") || slug.toUpperCase();
@@ -147,9 +176,9 @@ const JoinCircle = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center px-6 text-center">
       {/* Logo */}
-      <a href="/" className="mb-8 block">
+      <div className="mb-8">
         {hasCompanyLogo ? (
-          <div className="h-24 w-24 mx-auto rounded-2xl bg-white shadow-sm ring-1 ring-black/5 flex items-center justify-center p-3 overflow-hidden transition-transform hover:scale-105">
+          <div className="h-24 w-24 mx-auto rounded-2xl bg-white shadow-sm ring-1 ring-black/5 flex items-center justify-center p-3 overflow-hidden">
             <img
               src={company!.logoUrl!}
               onError={() => setLogoFailed(true)}
@@ -161,10 +190,10 @@ const JoinCircle = () => {
           <img
             src={DEFAULT_LOGO}
             alt="Grover"
-            className="h-8 w-auto max-w-[200px] object-contain mx-auto opacity-90 hover:opacity-100 transition-opacity"
+            className="h-8 w-auto max-w-[200px] object-contain mx-auto opacity-90"
           />
         )}
-      </a>
+      </div>
 
       {state.status === "loading" && (
         <div className="w-full max-w-xs animate-pulse">
@@ -229,30 +258,46 @@ const JoinCircle = () => {
 
           {/* Code callout */}
           {codes.length <= 1 ? (
-            <div
-              className="bg-muted rounded-xl px-8 py-5 mb-10 inline-flex flex-col items-center gap-1"
+            <button
+              type="button"
+              onClick={() => copyCode(codes[0] ?? slug.toUpperCase())}
+              aria-label={`Copy circle code ${codes[0] ?? slug.toUpperCase()}`}
+              className="bg-muted rounded-xl px-8 py-5 mb-10 inline-flex flex-col items-center gap-1 cursor-pointer transition-transform hover:scale-[1.02] active:scale-[0.97] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
               style={secondaryHex ? { backgroundColor: hexToRgba(secondaryHex, 0.12) } : undefined}
             >
               <span className="text-xs uppercase tracking-widest text-muted-foreground font-medium">
-                Your circle code
+                {copiedCode === (codes[0] ?? slug.toUpperCase()) ? "Copied!" : "Your circle code · tap to copy"}
               </span>
-              <span className="text-3xl font-bold font-heading tracking-wider text-foreground">
+              <span className="flex items-center gap-2 text-3xl font-bold font-heading tracking-wider text-foreground">
                 {codes[0] ?? slug.toUpperCase()}
+                {copiedCode === (codes[0] ?? slug.toUpperCase()) ? (
+                  <Check className="h-5 w-5 opacity-60 shrink-0" strokeWidth={2.5} />
+                ) : (
+                  <Copy className="h-5 w-5 opacity-40 shrink-0" strokeWidth={2.5} />
+                )}
               </span>
-            </div>
+            </button>
           ) : (
             <div className="bg-muted rounded-xl px-8 py-5 mb-10 inline-flex flex-col items-center gap-3">
               <span className="text-xs uppercase tracking-widest text-muted-foreground font-medium">
-                Enter one of these codes
+                Tap a code to copy it
               </span>
               <div className="flex flex-wrap justify-center gap-2 max-w-xs">
                 {codes.map((code) => (
-                  <span
+                  <button
                     key={code}
-                    className="px-4 py-1.5 rounded-lg bg-background border border-border text-lg font-bold font-heading tracking-wider text-foreground"
+                    type="button"
+                    onClick={() => copyCode(code)}
+                    aria-label={`Copy circle code ${code}`}
+                    className="flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-background border border-border text-lg font-bold font-heading tracking-wider text-foreground cursor-pointer transition-transform hover:scale-[1.03] active:scale-[0.97] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
                   >
                     {code}
-                  </span>
+                    {copiedCode === code ? (
+                      <Check className="h-4 w-4 opacity-60 shrink-0" strokeWidth={2.5} />
+                    ) : (
+                      <Copy className="h-4 w-4 opacity-40 shrink-0" strokeWidth={2.5} />
+                    )}
+                  </button>
                 ))}
               </div>
             </div>
@@ -297,6 +342,10 @@ const JoinCircle = () => {
       <p className="mt-4 text-xs text-muted-foreground/60">
         iOS · Android · Free to download
       </p>
+
+      <a href="/" className="mt-8 inline-block opacity-40 hover:opacity-70 transition-opacity">
+        <img src={DEFAULT_LOGO} alt="Grover" className="h-4 w-auto" />
+      </a>
     </div>
   );
 };

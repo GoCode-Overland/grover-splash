@@ -72,7 +72,42 @@
         .nav-links a { text-decoration: none; color: #66AEC0; font-weight: 500; padding: 6px 14px; border-radius: 20px; transition: background-color 0.3s ease; font-size: 0.85rem; }
         .nav-links a:hover { background: #f8f9fa; }
         .nav-links a.active { background: #66AEC0; color: white; }
-        @media (max-width: 768px) { .blog-title { font-size: 2rem; } .nav-links a { font-size: 0.75rem; padding: 4px 10px; } }
+
+        /* Screenshot styling */
+        .screenshot-frame {
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8aad 60%, #1e7090 100%);
+            border-radius: 24px;
+            padding: 32px 24px;
+            margin: 36px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 440px;
+            box-shadow: 0 12px 40px rgba(26, 95, 122, 0.35);
+        }
+        .screenshot-frame img {
+            border: 3px solid #111;
+            border-radius: 40px;
+            max-width: 260px;
+            width: 100%;
+            display: block;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+        .screenshot-caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: -20px;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title { font-size: 2rem; }
+            .nav-links a { font-size: 0.75rem; padding: 4px 10px; }
+            .screenshot-frame { padding: 20px 16px; }
+            .screenshot-frame img { max-width: 220px; border-radius: 32px; }
+        }
     </style>
 </head>
 <body class="font-body text-gray-800 leading-relaxed m-0 p-0">
@@ -110,10 +145,10 @@
         </header>
 
         <article class="blog-content">
-            <figure style="margin: 0 0 40px 0; text-align: center;">
-                <img src="../../img/blog-photos/bucket-list-autocompletion.jpeg" alt="Grover's Create a Pin screen showing an automatically detected bucket list match with a one-tap checkbox to mark it visited" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
-                <figcaption style="margin-top: 10px; font-style: italic; color: #666; font-size: 0.9rem;">Drop a pin near a spot you'd bucket-listed, and Grover already knows.</figcaption>
-            </figure>
+            <div class="screenshot-frame">
+                <img src="../../img/blog-photos/bucket-list-autocompletion.jpeg" alt="Grover's Create a Pin screen showing an automatically detected bucket list match with a one-tap checkbox to mark it visited" loading="lazy">
+            </div>
+            <p class="screenshot-caption">Drop a pin near a spot you'd bucket-listed, and Grover already knows.</p>
 
             <section id="the-other-half">
                 <p>We told you about <a href="../grover-bucket-list-pin-creation" class="cta-link">the loop that closes when you tap a bucket list marker</a> — you visit the spot you'd planned for, upload a photo, and Grover turns your dream into a real pin on the map. That flow is great, but it asks something of you: you have to remember the marker was there, find it, and tap it.</p>
@@ -160,7 +195,7 @@
 
                 <p>Once you're on the road, you don't have to do anything differently. Drop pins the way you always have. If you happen to land near a spot you'd dreamed about, Grover will tell you, pre-checked and ready to go. And if you're not sure what's nearby or want help deciding where to go next, remember that <a href="../grover-chat-knows-where-you-are" class="cta-link">chat now knows where you are</a>, so your agent can point you toward planned spots without you having to ask twice.</p>
 
-                <p>Every completed spot adds to your growing collection too. Check your <a href="../grover-stats-and-trophies" class="cta-link">Stats & Trophy page</a> after your next drive and watch the numbers move.</p>
+                <p>Every completed spot adds to your growing collection too. Check your <a href="../grover-stats-and-trophies" class="cta-link">Stats & Trophy page</a> after your next drive and watch the numbers move. And once you've got a pin worth showing off, <a href="../grover-circles-club-sharing" class="cta-link">share it with your Circle</a> in one tap — the people who'll actually appreciate that dream-spot photo are usually the ones already following your trip.</p>
             </section>
 
             <section class="related-articles" style="margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 15px; border-left: 4px solid #66AEC0;">
@@ -182,8 +217,14 @@
                         <h4 style="margin-bottom: 5px;"><a href="../grover-stats-and-trophies" class="cta-link">Your Vanlife Story, in Numbers: Meet Grover's Stats & Trophy System</a></h4>
                         <p style="margin: 0; color: #666; font-size: 0.9rem;">Every completed bucket list spot adds to your growing trophy collection.</p>
                     </div>
+                    <div>
+                        <h4 style="margin-bottom: 5px;"><a href="../grover-circles-club-sharing" class="cta-link">Your People, Your Pins: Introducing Club Circles on Grover</a></h4>
+                        <p style="margin: 0; color: #666; font-size: 0.9rem;">Just completed a bucket list spot? Share the pin with your Circle in one tap.</p>
+                    </div>
                 </div>
             </section>
+
+            <p><strong>Don't have this yet?</strong> Make sure automatic updates are turned on in the App Store or Google Play so Grover updates itself the moment new features ship — no need to check back and update manually.</p>
 
             <div class="cta-box">
                 <h3>Let Grover Catch the Moment</h3>

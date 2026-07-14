@@ -120,11 +120,22 @@ Match thematically:
 - Default if nothing fits → skip hero image or use `og.png`
 
 ### Image HTML pattern
+
+For wide/landscape lifestyle photos (vans, scenery, community shots):
 ```html
 <img src="../img/blog-photos/[name]" 
      alt="[descriptive alt text]" 
      style="width: 100%; border-radius: 12px; margin: 20px 0; max-height: 400px; object-fit: cover;">
 ```
+
+For actual in-app phone screenshots (portrait, e.g. `1170x2532`) — do NOT use the pattern above, it crops the screen content badly. Use the device-frame treatment instead (see `blog/grover-in-app-tutorial-system/index.html` for the original, or any of the July 2026 iOS-1.2.8 posts for a copy-paste example):
+```html
+<div class="screenshot-frame">
+    <img src="../../img/blog-photos/[name]" alt="[descriptive alt text]" loading="lazy">
+</div>
+<p class="screenshot-caption">[one-line caption]</p>
+```
+Add the `.screenshot-frame`, `.screenshot-frame img`, `.screenshot-caption` (and `.screenshot-group` for a side-by-side pair) CSS rules to the post's `<style>` block — copy verbatim from an existing post that uses them.
 
 ### ⚠️ Requesting new images from the Director
 

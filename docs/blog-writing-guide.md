@@ -14,6 +14,8 @@ Read this before creating, editing, or publishing any blog content. Update it wh
 
 The blog is **static HTML** — no build step, no SSG, no framework. Files are authored in `blog/` and deployed as-is. Always keep `public/blog/` in sync (see §8).
 
+Posts use **clean URLs**: each post lives at `blog/[slug]/index.html` (a directory, not a flat `blog/[slug].html` file), so links omit the `.html` extension (e.g. `href="grover-campflare-campgrounds"`). Head/CSS asset paths from a post use `../../` (one level for the slug directory, one for `blog/`) instead of `../`.
+
 ---
 
 ## 2. Brand Voice

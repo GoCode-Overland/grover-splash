@@ -152,12 +152,12 @@ export default function GroverUpdateJune2026() {
             <Text className="cta-label" style={ctaLabelStyle}>Get the app</Text>
             <Row>
               <Column style={{ paddingRight: '8px' }}>
-                <Link href="https://apps.apple.com/us/app/grover-vanlife-co-pilot/id6477892440" style={ctaButtonStyle}>
+                <Link href="https://apps.apple.com/us/app/grover-van-life/id6742468326" style={ctaButtonStyle}>
                   Download on iOS
                 </Link>
               </Column>
               <Column>
-                <Link href="https://play.google.com/store/apps/details?id=ai.getgrover.android" style={ctaOutlineStyle}>
+                <Link href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" style={ctaOutlineStyle}>
                   Get it on Android
                 </Link>
               </Column>

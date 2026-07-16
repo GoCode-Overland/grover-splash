@@ -37,7 +37,7 @@ export default function GroverUpdate20260716() {
       <Head>
         <style>{darkMode}</style>
       </Head>
-      <Preview>We hit Adventure Van Expo, met Rene, and shipped 3 fun new things.</Preview>
+      <Preview>Adventure Van Expo, Club Circles, and 2 more fun things shipped.</Preview>
       <Body className="email-bg" style={bodyStyle}>
         <Container className="email-card" style={containerStyle}>
 
@@ -78,14 +78,14 @@ export default function GroverUpdate20260716() {
             </div>
           </Section>
 
-          {/* Location-aware chat */}
+          {/* Club Circles */}
           <Section style={boxOuterStyle}>
             <div className="box-card" style={boxCardStyle}>
-              <Text className="item-title" style={itemTitleStyle}>Chat that knows where you are</Text>
+              <Text className="item-title" style={itemTitleStyle}>Share your pins with just your people</Text>
               <Text className="item-body" style={itemBodyStyle}>
-                Ask "find dispersed camping near me" and Grover finally knows what near means. If you've already opted in to sharing your location for the map, chat uses that same permission to understand roughly where you are. Nothing changes if you haven't opted in, and it's never used for anything beyond that one conversation. Rolling out on iOS first, Android close behind.
+                Club Circles are live. Build a Circle for your crew, your rig-specific group, or the three people who actually text back at 2 a.m. when you're stuck somewhere. Find an amazing spot, snap a photo, and pick which Circle sees it. One tap, and it's just theirs, not the whole map. Whoever creates a Circle becomes its Grovenor, they can invite people, approve requests, and keep things running well.
               </Text>
-              <Link href={`${BASE}/blog/grover-chat-knows-where-you-are`} style={readMoreStyle}>Read more →</Link>
+              <Link href={`${BASE}/blog/grover-circles-club-sharing`} style={readMoreStyle}>Read more →</Link>
             </div>
           </Section>
 
@@ -246,6 +246,7 @@ const itemTitleStyle: React.CSSProperties = {
 };
 
 const photoFrameStyle: React.CSSProperties = {
+  backgroundColor: '#3d7c9c', // fallback for Outlook desktop, which ignores the gradient below entirely
   background: 'linear-gradient(135deg, #23496d 0%, #62aebf 100%)',
   borderRadius: '16px',
   margin: '4px auto 8px',
@@ -262,6 +263,7 @@ const photoImgStyle: React.CSSProperties = {
 };
 
 const photoFrameStyleSmall: React.CSSProperties = {
+  backgroundColor: '#3d7c9c', // fallback for Outlook desktop, which ignores the gradient below entirely
   background: 'linear-gradient(135deg, #23496d 0%, #62aebf 100%)',
   borderRadius: '12px',
   padding: '6px',

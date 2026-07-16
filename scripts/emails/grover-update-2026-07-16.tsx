@@ -31,15 +31,9 @@ const darkMode = `
   }
 `;
 
-export default function GroverUpdate20260716() {
+export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe?: boolean }) {
   return (
-    <Html lang="en">
-      <Head>
-        <style>{darkMode}</style>
-      </Head>
-      <Preview>Adventure Van Expo, Club Circles, and 2 more fun things shipped.</Preview>
-      <Body className="email-bg" style={bodyStyle}>
-        <Container className="email-card" style={containerStyle}>
+    <Container className="email-card" style={containerStyle}>
 
           {/* Header */}
           <Section style={headerStyle}>
@@ -50,7 +44,7 @@ export default function GroverUpdate20260716() {
           {/* Intro */}
           <Section style={sectionStyle}>
             <Text className="intro-text" style={introStyle}>
-              We just got back from Adventure Van Expo in Winter Park, and I am still riding the high. Grab a coffee. This one's a good one.
+              We just got back from Adventure Van Expo in Winter Park, and I am still riding the high. Buckle up. New tools are here!
             </Text>
           </Section>
 
@@ -83,7 +77,7 @@ export default function GroverUpdate20260716() {
             <div className="box-card" style={boxCardStyle}>
               <Text className="item-title" style={itemTitleStyle}>Share your pins with just your people</Text>
               <Text className="item-body" style={itemBodyStyle}>
-                Club Circles are live. Build a Circle for your crew, your rig-specific group, or the three people who actually text back at 2 a.m. when you're stuck somewhere. Find an amazing spot, snap a photo, and pick which Circle sees it. One tap, and it's just theirs, not the whole map. Whoever creates a Circle becomes its Grovenor, they can invite people, approve requests, and keep things running well.
+                Club Circles are live. Build a Circle for your crew, your rig-specific group, or the three people who actually text back at 2 a.m. when you're stuck somewhere. Find an amazing spot, snap a photo, and pick which Circle sees it. One tap to share it with just the right people, not the whole world. Whoever creates the Circle becomes its Grovenor. They can invite people, approve requests, and keep things running well.
               </Text>
               <Link href={`${BASE}/blog/grover-circles-club-sharing`} style={readMoreStyle}>Read more →</Link>
             </div>
@@ -102,7 +96,7 @@ export default function GroverUpdate20260716() {
                 />
               </div>
               <Text className="item-body" style={itemBodyStyle}>
-                Drop a pin within 500 meters of a spot you'd bucket-listed and Grover notices. A checkbox appears right in the pin creation form, pre-checked and ready to mark that spot visited using the photo you just took. You don't have to remember your own plans anymore. Grover remembers for you.
+                Drop a pin within 500 meters of a place on your bucket-list, and Grover notices. A checkbox appears right in the pin creation form, pre-checked and ready to mark that spot visited using the photo you just took. You don't have to remember your own plans anymore. Grover remembers for you.
               </Text>
               <Link href={`${BASE}/blog/grover-bucket-list-pin-matching`} style={readMoreStyle}>Read more →</Link>
             </div>
@@ -135,7 +129,7 @@ export default function GroverUpdate20260716() {
                 </Column>
               </Row>
               <Text className="item-body" style={itemBodyStyle}>
-                Campflare campgrounds now show up as their own pins on the Grover map, over 10,000 of them, right alongside your community spots. Tap one and get a full detail card: open or closed status, price range, amenities, and cell signal strength by carrier. Toggle the layer whenever you're scouting a new stretch of road.
+                Campflare campgrounds now show up as their own pins on the Grover map, over 10,000 of them, right alongside your community spots. Tap one and get a full detail card: open or closed status, price range, amenities, and cell signal strength by carrier. Toggle the layer whenever you're scouting a new stretch of road. Next week, live availability and alerts...
               </Text>
               <Link href={`${BASE}/blog/grover-campflare-campgrounds`} style={readMoreStyle}>Read more →</Link>
             </div>
@@ -147,12 +141,12 @@ export default function GroverUpdate20260716() {
             <Row>
               <Column style={{ paddingRight: '8px' }}>
                 <Link href="https://apps.apple.com/us/app/grover-van-life/id6742468326" style={ctaButtonStyle}>
-                  Download on iOS
+                  Download on the App Store
                 </Link>
               </Column>
               <Column>
                 <Link href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" style={ctaOutlineStyle}>
-                  Get it on Android
+                  Get it on Google Play
                 </Link>
               </Column>
             </Row>
@@ -161,15 +155,32 @@ export default function GroverUpdate20260716() {
           {/* Footer */}
           <Section className="email-footer" style={footerStyle}>
             <Text className="footer-copy" style={footerTextStyle}>
-              You're getting this because you signed up for Grover updates.{' '}
-              <Link href="{{{RESEND_UNSUBSCRIBE_URL}}}" className="footer-link" style={footerLinkStyle}>
-                Unsubscribe
-              </Link>
+              You're getting this because you signed up for Grover updates.
+              {includeUnsubscribe && (
+                <>
+                  {' '}
+                  <Link href="{{{RESEND_UNSUBSCRIBE_URL}}}" className="footer-link" style={footerLinkStyle}>
+                    Unsubscribe
+                  </Link>
+                </>
+              )}
             </Text>
             <Text className="footer-copy" style={footerTextStyle}>© 2026 Grover · getgrover.ai</Text>
           </Section>
 
-        </Container>
+    </Container>
+  );
+}
+
+export default function GroverUpdate20260716() {
+  return (
+    <Html lang="en">
+      <Head>
+        <style>{darkMode}</style>
+      </Head>
+      <Preview>Adventure Van Expo, Club Circles, and 2 more fun things shipped.</Preview>
+      <Body className="email-bg" style={bodyStyle}>
+        <EmailContent />
       </Body>
     </Html>
   );

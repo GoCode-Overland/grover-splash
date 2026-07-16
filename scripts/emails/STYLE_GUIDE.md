@@ -1,7 +1,7 @@
-# Joyride Journal — Email Style Guide
+# Joyride Journal Email Style Guide
 
-The newsletter was previously called **Grover Joyride** (sent via HubSpot, issues dated #1 through 11/11).
-It is now called the **Joyride Journal**, sent via Resend from `will@news.getgrover.ai`.
+The newsletter was previously called **Grover Joyride** (sent via HubSpot, issues dated #1 through 11/11, monthly cadence).
+It is now called the **Joyride Journal**, sent via Resend from `will@news.getgrover.ai`, on a **weekly or biweekly** cadence. Issues are identified by send date, not by issue number or month.
 
 ---
 
@@ -49,12 +49,13 @@ The old Grover Joyride emails nailed this: "I'm not going to overhype this." "Do
 ## Subject lines
 
 - Under 50 characters. Count them.
-- Be specific. "5 new things in Grover this month" beats "What's new in June."
+- Be specific. "3 new things in Grover this week" beats "What's new."
+- Say "this week," not "this month." The newsletter runs weekly or biweekly now, "this month" overpromises volume and undersells cadence.
 - No punctuation at the end unless it genuinely helps (a question mark is fine, exclamation points are not).
 - Don't repeat the subject line in the preview text.
 - Avoid clickbait. If the subject promises something, the email delivers it immediately.
 
-Good: `5 new things in Grover this month`
+Good: `3 new things in Grover this week`
 Good: `Your vanlife stats are live`
 Good: `Plan this weekend instantly`
 Bad: `Big news from the Grover team!`
@@ -81,7 +82,7 @@ Every Joyride Journal follows this order:
 5. **CTAs** — iOS + Android, always together, always at the bottom.
 6. **Footer** — dark navy to bookend the header. Unsubscribe link. Copyright. Nothing else.
 
-Keep the total to 5 items or fewer. If there's more to say, send a second email.
+Keep the total to 5 items or fewer, and expect fewer on a weekly cadence, 1 to 3 items is normal for a single week. Don't pad a thin week with filler just to hit a count. If there's more to say than fits, send a second email rather than cramming it in.
 
 ---
 
@@ -168,7 +169,9 @@ Design notes:
 
 When creating a new issue:
 1. Duplicate the most recent template file.
-2. Rename it: `grover-update-[month]-[year].tsx` (e.g. `grover-update-july-2026.tsx`).
-3. Update the `updates` data, preview text, and broadcast name in `send-broadcast-draft.ts`.
-4. Run `npm run draft-email` to push a draft to Resend.
-5. Go to resend.com/broadcasts to review, schedule, or send.
+2. Rename it: `grover-update-[YYYY-MM-DD].tsx`, using the date this issue is drafted or sent (e.g. `grover-update-2026-07-23.tsx`). Cadence is weekly or biweekly, so the date is what disambiguates issues, not a month or an issue number.
+3. Rename the exported function to match the date (e.g. `GroverUpdate20260723`).
+4. Update the import, subject line, preview text, and broadcast `name` in `send-broadcast-draft.ts`. Broadcast name format: `Joyride Journal - Mon DD, YYYY`.
+5. Clear `RESEND_BROADCAST_ID` in `.env` if this is a new issue rather than an edit to a draft already in progress.
+6. Run `npm run draft-email` to push a draft to Resend.
+7. Go to resend.com/broadcasts to review, schedule, or send.

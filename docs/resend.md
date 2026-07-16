@@ -44,19 +44,21 @@ RESEND_FROM=will@news.getgrover.ai
 
 | Audience name | ID | Used for |
 |---|---|---|
-| Grover Marketing | `ed4ed314-a7bd-4e1e-9b84-d4ff0fb15ebc` | Joyride Journal broadcast list |
+| Grover Marketing | `3da28087-f849-4cd9-82ec-bf5243db054e` | Joyride Journal broadcast list |
 | General | `fd639019-3fd0-4bf0-bc50-95b07f934499` | (legacy, unused) |
 
 Contacts for the Joyride Journal live in the **Grover Marketing** audience. Import contacts via CSV in the Resend dashboard or via the Contacts API.
+
+Note: the original Grover Marketing audience (`ed4ed314-...`) was deleted from the Resend account at some point after this doc was first written. It was recreated on 2026-07-16 with the ID above, empty, contacts need to be re-imported. If the ID above stops matching what's in the Resend dashboard, treat this doc as stale and check the dashboard directly rather than trusting the ID blindly.
 
 ---
 
 ## Joyride Journal workflow
 
-The newsletter (formerly "Grover Joyride" on HubSpot) is built and sent from `grover-splash`.
+The newsletter (formerly "Grover Joyride" on HubSpot, issues #1 through #11) is built and sent from `grover-splash`. As of 2026-07, it runs on a **weekly or biweekly** cadence rather than monthly, so issues are named by send date, not by month.
 
 **Files:**
-- `scripts/emails/grover-update-[month]-[year].tsx` — React Email template
+- `scripts/emails/grover-update-[YYYY-MM-DD].tsx` — React Email template, one file per issue, named for the date it's drafted/sent
 - `scripts/send-broadcast-draft.ts` — renders template, creates or updates a Resend broadcast
 - `scripts/emails/STYLE_GUIDE.md` — voice, copy rules, color palette, image guidelines
 - `.env` — credentials (not committed)
@@ -65,12 +67,16 @@ The newsletter (formerly "Grover Joyride" on HubSpot) is built and sent from `gr
 
 ```
 RESEND_API_KEY=re_...                  # grover-splash-marketing key
-RESEND_AUDIENCE_ID=ed4ed314-...        # Grover Marketing audience
+RESEND_AUDIENCE_ID=3da28087-...        # Grover Marketing audience
 RESEND_FROM=will@news.getgrover.ai     # use will@hello.getgrover.ai until domain is verified
 RESEND_BROADCAST_ID=...                # optional — set to update an existing draft in place
 ```
 
 **To send a new issue:**
+
+1. Duplicate the most recent `scripts/emails/grover-update-[YYYY-MM-DD].tsx` file, rename it for today's date, and rename its exported function to match (e.g. `GroverUpdate20260723`).
+2. Update the import, subject line, and broadcast `name` in `scripts/send-broadcast-draft.ts`. Broadcast name format: `Joyride Journal - Mon DD, YYYY`.
+3. Clear `RESEND_BROADCAST_ID` in `.env` if this is a new issue, not an edit to one already drafted.
 
 ```bash
 npm run draft-email   # creates draft in Resend, prints broadcast ID

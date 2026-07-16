@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { render } from '@react-email/render';
 import { Resend } from 'resend';
-import GroverUpdateJune2026 from './emails/grover-update-june-2026.js';
+import GroverUpdate20260716 from './emails/grover-update-2026-07-16.js';
 
 const { RESEND_API_KEY, RESEND_AUDIENCE_ID, RESEND_FROM, RESEND_BROADCAST_ID } = process.env;
 
@@ -12,17 +12,17 @@ if (!RESEND_API_KEY || !RESEND_AUDIENCE_ID || !RESEND_FROM) {
 
 const resend = new Resend(RESEND_API_KEY);
 
-const html = await render(GroverUpdateJune2026());
-const text = await render(GroverUpdateJune2026(), { plainText: true });
+const html = await render(GroverUpdate20260716());
+const text = await render(GroverUpdate20260716(), { plainText: true });
 
 const payload = {
   audienceId: RESEND_AUDIENCE_ID,
   from: `Will @ Grover <${RESEND_FROM}>`,
   replyTo: 'will@getgrover.ai',
-  subject: '5 new things in Grover this month',
+  subject: 'Adventure Van Expo recap + 3 new things',
   html,
   text,
-  name: 'Joyride Journal — June 2026',
+  name: 'Joyride Journal - Jul 16, 2026',
 };
 
 if (RESEND_BROADCAST_ID) {

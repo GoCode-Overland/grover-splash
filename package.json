@@ -13,8 +13,10 @@
     "lint": "eslint .",
     "stamp-blog": "node scripts/stamp-blog.js",
     "draft-email": "tsx scripts/send-broadcast-draft.ts",
+    "draft-b2b-email": "tsx scripts/send-b2b-broadcast-draft.ts",
     "render-hubspot-fragment": "tsx scripts/render-hubspot-fragment.ts",
-    "create-mobile-audience": "tsx scripts/create-mobile-audience.ts"
+    "create-mobile-audience": "tsx scripts/create-mobile-audience.ts",
+    "create-partner-audience": "tsx scripts/create-partner-audience.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

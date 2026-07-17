@@ -49,90 +49,74 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
           </Section>
 
           {/* Adventure Van Expo recap, boxed with framed photo */}
-          <Section style={boxOuterStyle}>
-            <div className="box-card" style={boxCardStyle}>
-              <Text className="item-title" style={itemTitleStyle}>We had a blast at Adventure Van Expo 🏔️</Text>
-              <Text className="item-body" style={itemBodyStyle}>
-                Winter Park was incredible. We set up shop for the weekend, met a ton of you in person, and swapped stories with partners and users nonstop. Also in tow: the very first printed prototype of something we're calling <strong>Pinspiration</strong>, a real coffee table book of some of our favorite pins shared in Grover.
-              </Text>
-              <div style={photoFrameStyle}>
-                <Img
-                  src={`${BASE}/img/blog-photos/will-rene-avex-lookbook.jpg`}
-                  alt="Will and Rene smiling at the Grover booth at Adventure Van Expo, holding open the Pinspiration coffee table book to a page of printed community pins"
-                  width="280"
-                  style={photoImgStyle}
-                />
-              </div>
-              <Text className="caption-text" style={captionStyle}>
-                Rene found his own pin printed inside Pinspiration and insisted on a photo with Will on the spot. We insisted right back.
-              </Text>
-              <Text className="item-body" style={itemBodyStyle}>
-                Huge shoutout to Rene for making our week. If you flipped through Pinspiration at the booth, you already know how good these pins look on paper. More on that soon.
-              </Text>
-            </div>
+          <Section className="box-card" style={cardStyle}>
+            <Text className="item-title" style={itemTitleStyle}>We had a blast at Adventure Van Expo 🏔️</Text>
+            <Text className="item-body" style={itemBodyStyle}>
+              Winter Park was incredible. We set up shop for the weekend, met a ton of you in person, and swapped stories with partners and users nonstop. Also in tow: the very first printed prototype of something we're calling <strong>Pinspiration</strong>, a real coffee table book of some of our favorite pins shared in Grover.
+            </Text>
+            <Img
+              src={`${BASE}/img/blog-photos/will-rene-avex-lookbook.jpg`}
+              alt="Will and Rene smiling at the Grover booth at Adventure Van Expo, holding open the Pinspiration coffee table book to a page of printed community pins"
+              width="260"
+              style={heroPhotoStyle}
+            />
+            <Text className="caption-text" style={captionStyle}>
+              Rene found his own pin printed inside Pinspiration and insisted on a photo with Will on the spot. We insisted right back.
+            </Text>
+            <Text className="item-body" style={itemBodyStyle}>
+              Huge shoutout to Rene for making our week. If you flipped through Pinspiration at the booth, you already know how good these pins look on paper. More on that soon.
+            </Text>
           </Section>
 
           {/* Club Circles */}
-          <Section style={boxOuterStyle}>
-            <div className="box-card" style={boxCardStyle}>
-              <Text className="item-title" style={itemTitleStyle}>Share your pins with just your people</Text>
-              <Text className="item-body" style={itemBodyStyle}>
-                Club Circles are live. Build a Circle for your crew, your rig-specific group, or the three people who actually text back at 2 a.m. when you're stuck somewhere. Find an amazing spot, snap a photo, and pick which Circle sees it. One tap to share it with just the right people, not the whole world. Whoever creates the Circle becomes its Grovenor. They can invite people, approve requests, and keep things running well.
-              </Text>
-              <Link href={`${BASE}/blog/grover-circles-club-sharing`} style={readMoreStyle}>Read more →</Link>
-            </div>
+          <Section className="box-card" style={cardStyle}>
+            <Text className="item-title" style={itemTitleStyle}>Share your pins with just your people</Text>
+            <Text className="item-body" style={itemBodyStyle}>
+              Club Circles are live. Build a Circle for your crew, your rig-specific group, or the three people who actually text back at 2 a.m. when you're stuck somewhere. Find an amazing spot, snap a photo, and pick which Circle sees it. One tap to share it with just the right people, not the whole world. Whoever creates the Circle becomes its Grovenor. They can invite people, approve requests, and keep things running well.
+            </Text>
+            <Link href={`${BASE}/blog/grover-circles-club-sharing`} style={readMoreStyle}>Read more →</Link>
           </Section>
 
           {/* Bucket list pin matching */}
-          <Section style={boxOuterStyle}>
-            <div className="box-card" style={boxCardStyle}>
-              <Text className="item-title" style={itemTitleStyle}>Grover catches your bucket list matches</Text>
-              <div style={photoFrameStyleSmall}>
-                <Img
-                  src={`${BASE}/img/blog-photos/bucket-list-autocompletion.jpeg`}
-                  alt="Grover's Create a Pin screen showing an automatically detected bucket list match with a one-tap checkbox to mark it visited"
-                  width="220"
-                  style={photoImgStyleSmall}
-                />
-              </div>
-              <Text className="item-body" style={itemBodyStyle}>
-                Drop a pin within 500 meters of a place on your bucket-list, and Grover notices. A checkbox appears right in the pin creation form, pre-checked and ready to mark that spot visited using the photo you just took. You don't have to remember your own plans anymore. Grover remembers for you.
-              </Text>
-              <Link href={`${BASE}/blog/grover-bucket-list-pin-matching`} style={readMoreStyle}>Read more →</Link>
-            </div>
+          <Section className="box-card" style={cardStyle}>
+            <Text className="item-title" style={itemTitleStyle}>Grover catches your bucket list matches</Text>
+            <Img
+              src={`${BASE}/img/blog-photos/bucket-list-autocompletion.jpeg`}
+              alt="Grover's Create a Pin screen showing an automatically detected bucket list match with a one-tap checkbox to mark it visited"
+              width="200"
+              style={smallPhotoStyle}
+            />
+            <Text className="item-body" style={itemBodyStyle}>
+              Drop a pin within 500 meters of a place on your bucket-list, and Grover notices. A checkbox appears right in the pin creation form, pre-checked and ready to mark that spot visited using the photo you just took. You don't have to remember your own plans anymore. Grover remembers for you.
+            </Text>
+            <Link href={`${BASE}/blog/grover-bucket-list-pin-matching`} style={readMoreStyle}>Read more →</Link>
           </Section>
 
           {/* Campflare campgrounds */}
-          <Section style={boxOuterStyle}>
-            <div className="box-card" style={boxCardStyle}>
-              <Text className="item-title" style={itemTitleStyle}>10,000 campgrounds just joined the map</Text>
-              <Row style={{ marginBottom: '14px' }}>
-                <Column style={{ paddingRight: '6px' }}>
-                  <div style={photoFrameStyleSmall}>
-                    <Img
-                      src={`${BASE}/img/blog-photos/campflare-campground-location.jpeg`}
-                      alt="Grover map showing pink triangle Campflare campground pins across mountainous terrain, with a preview card for a campground on the Naches River"
-                      width="190"
-                      style={photoImgStyleSmall}
-                    />
-                  </div>
-                </Column>
-                <Column style={{ paddingLeft: '6px' }}>
-                  <div style={photoFrameStyleSmall}>
-                    <Img
-                      src={`${BASE}/img/blog-photos/campflare-campground-detailed.jpeg`}
-                      alt="Detailed Campflare campground card showing an open status badge, description, photos, and an amenities grid"
-                      width="190"
-                      style={photoImgStyleSmall}
-                    />
-                  </div>
-                </Column>
-              </Row>
-              <Text className="item-body" style={itemBodyStyle}>
-                Campflare campgrounds now show up as their own pins on the Grover map, over 10,000 of them, right alongside your community spots. Tap one and get a full detail card: open or closed status, price range, amenities, and cell signal strength by carrier. Toggle the layer whenever you're scouting a new stretch of road. Next week, live availability and alerts...
-              </Text>
-              <Link href={`${BASE}/blog/grover-campflare-campgrounds`} style={readMoreStyle}>Read more →</Link>
-            </div>
+          <Section className="box-card" style={cardStyle}>
+            <Text className="item-title" style={itemTitleStyle}>10,000 campgrounds just joined the map</Text>
+            <Row>
+              <Column style={{ paddingRight: '6px' }}>
+                <Img
+                  src={`${BASE}/img/blog-photos/campflare-campground-location.jpeg`}
+                  alt="Grover map showing pink triangle Campflare campground pins across mountainous terrain, with a preview card for a campground on the Naches River"
+                  width="190"
+                  style={smallPhotoStyle}
+                />
+              </Column>
+              <Column style={{ paddingLeft: '6px' }}>
+                <Img
+                  src={`${BASE}/img/blog-photos/campflare-campground-detailed.jpeg`}
+                  alt="Detailed Campflare campground card showing an open status badge, description, photos, and an amenities grid"
+                  width="190"
+                  style={smallPhotoStyle}
+                />
+              </Column>
+            </Row>
+            <Text className="item-body" style={itemBodyStyle}>
+              Campflare campgrounds now show up as their own pins on the Grover map, over 10,000 of them, right alongside your community spots. Tap one and get a full detail card: open or closed status, price range, amenities, and cell signal strength by carrier. Toggle the layer whenever you're scouting a new stretch of road. Next week, live availability and alerts...
+            </Text>
+            <Link href={`${BASE}/blog/grover-campflare-campgrounds`} style={readMoreStyle}>Read more →</Link>
           </Section>
 
           {/* CTAs */}
@@ -237,15 +221,12 @@ const introStyle: React.CSSProperties = {
   margin: 0,
 };
 
-const boxOuterStyle: React.CSSProperties = {
-  padding: '12px 24px',
-};
-
-const boxCardStyle: React.CSSProperties = {
+const cardStyle: React.CSSProperties = {
   backgroundColor: '#fffaf0',
   border: '1.5px solid #e5d5b0',
   borderRadius: '14px',
-  padding: '24px 24px 20px',
+  margin: '8px 24px',
+  padding: '20px 22px 18px',
 };
 
 const itemTitleStyle: React.CSSProperties = {
@@ -253,37 +234,23 @@ const itemTitleStyle: React.CSSProperties = {
   fontSize: '18px',
   fontWeight: '700',
   letterSpacing: '-0.3px',
-  margin: '0 0 14px',
+  margin: '0 0 12px',
 };
 
-const photoFrameStyle: React.CSSProperties = {
-  backgroundColor: '#3d7c9c', // fallback for Outlook desktop, which ignores the gradient below entirely
-  background: 'linear-gradient(135deg, #23496d 0%, #62aebf 100%)',
-  borderRadius: '16px',
-  margin: '4px auto 8px',
-  maxWidth: '300px',
-  padding: '10px',
-};
-
-const photoImgStyle: React.CSSProperties = {
-  border: '3px solid #ffffff',
+const heroPhotoStyle: React.CSSProperties = {
+  border: '2px solid #e5d5b0',
   borderRadius: '10px',
   display: 'block',
-  maxWidth: '100%',
+  margin: '4px auto 8px',
+  maxWidth: '260px',
   width: '100%',
 };
 
-const photoFrameStyleSmall: React.CSSProperties = {
-  backgroundColor: '#3d7c9c', // fallback for Outlook desktop, which ignores the gradient below entirely
-  background: 'linear-gradient(135deg, #23496d 0%, #62aebf 100%)',
-  borderRadius: '12px',
-  padding: '6px',
-};
-
-const photoImgStyleSmall: React.CSSProperties = {
-  border: '2px solid #ffffff',
-  borderRadius: '7px',
+const smallPhotoStyle: React.CSSProperties = {
+  border: '2px solid #e5d5b0',
+  borderRadius: '8px',
   display: 'block',
+  margin: '0 0 12px',
   maxWidth: '100%',
   width: '100%',
 };

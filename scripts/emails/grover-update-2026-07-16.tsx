@@ -11,6 +11,7 @@ import {
   Img,
   Row,
   Column,
+  Hr,
 } from '@react-email/components';
 
 const BASE = 'https://getgrover.ai';
@@ -23,6 +24,7 @@ const darkMode = `
     .item-title  { color: #f0e6d0 !important; }
     .item-body   { color: #d4c5a9 !important; }
     .box-card    { background-color: #221810 !important; border-color: #3a2a16 !important; }
+    .card-divider { border-color: #3a2a16 !important; }
     .cta-label   { color: #a1876a !important; }
     .caption-text { color: #a1876a !important; }
     .email-footer { background-color: #111c27 !important; }
@@ -48,9 +50,11 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
             </Text>
           </Section>
 
-          {/* Adventure Van Expo recap, boxed with framed photo */}
+          {/* All four updates, one continuous card with dividers instead of separate boxes */}
           <Section style={cardOuterStyle}>
             <div className="box-card" style={cardStyle}>
+
+              {/* Adventure Van Expo recap, with framed photo */}
               <Text className="item-title" style={itemTitleStyle}>We had a blast at Adventure Van Expo 🏔️</Text>
               <Text className="item-body" style={itemBodyStyle}>
                 Winter Park was incredible. We set up shop for the weekend, met a ton of you in person, and swapped stories with partners and users nonstop. Also in tow: the very first printed prototype of something we're calling <strong>Pinspiration</strong>, a real coffee table book of some of our favorite pins shared in Grover.
@@ -67,23 +71,19 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
               <Text className="item-body" style={itemBodyStyle}>
                 Huge shoutout to Rene for making our week. If you flipped through Pinspiration at the booth, you already know how good these pins look on paper. More on that soon.
               </Text>
-            </div>
-          </Section>
 
-          {/* Club Circles */}
-          <Section style={cardOuterStyle}>
-            <div className="box-card" style={cardStyle}>
+              <Hr className="card-divider" style={dividerStyle} />
+
+              {/* Club Circles */}
               <Text className="item-title" style={itemTitleStyle}>Share your pins with just your people</Text>
               <Text className="item-body" style={itemBodyStyle}>
                 Club Circles are live. Build a Circle for your crew, your rig-specific group, or the three people who actually text back at 2 a.m. when you're stuck somewhere. Find an amazing spot, snap a photo, and pick which Circle sees it. One tap to share it with just the right people, not the whole world. Whoever creates the Circle becomes its Grovenor. They can invite people, approve requests, and keep things running well.
               </Text>
               <Link href={`${BASE}/blog/grover-circles-club-sharing`} style={readMoreStyle}>Read more →</Link>
-            </div>
-          </Section>
 
-          {/* Bucket list pin matching */}
-          <Section style={cardOuterStyle}>
-            <div className="box-card" style={cardStyle}>
+              <Hr className="card-divider" style={dividerStyle} />
+
+              {/* Bucket list pin matching */}
               <Text className="item-title" style={itemTitleStyle}>Grover catches your bucket list matches</Text>
               <Img
                 src={`${BASE}/img/blog-photos/bucket-list-autocompletion.jpeg`}
@@ -95,12 +95,10 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
                 Drop a pin within 500 meters of a place on your bucket-list, and Grover notices. A checkbox appears right in the pin creation form, pre-checked and ready to mark that spot visited using the photo you just took. You don't have to remember your own plans anymore. Grover remembers for you.
               </Text>
               <Link href={`${BASE}/blog/grover-bucket-list-pin-matching`} style={readMoreStyle}>Read more →</Link>
-            </div>
-          </Section>
 
-          {/* Campflare campgrounds */}
-          <Section style={cardOuterStyle}>
-            <div className="box-card" style={cardStyle}>
+              <Hr className="card-divider" style={dividerStyle} />
+
+              {/* Campflare campgrounds */}
               <Text className="item-title" style={itemTitleStyle}>10,000 campgrounds just joined the map</Text>
               <Row>
                 <Column style={{ paddingRight: '6px' }}>
@@ -124,6 +122,7 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
                 Campflare campgrounds now show up as their own pins on the Grover map, over 10,000 of them, right alongside your community spots. Tap one and get a full detail card: open or closed status, price range, amenities, and cell signal strength by carrier. Toggle the layer whenever you're scouting a new stretch of road. Next week, live availability and alerts...
               </Text>
               <Link href={`${BASE}/blog/grover-campflare-campgrounds`} style={readMoreStyle}>Read more →</Link>
+
             </div>
           </Section>
 
@@ -238,6 +237,12 @@ const cardStyle: React.CSSProperties = {
   border: '1.5px solid #e5d5b0',
   borderRadius: '14px',
   padding: '18px 20px 16px',
+};
+
+const dividerStyle: React.CSSProperties = {
+  borderColor: '#e5d5b0',
+  borderTopWidth: '1px',
+  margin: '18px 0',
 };
 
 const itemTitleStyle: React.CSSProperties = {

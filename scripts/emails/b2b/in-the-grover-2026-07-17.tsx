@@ -20,6 +20,10 @@ const darkMode = `
     .item-body   { color: #d4c5a9 !important; }
     .box-card    { background-color: #221810 !important; border-color: #3a2a16 !important; }
     .card-divider { border-color: #3a2a16 !important; }
+    .masthead-box { background-color: #221810 !important; border-color: #3a2a16 !important; }
+    .masthead-body { color: #d4c5a9 !important; }
+    .callout-sub { color: #b9d1da !important; }
+    .resource-line { color: #d4c5a9 !important; }
     .cta-note    { color: #a1876a !important; }
     .email-footer { background-color: #111c27 !important; }
     .footer-copy  { color: #4a3f2e !important; }
@@ -28,6 +32,8 @@ const darkMode = `
 `;
 
 const SUCCESS_CALL_URL = 'https://meetings.hubspot.com/will858/grover-success';
+const ADMIN_URL = 'https://admin.getgrover.ai';
+const PARTNER_RESOURCES_URL = 'https://getgrover.ai/partners/copy-kit/';
 
 export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe?: boolean }) {
   return (
@@ -39,6 +45,16 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
         <Text style={headerTagStyle}>In the Grove</Text>
       </Section>
 
+      {/* Masthead: what this newsletter is */}
+      <Section style={sectionStyle}>
+        <div className="masthead-box" style={mastheadStyle}>
+          <Text style={mastheadLabelStyle}>What is In the Grove?</Text>
+          <Text className="masthead-body" style={mastheadBodyStyle}>
+            Product updates and details for Grover's partners and customers, straight from the team building them.
+          </Text>
+        </div>
+      </Section>
+
       {/* Intro */}
       <Section style={sectionStyle}>
         <Text className="intro-text" style={introStyle}>
@@ -46,7 +62,7 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
         </Text>
       </Section>
 
-      {/* All three updates, one continuous card with dividers instead of separate boxes */}
+      {/* First update, its own card */}
       <Section style={cardOuterStyle}>
         <div className="box-card" style={cardStyle}>
 
@@ -56,7 +72,27 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
             Any customer can spin up a Club Circle in Grover, a private or public group built around whatever grouping matters to them. A regional owners group, a trial fleet, a rental cohort, an ambassador crew. They name it, describe it, and invite the right people. Whoever creates it becomes the Grovenor, the owner who manages invites, approves join requests, and keeps the group running well. It's live on iOS today, with Android close behind.
           </Text>
 
-          <Hr className="card-divider" style={dividerStyle} />
+        </div>
+      </Section>
+
+      {/* Admin dashboard callout */}
+      <Section style={cardOuterStyle}>
+        <div style={calloutStyle}>
+          <Text style={calloutTitleStyle}>Have you looked around your dashboard lately?</Text>
+          <Text className="callout-sub" style={calloutSubStyle}>
+            Everything above lives in your Grover admin dashboard at{' '}
+            <Link href={ADMIN_URL} style={calloutLinkStyle}>admin.getgrover.ai</Link>. Don't have a login yet? I'm happy to get your team set up myself, just email me at{' '}
+            <Link href="mailto:will@getgrover.ai" style={calloutLinkStyle}>will@getgrover.ai</Link> and I'll take care of it.
+          </Text>
+          <Text className="callout-sub" style={calloutSignatureStyle}>
+            — Will, Co-Founder
+          </Text>
+        </div>
+      </Section>
+
+      {/* Remaining updates, their own card */}
+      <Section style={cardOuterStyle}>
+        <div className="box-card" style={cardStyle}>
 
           {/* Notification scheduling */}
           <Text className="item-title" style={itemTitleStyle}>Reach your customers on your schedule</Text>
@@ -73,6 +109,14 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
           </Text>
 
         </div>
+      </Section>
+
+      {/* Partner marketing resources */}
+      <Section style={resourceSectionStyle}>
+        <Text className="resource-line" style={resourceLineStyle}>
+          Want ready-made copy to tell your customers about Grover? Check out our{' '}
+          <Link href={PARTNER_RESOURCES_URL} style={resourceLinkStyle}>partner marketing resources →</Link>
+        </Text>
       </Section>
 
       {/* CTA */}
@@ -200,6 +244,82 @@ const itemBodyStyle: React.CSSProperties = {
   fontSize: '15px',
   lineHeight: '1.7',
   margin: '0 0 12px',
+};
+
+const mastheadStyle: React.CSSProperties = {
+  backgroundColor: '#fffaf0',
+  border: '1.5px solid #e5d5b0',
+  borderRadius: '10px',
+  padding: '14px 18px',
+};
+
+const mastheadLabelStyle: React.CSSProperties = {
+  color: '#7a6a52',
+  fontSize: '11px',
+  fontWeight: '700',
+  letterSpacing: '0.08em',
+  margin: '0 0 6px',
+  textTransform: 'uppercase',
+};
+
+const mastheadBodyStyle: React.CSSProperties = {
+  color: '#1e1e1e',
+  fontSize: '14px',
+  lineHeight: '1.6',
+  margin: 0,
+};
+
+const calloutStyle: React.CSSProperties = {
+  backgroundColor: '#23496d',
+  border: '1.5px solid #62aebf',
+  borderRadius: '14px',
+  padding: '20px 22px 18px',
+};
+
+const calloutTitleStyle: React.CSSProperties = {
+  color: '#ffffff',
+  fontSize: '17px',
+  fontWeight: '700',
+  letterSpacing: '-0.2px',
+  margin: '0 0 10px',
+};
+
+const calloutSubStyle: React.CSSProperties = {
+  color: '#cfe3ea',
+  fontSize: '14px',
+  lineHeight: '1.65',
+  margin: '0 0 10px',
+};
+
+const calloutSignatureStyle: React.CSSProperties = {
+  color: '#8fafc2',
+  fontSize: '13px',
+  fontStyle: 'italic',
+  margin: 0,
+};
+
+const calloutLinkStyle: React.CSSProperties = {
+  color: '#8fe0f0',
+  fontWeight: '600',
+  textDecoration: 'underline',
+};
+
+const resourceSectionStyle: React.CSSProperties = {
+  padding: '4px 40px 0',
+  textAlign: 'center',
+};
+
+const resourceLineStyle: React.CSSProperties = {
+  color: '#4a3f2e',
+  fontSize: '14px',
+  lineHeight: '1.6',
+  margin: 0,
+};
+
+const resourceLinkStyle: React.CSSProperties = {
+  color: '#00a4bd',
+  fontWeight: '600',
+  textDecoration: 'none',
 };
 
 const ctaSectionStyle: React.CSSProperties = {

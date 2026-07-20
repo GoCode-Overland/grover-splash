@@ -19,7 +19,7 @@ const payload = {
   audienceId: RESEND_B2B_AUDIENCE_ID,
   from: `Will @ Grover <${RESEND_FROM}>`,
   replyTo: 'will@getgrover.ai',
-  subject: 'New tools for what happens after the sale',
+  subject: '3 ways to look out for your customers',
   html,
   text,
   name: 'In the Grove - Jul 17, 2026',

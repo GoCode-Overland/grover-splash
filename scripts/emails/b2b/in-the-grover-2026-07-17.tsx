@@ -8,8 +8,11 @@ import {
   Section,
   Text,
   Link,
+  Img,
   Hr,
 } from '@react-email/components';
+
+const BASE = 'https://getgrover.ai';
 
 const darkMode = `
   @media (prefers-color-scheme: dark) {
@@ -20,8 +23,7 @@ const darkMode = `
     .item-body   { color: #d4c5a9 !important; }
     .box-card    { background-color: #221810 !important; border-color: #3a2a16 !important; }
     .card-divider { border-color: #3a2a16 !important; }
-    .masthead-box { background-color: #221810 !important; border-color: #3a2a16 !important; }
-    .masthead-body { color: #d4c5a9 !important; }
+    .eyebrow     { color: #a1876a !important; }
     .callout-sub { color: #b9d1da !important; }
     .resource-line { color: #d4c5a9 !important; }
     .cta-note    { color: #a1876a !important; }
@@ -45,20 +47,11 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
         <Text style={headerTagStyle}>In the Grove</Text>
       </Section>
 
-      {/* Masthead: what this newsletter is */}
+      {/* Intro, with a small eyebrow explaining what this newsletter is */}
       <Section style={sectionStyle}>
-        <div className="masthead-box" style={mastheadStyle}>
-          <Text style={mastheadLabelStyle}>What is In the Grove?</Text>
-          <Text className="masthead-body" style={mastheadBodyStyle}>
-            Product updates and details for Grover's partners and customers, straight from the team building them.
-          </Text>
-        </div>
-      </Section>
-
-      {/* Intro */}
-      <Section style={sectionStyle}>
+        <Text className="eyebrow" style={eyebrowStyle}>Product updates for Grover partners</Text>
         <Text className="intro-text" style={introStyle}>
-          The sale is the start of the relationship, not the end of it. Here's what we've built this week to help you support your customers after they drive off the lot.
+          The sale is where the relationship starts, not where it ends. Here's what we shipped this week to help you take care of your people after they drive off the lot.
         </Text>
       </Section>
 
@@ -67,9 +60,9 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
         <div className="box-card" style={cardStyle}>
 
           {/* Club Circles */}
-          <Text className="item-title" style={itemTitleStyle}>Your customers can build their own crew</Text>
+          <Text className="item-title" style={itemTitleStyle}>Your customers are already finding each other</Text>
           <Text className="item-body" style={itemBodyStyle}>
-            Any customer can spin up a Club Circle in Grover, a private or public group built around whatever grouping matters to them. A regional owners group, a trial fleet, a rental cohort, an ambassador crew. They name it, describe it, and invite the right people. Whoever creates it becomes the Grovenor, the owner who manages invites, approves join requests, and keeps the group running well. It's live on iOS today, with Android close behind.
+            Any customer can start a Club Circle in Grover, a group built around whatever matters to them: a regional owners group, a trial fleet, a rental cohort, an ambassador crew, whatever fits. They name it and run it. Whoever starts it becomes the Grovenor, the person who invites members, approves join requests, and keeps things friendly. That's a place for your customers to swap tips and troubleshoot with each other, before they ever have to call you. Live on iOS today, Android close behind.
           </Text>
 
         </div>
@@ -78,11 +71,17 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
       {/* Admin dashboard callout */}
       <Section style={cardOuterStyle}>
         <div style={calloutStyle}>
-          <Text style={calloutTitleStyle}>Have you looked around your dashboard lately?</Text>
+          <Text style={calloutTitleStyle}>Take a look inside your dashboard</Text>
+          <Img
+            src={`${BASE}/img/blog-photos/grover-admin-dashboard-knowledge-bases.png`}
+            alt="Grover admin dashboard showing a company's Knowledge Bases, with a left navigation listing Users, Assistants, Knowledge Bases, FAQs, Sessions, Circles, Lookbook, and Notifications"
+            width="480"
+            style={calloutImageStyle}
+          />
           <Text className="callout-sub" style={calloutSubStyle}>
-            Everything above lives in your Grover admin dashboard at{' '}
-            <Link href={ADMIN_URL} style={calloutLinkStyle}>admin.getgrover.ai</Link>. Don't have a login yet? I'm happy to get your team set up myself, just email me at{' '}
-            <Link href="mailto:will@getgrover.ai" style={calloutLinkStyle}>will@getgrover.ai</Link> and I'll take care of it.
+            This is what it looks like day to day, your knowledge bases, assistants, notifications, and customer sessions, all in one place at{' '}
+            <Link href={ADMIN_URL} style={calloutLinkStyle}>admin.getgrover.ai</Link>. If your team doesn't have a login yet, I'll set one up myself, just email me at{' '}
+            <Link href="mailto:will@getgrover.ai" style={calloutLinkStyle}>will@getgrover.ai</Link> and I'll get you going.
           </Text>
           <Text className="callout-sub" style={calloutSignatureStyle}>
             — Will, Co-Founder
@@ -95,17 +94,17 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
         <div className="box-card" style={cardStyle}>
 
           {/* Notification scheduling */}
-          <Text className="item-title" style={itemTitleStyle}>Reach your customers on your schedule</Text>
+          <Text className="item-title" style={itemTitleStyle}>Check in without lifting a finger every time</Text>
           <Text className="item-body" style={itemBodyStyle}>
-            Your dashboard can now schedule notifications straight to your Circle. Send a one-time heads up or set up a recurring cadence, weekly, biweekly, or monthly, and pause or resume it whenever you need to. Target everyone in your Circle or hand-pick the members who should hear it. Prefer not to build it yourself? Just tell our Claude Code integration what you want sent and when, and it'll create and manage the notification for you.
+            Set up a notification once, weekly, biweekly, or monthly, and your dashboard handles the rest. Pause it, resume it, or send a one-time heads up whenever something comes up. Send it to your whole Circle or just the people it's actually for. Would rather not touch the dashboard at all? Tell our Claude Code integration what you want said and when, it'll build and manage the notification for you.
           </Text>
 
           <Hr className="card-divider" style={dividerStyle} />
 
           {/* Admin access to chat logs */}
-          <Text className="item-title" style={itemTitleStyle}>See what your customers are actually asking</Text>
+          <Text className="item-title" style={itemTitleStyle}>Stop guessing what your customers are stuck on</Text>
           <Text className="item-body" style={itemBodyStyle}>
-            Your team can get dashboard logins scoped to just your company, at whichever permission level fits (owner, admin, or view-only). From there, read real transcripts between your customers and your AI assistant, filter by date range or by whether a conversation got escalated to a human, and check the auto-generated Top Topics panel to spot what's coming up again and again. No more guessing what support questions are piling up after the sale.
+            Get your team a login scoped to just your company, whatever access level makes sense (owner, admin, or a view-only look-around). From there, read real conversations between your customers and your AI assistant, see which ones got escalated to a human, and check the auto-generated Top Topics panel to catch a pattern before it turns into a pile of angry calls.
           </Text>
 
         </div>
@@ -155,7 +154,7 @@ export default function InTheGrover20260717() {
       <Head>
         <style>{darkMode}</style>
       </Head>
-      <Preview>Circles, scheduled Circle notifications, and real chat logs in your dashboard.</Preview>
+      <Preview>Circles, scheduled check-ins, and real chat logs, all from your dashboard.</Preview>
       <Body className="email-bg" style={bodyStyle}>
         <EmailContent />
       </Body>
@@ -246,27 +245,13 @@ const itemBodyStyle: React.CSSProperties = {
   margin: '0 0 12px',
 };
 
-const mastheadStyle: React.CSSProperties = {
-  backgroundColor: '#fffaf0',
-  border: '1.5px solid #e5d5b0',
-  borderRadius: '10px',
-  padding: '14px 18px',
-};
-
-const mastheadLabelStyle: React.CSSProperties = {
+const eyebrowStyle: React.CSSProperties = {
   color: '#7a6a52',
   fontSize: '11px',
   fontWeight: '700',
   letterSpacing: '0.08em',
-  margin: '0 0 6px',
+  margin: '0 0 8px',
   textTransform: 'uppercase',
-};
-
-const mastheadBodyStyle: React.CSSProperties = {
-  color: '#1e1e1e',
-  fontSize: '14px',
-  lineHeight: '1.6',
-  margin: 0,
 };
 
 const calloutStyle: React.CSSProperties = {
@@ -281,7 +266,16 @@ const calloutTitleStyle: React.CSSProperties = {
   fontSize: '17px',
   fontWeight: '700',
   letterSpacing: '-0.2px',
-  margin: '0 0 10px',
+  margin: '0 0 14px',
+};
+
+const calloutImageStyle: React.CSSProperties = {
+  border: '1.5px solid #3a648a',
+  borderRadius: '8px',
+  display: 'block',
+  margin: '0 auto 14px',
+  maxWidth: '100%',
+  width: '100%',
 };
 
 const calloutSubStyle: React.CSSProperties = {

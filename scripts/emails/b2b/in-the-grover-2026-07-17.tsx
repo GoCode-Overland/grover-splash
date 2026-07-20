@@ -23,8 +23,6 @@ const darkMode = `
     .item-body   { color: #d4c5a9 !important; }
     .box-card    { background-color: #221810 !important; border-color: #3a2a16 !important; }
     .card-divider { border-color: #3a2a16 !important; }
-    .masthead-box { background-color: #221810 !important; border-color: #3a2a16 !important; }
-    .masthead-body { color: #d4c5a9 !important; }
     .callout-sub { color: #b9d1da !important; }
     .resource-line { color: #d4c5a9 !important; }
     .cta-note    { color: #a1876a !important; }
@@ -50,9 +48,9 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
 
       {/* Masthead: what this newsletter is */}
       <Section style={sectionStyle}>
-        <div className="masthead-box" style={mastheadStyle}>
+        <div style={mastheadStyle}>
           <Text style={mastheadLabelStyle}>What is In the Grove?</Text>
-          <Text className="masthead-body" style={mastheadBodyStyle}>
+          <Text style={mastheadBodyStyle}>
             Product updates and details for Grover's partners and customers, straight from the team building them.
           </Text>
         </div>
@@ -61,7 +59,7 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
       {/* Intro */}
       <Section style={sectionStyle}>
         <Text className="intro-text" style={introStyle}>
-          The sale is where the relationship starts, not where it ends. Here's what we shipped this week to help you take care of your people after they drive off the lot.
+          Here's what's new this week to help you take care of your people after they drive off the lot.
         </Text>
       </Section>
 
@@ -256,14 +254,14 @@ const itemBodyStyle: React.CSSProperties = {
 };
 
 const mastheadStyle: React.CSSProperties = {
-  backgroundColor: '#fffaf0',
-  border: '1.5px solid #e5d5b0',
-  borderRadius: '10px',
+  backgroundColor: '#23496d',
+  borderLeft: '4px solid #ee8141',
+  borderRadius: '8px',
   padding: '14px 18px',
 };
 
 const mastheadLabelStyle: React.CSSProperties = {
-  color: '#7a6a52',
+  color: '#ee8141',
   fontSize: '11px',
   fontWeight: '700',
   letterSpacing: '0.08em',
@@ -272,7 +270,7 @@ const mastheadLabelStyle: React.CSSProperties = {
 };
 
 const mastheadBodyStyle: React.CSSProperties = {
-  color: '#1e1e1e',
+  color: '#f1f5f9',
   fontSize: '14px',
   lineHeight: '1.6',
   margin: 0,

@@ -48,11 +48,18 @@ Dark mode overrides match Joyride Journal's (see that guide's table).
 
 More professional than Joyride Journal, still direct and personal, not corporate. Written as one operator to another, not a brand to a customer.
 
+This is grounded in how Will actually writes to partners (pulled from real sent email, not guessed):
+
 - Address the reader as a partner, not a user. "Your customers," "your team," "your dashboard."
 - Lead with the outcome for their business (better post-purchase experience, fewer support burdens, brand-safe marketing assets), then the mechanism.
-- No hype language. No "excited to announce." State what shipped and what it does.
-- Short paragraphs. This audience skims.
-- First person from Will is fine, this is a relationship-driven newsletter.
+- No hype language. No "excited to announce." Just say what's new and what it does.
+- Short paragraphs. This audience skims, especially small van-building shop owners without a marketing team reading their inbox for them.
+- First person from Will is fine, this is a relationship-driven newsletter, not a brand voice.
+- State enthusiasm plainly instead of performing it: "I love it," "nothing to scoff at," "keep crushing," not "we're thrilled to share."
+- It's fine to sound like a real person typing quickly: contractions, the occasional "..." trailing off, a stray exclamation point in body copy (subject lines still stay exclamation-free per below).
+- Bolded all-caps section labels ("PLACES:", "ADMIN:") are how Will actually structures multi-update emails to partners. Not required in the newsletter's styled item-title format, but the plain, matter-of-fact framing behind them is the model: say what's new, then one or two sentences of why it matters, done.
+
+**Avoid these words and constructions**, they don't appear in Will's real partner emails and read as tech-vendor-speak instead of a founder writing to a partner: "shipped," "scoped," "delivery method," "leverage," "empower," "seamless," "robust," "unlock," "game-changing," "we've made it possible to." If you catch yourself writing a sentence that sounds like a changelog or a press release, rewrite it the way you'd say it out loud to the partner on a call.
 
 ---
 
@@ -71,10 +78,11 @@ More professional than Joyride Journal, still direct and personal, not corporate
 ## Structure
 
 1. **Header** — Grover wordmark + "In the Grove" tag. Dark navy.
-2. **Intro line** — one or two sentences, frames the issue around the after-the-sale mission.
-3. **Sections** — each item: title, 2-4 sentences of body focused on partner value, honest about shipped-vs-not.
-4. **CTA** — single button: "Schedule a Success Call." Always at the bottom, after all content.
-5. **Footer** — dark navy, unsubscribe link, copyright.
+2. **Masthead** — a small high-contrast callout ("What is In the Grove?") explaining what this newsletter is in one sentence. Dark navy with an orange left-border accent, needs to pop against the cream page background, not blend into it. This exists because new partners land in this newsletter without context, it has to read as self-explanatory in a glance, not just to repeat subscribers.
+3. **Intro line** — one sentence, no throat-clearing framing device ("the sale is the start of the relationship, not the end" reads like a tagline, not something Will would actually write). Just say what's new this week and why it matters, plainly.
+4. **Sections** — each item: title, 2-4 sentences of body focused on partner value, honest about what's real today vs. not.
+5. **CTA** — single button: "Schedule a Success Call." Always at the bottom, after all content.
+6. **Footer** — dark navy, unsubscribe link, copyright.
 
 Keep to 3 items per issue on the weekly cadence. Don't pad. If a week is thin, hold the send rather than stretching content.
 

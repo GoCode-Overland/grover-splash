@@ -35,6 +35,7 @@ const darkMode = `
 const SUCCESS_CALL_URL = 'https://meetings.hubspot.com/will858/grover-success';
 const ADMIN_URL = 'https://admin.getgrover.ai';
 const PARTNER_RESOURCES_URL = 'https://getgrover.ai/partners/copy-kit/';
+const CLAUDE_MARKETPLACE_URL = 'https://github.com/gocode-overland/grover-claude-marketplace';
 
 export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe?: boolean }) {
   return (
@@ -68,9 +69,9 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
         <div className="box-card" style={cardStyle}>
 
           {/* Club Circles */}
-          <Text className="item-title" style={itemTitleStyle}>Your customers are already finding each other</Text>
+          <Text className="item-title" style={itemTitleStyle}>Your customers can share the good spots, just not with everyone</Text>
           <Text className="item-body" style={itemBodyStyle}>
-            Any customer can start a Club Circle in Grover, a group built around whatever matters to them: a regional owners group, a trial fleet, a rental cohort, an ambassador crew, whatever fits. They name it and run it. Whoever starts it becomes the Grovenor, the person who invites members, approves join requests, and keeps things friendly. That's a place for your customers to swap tips and troubleshoot with each other, before they ever have to call you. Live on iOS today, Android close behind.
+            Any customer can start a Club Circle in Grover, a group built around whoever should actually see their pins: a regional owners group, a trial fleet, a rental cohort, an ambassador crew, whatever fits. They name it and run it. Whoever starts it becomes the Grovenor, the person who invites members, approves join requests, and keeps things running. That secluded forest service road or the one overnight lot that actually works gets shared with their people, not the whole map. Live on iOS today, Android close behind.
           </Text>
 
         </div>
@@ -106,13 +107,14 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
           <Text className="item-body" style={itemBodyStyle}>
             Set up a notification once, weekly, biweekly, or monthly, and your dashboard handles the rest. Pause it, resume it, or send a one-time heads up whenever something comes up. Send it to your whole Circle or just the people it's actually for. Would rather not touch the dashboard at all? Tell our Claude Code integration what you want said and when, it'll build and manage the notification for you.
           </Text>
+          <Link href={CLAUDE_MARKETPLACE_URL} style={readMoreStyle}>Get set up with the Claude Code integration →</Link>
 
           <Hr className="card-divider" style={dividerStyle} />
 
           {/* Admin access to chat logs */}
           <Text className="item-title" style={itemTitleStyle}>Stop guessing what your customers are stuck on</Text>
           <Text className="item-body" style={itemBodyStyle}>
-            Get your team a login scoped to just your company, whatever access level makes sense (owner, admin, or a view-only look-around). From there, read real conversations between your customers and your AI assistant, see which ones got escalated to a human, and check the auto-generated Top Topics panel to catch a pattern before it turns into a pile of angry calls.
+            Get your team a login just for your company, whatever access level makes sense (owner, admin, or a view-only look-around). From there, read real conversations between your customers and your AI assistant, see which ones got escalated to a human, and check the auto-generated Top Topics panel to catch a pattern before it turns into a pile of angry calls.
           </Text>
 
         </div>
@@ -251,6 +253,13 @@ const itemBodyStyle: React.CSSProperties = {
   fontSize: '15px',
   lineHeight: '1.7',
   margin: '0 0 12px',
+};
+
+const readMoreStyle: React.CSSProperties = {
+  color: '#00a4bd',
+  fontSize: '14px',
+  fontWeight: '600',
+  textDecoration: 'none',
 };
 
 const mastheadStyle: React.CSSProperties = {

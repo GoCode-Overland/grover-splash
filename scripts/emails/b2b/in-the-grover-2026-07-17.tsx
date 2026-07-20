@@ -23,7 +23,8 @@ const darkMode = `
     .item-body   { color: #d4c5a9 !important; }
     .box-card    { background-color: #221810 !important; border-color: #3a2a16 !important; }
     .card-divider { border-color: #3a2a16 !important; }
-    .eyebrow     { color: #a1876a !important; }
+    .masthead-box { background-color: #221810 !important; border-color: #3a2a16 !important; }
+    .masthead-body { color: #d4c5a9 !important; }
     .callout-sub { color: #b9d1da !important; }
     .resource-line { color: #d4c5a9 !important; }
     .cta-note    { color: #a1876a !important; }
@@ -47,9 +48,18 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
         <Text style={headerTagStyle}>In the Grove</Text>
       </Section>
 
-      {/* Intro, with a small eyebrow explaining what this newsletter is */}
+      {/* Masthead: what this newsletter is */}
       <Section style={sectionStyle}>
-        <Text className="eyebrow" style={eyebrowStyle}>Product updates for Grover partners</Text>
+        <div className="masthead-box" style={mastheadStyle}>
+          <Text style={mastheadLabelStyle}>What is In the Grove?</Text>
+          <Text className="masthead-body" style={mastheadBodyStyle}>
+            Product updates and details for Grover's partners and customers, straight from the team building them.
+          </Text>
+        </div>
+      </Section>
+
+      {/* Intro */}
+      <Section style={sectionStyle}>
         <Text className="intro-text" style={introStyle}>
           The sale is where the relationship starts, not where it ends. Here's what we shipped this week to help you take care of your people after they drive off the lot.
         </Text>
@@ -245,13 +255,27 @@ const itemBodyStyle: React.CSSProperties = {
   margin: '0 0 12px',
 };
 
-const eyebrowStyle: React.CSSProperties = {
+const mastheadStyle: React.CSSProperties = {
+  backgroundColor: '#fffaf0',
+  border: '1.5px solid #e5d5b0',
+  borderRadius: '10px',
+  padding: '14px 18px',
+};
+
+const mastheadLabelStyle: React.CSSProperties = {
   color: '#7a6a52',
   fontSize: '11px',
   fontWeight: '700',
   letterSpacing: '0.08em',
-  margin: '0 0 8px',
+  margin: '0 0 6px',
   textTransform: 'uppercase',
+};
+
+const mastheadBodyStyle: React.CSSProperties = {
+  color: '#1e1e1e',
+  fontSize: '14px',
+  lineHeight: '1.6',
+  margin: 0,
 };
 
 const calloutStyle: React.CSSProperties = {

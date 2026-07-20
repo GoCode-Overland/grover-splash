@@ -58,10 +58,10 @@ export function EmailContent({ includeUnsubscribe = true }: { includeUnsubscribe
 
           <Hr className="card-divider" style={dividerStyle} />
 
-          {/* Lookbook / photo consent */}
-          <Text className="item-title" style={itemTitleStyle}>Real customer photos, with rights you can prove</Text>
+          {/* Notification scheduling */}
+          <Text className="item-title" style={itemTitleStyle}>Reach your customers on your schedule</Text>
           <Text className="item-body" style={itemBodyStyle}>
-            Your dashboard now has a Lookbook queue. Review the pins your customers have shared, approve the ones that represent your brand well, and Grover checks that the customer has actually granted usage rights before it counts, scoped to digital use, print use, or both. When you're ready to use a set of photos, generate a locked snapshot: an exact, verified list of approved and consented photos that won't shift under you later. It's the foundation for the coffee-table books and shareable galleries we're building toward next.
+            Your dashboard can now schedule notifications straight to your Circle. Send a one-time heads up or set up a recurring cadence, weekly, biweekly, or monthly, and pause or resume it whenever you need to. Target everyone in your Circle or hand-pick the members who should hear it. Prefer not to build it yourself? Just tell our Claude Code integration what you want sent and when, and it'll create and manage the notification for you.
           </Text>
 
           <Hr className="card-divider" style={dividerStyle} />
@@ -111,7 +111,7 @@ export default function InTheGrover20260717() {
       <Head>
         <style>{darkMode}</style>
       </Head>
-      <Preview>Circles, verified photo consent, and real chat logs in your dashboard.</Preview>
+      <Preview>Circles, scheduled Circle notifications, and real chat logs in your dashboard.</Preview>
       <Body className="email-bg" style={bodyStyle}>
         <EmailContent />
       </Body>

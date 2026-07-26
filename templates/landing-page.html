@@ -1,0 +1,116 @@
+<!--
+  Grover landing-page template.
+
+  Rendered by the `publish_landing_page` / `update_landing_page` MCP tools
+  (grover-chat). Do not edit pages under public/lp/ directly - edit this
+  template (for chrome/structure changes) or re-run the publish tool (for
+  content changes). See public/lp/README.md.
+
+  IMPORTANT for the renderer: this is plain whole-file string substitution,
+  no templating engine. Replace each slot token exactly once and do not reuse
+  a slot's own token string inside the value you substitute in for it (e.g.
+  don't embed the literal four-character sequence for the form slot inside
+  the form markup you're inserting), or a naive global replace will mangle
+  itself. This comment block intentionally names the slots below in prose,
+  not with the literal token syntax, so this documentation survives a plain
+  find-and-replace pass over the whole file.
+
+  Slots, in the order they appear in the body below:
+    TITLE slot       - Plain text page title. Used in <title>, og:title, twitter:title, <h1>.
+    DESCRIPTION slot - Plain text meta description. Used in meta/OG/twitter description.
+    CONTENT slot     - HTML body content, authored by whoever calls the publish tool.
+    FORM slot        - The full signup section, including its own <section> wrapper
+                       (see the default markup below), or an empty string when the
+                       page is published with includeForm: false. There is no
+                       separate wrapping section in this template for the form -
+                       omitting it removes the block entirely rather than leaving
+                       empty chrome behind.
+
+  Default FORM slot markup (what publish_landing_page should substitute in
+  when includeForm is true or unspecified; kept here as plain text so it is
+  not itself parsed as part of this template):
+
+    section.bg-primary.py-16 > div.container.mx-auto.px-4.max-w-6xl.text-center containing:
+      - h2: "Stay in the loop" (text-white font-heading)
+      - p: "Drop your email and we'll keep you posted." (text-white)
+      - div.max-w-md.mx-auto containing:
+          div.grover-signup[data-grover-signup][data-endpoint="https://ops.getgrover.ai/api/public/contacts/subscribe"]
+          script[src="/js/signup.js"][defer]
+
+  Path depth: pages live at public/lp/<slug>/index.html, two levels below the
+  site root (same depth as public/blog/<slug>/index.html), so asset paths
+  below use "../../" for same-origin static assets and "/js/signup.js" as an
+  absolute path (works regardless of nesting depth).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LN0EK30SS7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LN0EK30SS7');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} | Grover</title>
+  <meta name="description" content="{{description}}">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="stylesheet" href="../../main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="https://getgrover.ai/img/og.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="{{title}}">
+  <meta property="twitter:description" content="{{description}}">
+  <meta property="twitter:image" content="https://getgrover.ai/img/og.png">
+</head>
+<body class="font-body text-gray-800 leading-relaxed m-0 p-0 overflow-x-hidden">
+
+  <header class="bg-primary py-6">
+    <div class="container mx-auto px-4 max-w-6xl lg:max-w-[1400px]">
+      <nav class="flex items-center justify-between" role="navigation" aria-label="Main navigation">
+        <a href="/" aria-label="Grover homepage">
+          <img src="../../img/grover-combomark-white.svg" alt="Grover logo" class="h-10 md:h-14">
+        </a>
+        <a href="/" class="text-white hover:underline font-heading text-base">&larr; Back to Home</a>
+      </nav>
+      <h1 class="text-white font-heading text-2xl md:text-4xl font-bold mt-6 leading-[1.1]">
+        {{title}}
+      </h1>
+      <p class="text-white text-lg md:text-xl leading-[1.3] max-w-3xl mt-4">
+        {{description}}
+      </p>
+    </div>
+  </header>
+
+  <main class="py-16">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <article class="prose prose-lg max-w-none">
+        {{content}}
+      </article>
+    </div>
+  </main>
+
+  {{form}}
+
+  <footer class="py-16 text-center text-white bg-primary">
+    <div class="flex flex-col items-center">
+      <img src="../../img/grover-combomark-white.svg" alt="Grover logo" class="h-8 mb-4 mx-auto" loading="lazy" width="200" height="32">
+      <p class="text-sm font-body">&copy; 2026 Grover. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

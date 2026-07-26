@@ -170,3 +170,9 @@ These are explicitly out of scope for this agent and un-actioned here:
   general for any future template edits.
 - No changes made to Resend scripts, `scripts/emails/`, or anything outside
   the U2/U3/U5 scope.
+
+### Notes from Will
+Is there a better way to standup and build this site structurally to make it easier to add to and maintain?
+You should make notes in repos or in your memories that grover-chat deploys to ops.getgrover.ai for produciton (called main in gh) and dev.getgrover.ai for the dev branch in gh.
+I will hold off on the "remaning manual steps for Will" until all is complete.
+There was an embedded hubspot booking link in a couple of places. what happened to that? it was in an iframe on https://getgrover.ai/partners/copy-kit/. That is to book a time for a Customer Success call with me

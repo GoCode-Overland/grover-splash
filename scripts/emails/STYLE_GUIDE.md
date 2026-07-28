@@ -38,6 +38,8 @@ Write like you're texting a friend who vanlifes and actually uses the app. Direc
 
 The old Grover Joyride emails nailed this: "I'm not going to overhype this." "Don't have a blank map!" Short, punchy, personal. That's the baseline.
 
+Lean toward fun, casual, exciting, and camping-focused. Less uptight than a feature-recap tone, more like a friend hyped about a good trip. The one exception is genuinely sensitive topics (wildfire, smoke, anything where real people's hardship is in the frame), those stay measured and non-celebratory, see the fire/smoke item framing for the model to follow there.
+
 - Say what the thing does, then why it matters. Not the other way around.
 - Use "you" and "your" constantly. This is their app, their adventure, their pins.
 - Contractions are fine. First person ("I uploaded a photo...") is fine and encouraged.

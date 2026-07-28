@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { render } from '@react-email/render';
 import { Resend } from 'resend';
-import InTheGrover20260717 from './emails/b2b/in-the-grover-2026-07-17.js';
+import InTheGrover20260728 from './emails/b2b/in-the-grover-2026-07-28.js';
 
 const { RESEND_API_KEY, RESEND_B2B_AUDIENCE_ID, RESEND_FROM, RESEND_B2B_BROADCAST_ID } = process.env;
 
@@ -12,17 +12,17 @@ if (!RESEND_API_KEY || !RESEND_B2B_AUDIENCE_ID || !RESEND_FROM) {
 
 const resend = new Resend(RESEND_API_KEY);
 
-const html = await render(InTheGrover20260717());
-const text = await render(InTheGrover20260717(), { plainText: true });
+const html = await render(InTheGrover20260728());
+const text = await render(InTheGrover20260728(), { plainText: true });
 
 const payload = {
   audienceId: RESEND_B2B_AUDIENCE_ID,
   from: `Will @ Grover <${RESEND_FROM}>`,
   replyTo: 'will@getgrover.ai',
-  subject: '3 ways to look out for your customers',
+  subject: 'New tools for your assistant and dashboard',
   html,
   text,
-  name: 'In the Grove - Jul 17, 2026',
+  name: 'In the Grove - Jul 28, 2026',
 };
 
 if (RESEND_B2B_BROADCAST_ID) {

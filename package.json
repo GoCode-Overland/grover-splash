@@ -8,10 +8,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "predev": "node scripts/build-blog.js --index --sitemap",
+    "build": "node scripts/build-blog.js --index --sitemap && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "stamp-blog": "node scripts/stamp-blog.js",
     "draft-email": "tsx scripts/send-broadcast-draft.ts",
     "draft-b2b-email": "tsx scripts/send-b2b-broadcast-draft.ts",
     "create-mobile-audience": "tsx scripts/create-mobile-audience.ts",

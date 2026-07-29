@@ -1,4 +1,5 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
+import { useSEO } from "@/hooks/use-seo";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CopyBlock, Section, ContentBlock } from "@/components/copy-kit/primitives";
@@ -12,9 +13,11 @@ const CopyKit = () => {
   const [brandName, setBrandName] = useState("");
   const bn = brandName.trim() || "[Brand Name]";
 
-  useEffect(() => {
-    document.title = "Partner Copy Kit - Grover";
-  }, []);
+  useSEO({
+    title: "Partner Copy Kit - Grover",
+    description: "Ready-to-use launch emails, print materials, and brand assets for Grover partners.",
+    path: "/partners/copy-kit",
+  });
 
   // ── Email copy ────────────────────────────────────────────────────────────
 

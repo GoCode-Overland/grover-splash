@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/use-seo";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -50,6 +51,13 @@ const howItWorks = [
 ];
 
 const ForOems = () => {
+  useSEO({
+    title: "For OEMs – Publish Your Product Knowledge to Grover",
+    description:
+      "Component OEMs publish product knowledge into Grover so RV owners and overlanders get accurate, brand-accurate answers straight from the source.",
+    path: "/for-oems",
+  });
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />

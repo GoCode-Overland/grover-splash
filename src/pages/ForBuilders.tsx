@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useSEO } from "@/hooks/use-seo";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -78,6 +79,13 @@ const insights = [
 ];
 
 const ForBuilders = () => {
+  useSEO({
+    title: "For Builders – Branded AI Assistants for Your Customers | Grover",
+    description:
+      "Give every customer a branded AI assistant that knows your build — powered by your knowledge base, backed by real usage insights.",
+    path: "/for-builders",
+  });
+
   useEffect(() => {
     if (!document.getElementById("hs-forms-script")) {
       const script = document.createElement("script");

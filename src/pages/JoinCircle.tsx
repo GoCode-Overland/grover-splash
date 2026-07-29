@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import { Check, Copy } from "lucide-react";
+import { useSEO } from "@/hooks/use-seo";
 
 const IOS_APP_URL = "https://apps.apple.com/us/app/grover-van-life/id6742468326";
 const ANDROID_BASE_URL = "https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app";
@@ -156,6 +157,15 @@ const JoinCircle = () => {
   const primaryHex = theme ? (useDark ? theme.darkPrimaryHex ?? theme.primaryHex : theme.primaryHex) : undefined;
   const secondaryHex = theme ? (useDark ? theme.darkSecondaryHex ?? theme.secondaryHex : theme.secondaryHex) : undefined;
   const accentTextColor = primaryHex ? readableAccentColor(primaryHex) : undefined;
+
+  useSEO({
+    title: company ? `Join ${company.name}'s Circle on Grover` : "Join a Circle on Grover",
+    description: company
+      ? `Download Grover and enter your code to make ${company.name} your Home Circle.`
+      : "Download Grover and join your community's Home Circle.",
+    path: `/join/${slug}`,
+    image: company?.logoUrl ?? undefined,
+  });
 
   const hasCompanyLogo = state.status === "success" && !!company?.logoUrl && !logoFailed;
 

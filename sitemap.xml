@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -14,6 +14,26 @@
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://getgrover.ai/download</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://getgrover.ai/for-builders</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://getgrover.ai/for-oems</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://getgrover.ai/tutorials.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.50</priority>
+</url>
+<url>
   <loc>https://getgrover.ai/blog/</loc>
   <lastmod>2025-08-12T18:00:00+00:00</lastmod>
   <changefreq>daily</changefreq>
@@ -23,13 +43,11 @@
   <loc>https://getgrover.ai/blog/perfect-van-trip-planning.html</loc>
   <lastmod>2025-07-21T14:52:15+00:00</lastmod>
   <changefreq>monthly</changefreq>
-  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://getgrover.ai/blog/ultimate-guide-vanlife-apps.html</loc>
   <lastmod>2025-07-21T14:52:15+00:00</lastmod>
-  <changefreq>monthly</changefreq>
   <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
@@ -37,20 +55,17 @@
   <loc>https://getgrover.ai/blog/vanlife-community-apps-why-connection-matters.html</loc>
   <lastmod>2025-07-21T14:52:16+00:00</lastmod>
   <changefreq>monthly</changefreq>
-  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://getgrover.ai/blog/van-conversion-support-apps.html</loc>
   <lastmod>2025-07-21T14:52:16+00:00</lastmod>
   <changefreq>monthly</changefreq>
-  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://getgrover.ai/blog/best-apps-van-camping-spots.html</loc>
   <lastmod>2025-07-21T14:52:15+00:00</lastmod>
-  <changefreq>monthly</changefreq>
   <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>

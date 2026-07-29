@@ -1,4 +1,5 @@
 import { useSearchParams } from "react-router-dom";
+import { useSEO } from "@/hooks/use-seo";
 
 const IOS_APP_URL = "https://apps.apple.com/us/app/grover-van-life/id6742468326";
 const ANDROID_APP_URL = "https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app";
@@ -11,6 +12,13 @@ declare global {
 
 const Download = () => {
   const [searchParams] = useSearchParams();
+
+  useSEO({
+    title: "Download Grover – The AI Assistant for Life on the Road",
+    description:
+      "Get Grover for iOS and Android. Know your rig, find your spots, and travel with your people.",
+    path: "/download",
+  });
 
   const trackDownload = (platform: "ios" | "android") => {
     window.gtag?.("event", "download_click", {

@@ -12,7 +12,7 @@ Read this before creating, editing, or publishing any blog content. Update it wh
 **URL base:** `https://getgrover.ai/blog/`  
 **Purpose:** Inspire and inform vanlifers; showcase new Grover features; drive app downloads; rank in search.
 
-The blog is **static HTML** — no build step, no SSG, no framework. Files are authored in `blog/` and deployed as-is. Always keep `public/blog/` in sync (see §8).
+The blog is **markdown-sourced, build-generated static HTML** (since July 2026). Posts are authored as one file each in `content/blog/[slug].md` (frontmatter + markdown body, inline HTML allowed); `scripts/build-blog.js` renders them into `public/blog/` at build time via the shared template `scripts/blog-post-template.html`. Never hand-edit `public/blog/**` — it is gitignored generated output, overwritten on every build (see §8).
 
 Posts use **clean URLs**: each post lives at `blog/[slug]/index.html` (a directory, not a flat `blog/[slug].html` file), so links omit the `.html` extension (e.g. `href="grover-campflare-campgrounds"`). Head/CSS asset paths from a post use `../../` (one level for the slug directory, one for `blog/`) instead of `../`.
 
@@ -20,7 +20,7 @@ Posts use **clean URLs**: each post lives at `blog/[slug]/index.html` (a directo
 
 ## 2. Brand Voice
 
-Read `blog/vanlife-app-features-that-matter.html` and `blog/getting-started-with-grover-guide.html` as canonical voice examples before writing.
+Read `content/blog/vanlife-app-features-that-matter.md` and `content/blog/getting-started-with-grover-guide.md` as canonical voice examples before writing.
 
 **Tone rules:**
 - Warm, first-person plural ("we", "our community", "vanlifers like us")
@@ -42,7 +42,9 @@ Read `blog/vanlife-app-features-that-matter.html` and `blog/getting-started-with
 
 ## 3. Post Structure (HTML Template)
 
-Every post follows this exact structure. Copy from a recent post (e.g., `blog/grover-bucket-list-pin-creation.html`) rather than writing from scratch.
+Every post follows this exact structure. Copy from a recent post (e.g., `content/blog/grover-bucket-list-pin-creation.md`) rather than writing from scratch.
+
+**Since the July 2026 markdown migration, everything in the `<head>` checklist below is produced by the build** — GA, favicons, stylesheets, canonical/OG/Twitter tags come from `scripts/blog-post-template.html`, and per-post values (title, description, keywords, JSON-LD, styles) come from the post's frontmatter (see `content/blog/_template.md`). The checklist remains as the contract for what a rendered post must contain; you satisfy it by filling frontmatter, not by writing head HTML.
 
 ### `<head>` checklist
 ```
@@ -54,7 +56,7 @@ Every post follows this exact structure. Copy from a recent post (e.g., `blog/gr
 [ ] <link rel="stylesheet" href="../main.css">
 [ ] <link rel="stylesheet" href="blog.css">
 [ ] Favicon links (32x32 and 16x16 from ../img/)
-[ ] <link rel="canonical" href="https://getgrover.ai/blog/[slug].html">
+[ ] <link rel="canonical" href="https://getgrover.ai/blog/[slug]"> (no .html, no trailing slash — generated from frontmatter slug)
 [ ] Open Graph tags: og:type, og:title, og:description, og:image, og:url
 [ ] Twitter card tags: twitter:card, twitter:title, twitter:description, twitter:image
 [ ] Schema.org JSON-LD (Article type — see §3a)
@@ -82,7 +84,7 @@ Use `https://getgrover.ai/img/og.png` for all OG images unless a post-specific i
 ## 4. SEO Requirements
 
 - **Slug:** lowercase kebab-case, descriptive, under 60 chars  
-  Pattern: `grover-[feature-name].html` for feature posts, `vanlife-[topic].html` for guides
+  Pattern: `grover-[feature-name]` for feature posts, `vanlife-[topic]` for guides (the slug is the `.md` filename; no `.html` anywhere)
 - **Primary keyword** in: title, H1, meta description, first paragraph, at least one H2
 - **Internal links:** minimum 2–3 links to other blog posts using `class="cta-link"`
 - **Read time** in meta line: estimate 200 words/min (a 1,000-word post = ~5 min)
@@ -128,7 +130,7 @@ For wide/landscape lifestyle photos (vans, scenery, community shots):
      style="width: 100%; border-radius: 12px; margin: 20px 0; max-height: 400px; object-fit: cover;">
 ```
 
-For actual in-app phone screenshots (portrait, e.g. `1170x2532`) — do NOT use the pattern above, it crops the screen content badly. Use the device-frame treatment instead (see `blog/grover-in-app-tutorial-system/index.html` for the original, or any of the July 2026 iOS-1.2.8 posts for a copy-paste example):
+For actual in-app phone screenshots (portrait, e.g. `1170x2532`) — do NOT use the pattern above, it crops the screen content badly. Use the device-frame treatment instead (see `content/blog/grover-in-app-tutorial-system.md` for the original, or any of the July 2026 iOS-1.2.8 posts for a copy-paste example):
 ```html
 <div class="screenshot-frame">
     <img src="../../img/blog-photos/[name]" alt="[descriptive alt text]" loading="lazy">
@@ -200,48 +202,22 @@ Every post ends with a "Related Articles" block before the footer. Include 3–4
 
 ## 8. File Deployment
 
-The blog has **two copies that must always stay in sync:**
+**Single source of truth: `content/blog/[slug].md`.** One file per post. Copy `content/blog/_template.md` to start — it documents every frontmatter field (title, og_title, description, keywords, date, jsonld, styles, card fields, draft, etc.).
 
-| Location | Purpose |
-|---|---|
-| `blog/[slug].html` | Source of truth, version-controlled |
-| `public/blog/[slug].html` | Deployed copy served by the site |
-
-After editing any blog file, **always** copy it to `public/blog/`:
 ```bash
-cp blog/[slug].html public/blog/[slug].html
-# or sync everything:
-cp -r blog/. public/blog/
+# after writing/editing content/blog/[slug].md:
+npm run build          # regenerates public/blog/** + sitemap + builds dist/
+# or, generation only:
+node scripts/build-blog.js --index --sitemap
 ```
 
-When adding a new post, **also** add a card to both `blog/index.html` and `public/blog/index.html`.
+`public/blog/**` (except `blog.css`) and `public/sitemap.xml` are **generated and gitignored** — never hand-edit them; changes there are silently lost on the next build. `npm run dev` regenerates automatically (predev hook). Template/chrome changes go in `scripts/blog-post-template.html`; index chrome lives in `scripts/build-blog.js`.
 
 ---
 
 ## 9. Blog Index Card Pattern
 
-New posts go at the **top** of the `blog-cards-container` div in `blog/index.html`.
-
-```html
-<!-- Blog Card - [Title] -->
-<a href="[slug].html" class="blog-card-link">
-  <div class="blog-card">
-    <div class="blog-card-image">
-      <img src="../img/blog-photos/[image]" alt="[alt text]" style="width:100%;height:200px;object-fit:cover;">
-    </div>
-    <div class="blog-card-content">
-      <div class="blog-card-meta">[Month Day, Year]</div>
-      <h3 class="blog-card-title">[Post Title]</h3>
-      <p class="blog-card-excerpt">[2-sentence hook]</p>
-      <div class="blog-card-tags">
-        <span class="blog-tag">[tag1]</span>
-        <span class="blog-tag">[tag2]</span>
-        <span class="blog-tag">[tag3]</span>
-      </div>
-    </div>
-  </div>
-</a>
-```
+The index card grid is generated — cards come from each post's frontmatter (`card_excerpt`, `card_tags`, `card_image`, etc. — see `_template.md`), sorted by `date` descending. State-guide posts use `card_section: state` + `card_color`. The featured hero is the post with `featured: true` (plus `read_time` and `featured_excerpt`). No HTML to write.
 
 ---
 
@@ -283,9 +259,9 @@ Before publishing any post, verify every factual claim. The cost of a false clai
 [ ] At least 2–3 internal cta-link backlinks to related posts
 [ ] Related articles section present (§7)
 [ ] Slug is descriptive kebab-case
-[ ] Card added to blog/index.html and public/blog/index.html
-[ ] Both blog/[slug].html and public/blog/[slug].html written
-[ ] Committed and pushed to remote
+[ ] Card frontmatter fields filled (card_excerpt, card_tags, card_image)
+[ ] `npm run build` passes locally (build-blog fails loudly on bad frontmatter)
+[ ] Committed and pushed to remote (content/blog/[slug].md only — generated files are gitignored)
 ```
 
 ---
@@ -299,7 +275,7 @@ fix: correct [what] in [slug]
 feat: update [feature] across all blog posts
 ```
 
-Always commit `blog/` and `public/blog/` together in one commit.
+A post is one commit touching one file: `content/blog/[slug].md` (plus any new images under `public/img/blog-photos/`).
 
 ---
 

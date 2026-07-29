@@ -52,6 +52,9 @@ jsonld: |
 #         (the post page itself is still rendered); default false
 draft: false
 # og_image — og:image / twitter:image; default https://getgrover.ai/img/og.png
+# og_description — og:description / twitter:description when they differ from
+#                  the meta description (a few legacy posts use a shorter OG
+#                  variant); default: same as description
 # article_section — informational mirror of JSON-LD articleSection
 article_section: App Features
 # styles — the per-post <style> block CONTENTS (without the <style> tags),

@@ -174,6 +174,7 @@ function renderPost(post, template) {
     TITLE: post.title,
     OG_TITLE: post.og_title,
     DESCRIPTION: post.description,
+    OG_DESCRIPTION: post.og_description || post.description,
     KEYWORDS: post.keywords,
     SLUG: post.slug,
     OG_IMAGE: post.og_image || DEFAULT_OG_IMAGE,

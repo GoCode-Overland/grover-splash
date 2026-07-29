@@ -1,0 +1,217 @@
+---
+slug: grover-campflare-campgrounds
+title: 10,000+ Campgrounds Now on Your Map - Grover
+og_title: 10,000 Campgrounds, One Map: Grover Partners with Campflare
+description: Grover has partnered with Campflare to put 10,000+ campgrounds on your map, with amenities, cell service bars, pricing, and more in every detail card.
+keywords: Campflare, campgrounds, vanlife map, RV camping, map features, trip planning, campground amenities, cell service, Grover app, partnership
+date: 2026-07-14
+date_modified: 2026-07-14
+article_section: App Features
+draft: false
+nav_script: true
+card_section: latest
+card_excerpt: Through our partnership with Campflare, over 10,000 state and national campgrounds are now on the Grover map — with amenities, cell service bars, pricing, and more in every detail card.
+jsonld: |
+      <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "10,000 Campgrounds, One Map: Grover Partners with Campflare",
+          "description": "Grover has partnered with Campflare to put 10,000+ campgrounds on your map, with amenities, cell service bars, pricing, and more in every detail card.",
+          "datePublished": "2026-07-14",
+          "dateModified": "2026-07-14",
+          "author": {"@type": "Organization", "name": "Grover", "url": "https://getgrover.ai"},
+          "publisher": {"@type": "Organization", "name": "Grover", "logo": {"@type": "ImageObject", "url": "https://getgrover.ai/img/grover-combomark-white.svg"}},
+          "mainEntityOfPage": {"@type": "WebPage", "@id": "https://getgrover.ai/blog/grover-campflare-campgrounds"},
+          "articleSection": "App Features",
+          "keywords": ["Grover app", "Campflare", "campgrounds", "vanlife", "map features", "trip planning", "partnership", "RV camping"]
+      }
+      </script>
+styles: |
+          .blog-container {
+              font-family: 'Plantin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+              max-width: 800px;
+              margin: 0 auto;
+              padding: 0 20px;
+              line-height: 1.6;
+          }
+          .blog-header { text-align: center; margin: 40px 0; padding: 40px 0; border-bottom: 2px solid #f0f0f0; }
+          .blog-title { font-size: 2.5rem; font-weight: bold; color: #2c3e50; margin-bottom: 16px; line-height: 1.2; }
+          .blog-meta { color: #7f8c8d; font-size: 1rem; margin-bottom: 20px; }
+          .blog-content { margin: 40px 0; }
+          .blog-content h2 { font-size: 1.8rem; color: #2c3e50; margin: 40px 0 20px 0; font-weight: bold; }
+          .blog-content h3 { font-size: 1.4rem; color: #34495e; margin: 30px 0 15px 0; font-weight: 600; }
+          .blog-content p { margin-bottom: 20px; font-size: 1.1rem; color: #34495e; }
+          .blog-content ul, .blog-content ol { margin: 20px 0; padding-left: 30px; }
+          .blog-content li { margin-bottom: 8px; font-size: 1.1rem; color: #34495e; }
+          .cta-box { background: #f8e5c1; color: #66AEC0; padding: 40px; border-radius: 20px; text-align: center; margin: 40px 0; }
+          .cta-box h3 { color: #66AEC0; margin-bottom: 15px; }
+          .cta-button { display: inline-block; background: #66AEC0; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: transform 0.3s ease; }
+          .cta-button:hover { transform: translateY(-2px); }
+          .cta-link { color: #66AEC0; font-weight: bold; text-decoration: none; }
+          .cta-link:hover { text-decoration: underline; }
+          blockquote { border-left: 4px solid #66AEC0; padding-left: 20px; margin: 30px 0; font-style: italic; color: #34495e; }
+          .feature-highlight { background: #f0f8fb; border-left: 4px solid #66AEC0; padding: 20px 25px; border-radius: 0 12px 12px 0; margin: 30px 0; }
+          .feature-highlight p { margin-bottom: 0; }
+          .nav-menu { position: sticky; top: 0; background: white; z-index: 100; border-bottom: 1px solid #e9ecef; margin-bottom: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+          .nav-menu-content { max-width: 800px; margin: 0 auto; padding: 15px 20px; display: flex; flex-direction: column; gap: 10px; align-items: center; }
+          .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; list-style: none; margin: 0; padding: 0; }
+          .nav-links a { text-decoration: none; color: #66AEC0; font-weight: 500; padding: 6px 14px; border-radius: 20px; transition: background-color 0.3s ease; font-size: 0.85rem; }
+          .nav-links a:hover { background: #f8f9fa; }
+          .nav-links a.active { background: #66AEC0; color: white; }
+
+          /* Screenshot styling */
+          .screenshot-frame {
+              background: linear-gradient(135deg, #1a5f7a 0%, #2d8aad 60%, #1e7090 100%);
+              border-radius: 24px;
+              padding: 32px 24px;
+              margin: 36px auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              max-width: 440px;
+              box-shadow: 0 12px 40px rgba(26, 95, 122, 0.35);
+          }
+          .screenshot-frame img {
+              border: 3px solid #111;
+              border-radius: 40px;
+              max-width: 260px;
+              width: 100%;
+              display: block;
+              box-shadow: 0 6px 24px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+          }
+          .screenshot-caption {
+              text-align: center;
+              font-style: italic;
+              color: #666;
+              font-size: 0.9rem;
+              margin-top: -20px;
+              margin-bottom: 32px;
+          }
+
+          @media (max-width: 768px) {
+              .blog-title { font-size: 2rem; }
+              .nav-links a { font-size: 0.75rem; padding: 4px 10px; }
+              .screenshot-frame { padding: 20px 16px; }
+              .screenshot-frame img { max-width: 220px; border-radius: 32px; }
+          }
+---
+
+<nav class="nav-menu">
+<div class="nav-menu-content">
+<span class="font-heading text-sm text-gray-600">Jump to:</span>
+<ul class="nav-links">
+<li><a href="#the-partnership">The Partnership</a></li>
+<li><a href="#on-the-map">On the Map</a></li>
+<li><a href="#detail-cards">Detail Cards</a></li>
+<li><a href="#whats-next">What's Next</a></li>
+</ul>
+</div>
+</nav>
+
+<main class="blog-container">
+<header class="blog-header">
+<h1 class="blog-title">10,000 Campgrounds, One Map: Grover Partners with Campflare</h1>
+<p class="blog-meta">Published July 14, 2026 · 6 min read</p>
+<p class="blog-meta" style="margin-top: -10px;">Tags: <span style="color: #66AEC0;">Campflare · campgrounds · map features · trip planning · partnership</span></p>
+</header>
+
+<article class="blog-content">
+<div class="screenshot-frame">
+<img src="../../img/blog-photos/campflare-campground-location.jpeg" alt="Grover map showing pink triangle Campflare campground pins across mountainous terrain, with a bottom sheet preview of Cottonwood Campground on the Naches River in Washington showing price and elevation" loading="lazy">
+</div>
+<p class="screenshot-caption">Campflare campgrounds now show up as their own pins on the Grover map, right alongside community spots.</p>
+
+<section id="the-partnership">
+<p>Finding a good place to camp shouldn't take five different apps and a dozen tabs. That's the whole idea behind our new partnership with Campflare, and we couldn't be more excited to bring it to you.</p>
+
+<p>Campflare tracks state and national campgrounds across the country in incredible depth — not just where they are, but what they're really like once you get there. We've brought that entire library onto the Grover map, so more than 10,000 campgrounds now sit right next to your community pins and your <a href="../grover-landtrust-places-layer" class="cta-link">LandTrust properties</a>, all in one place.</p>
+
+This is the kind of feature we build Grover for. You already trust the map to show you where your fellow vanlifers have been. Now it can show you thousands of established campgrounds too, each one backed by real details instead of a name and a dot.
+
+<blockquote>
+"A great campsite shouldn't be a gamble. Our partnership with Campflare means you know what you're rolling into before you ever leave the highway."
+</blockquote>
+</section>
+
+<section id="on-the-map">
+<h2>A New Layer, Right Where You'd Expect It</h2>
+
+Campflare campgrounds live in the Grover filter bar, the same place you already toggle your other map layers. Switch it on and small triangle pins bloom across the map in a distinct pink, easy to pick out from community pins at a glance.
+
+Zoom into a region you're actually planning to visit and the campgrounds around you snap into focus. No more guessing whether a spot on some other map is still open, still public, or even still there.
+
+<div class="feature-highlight">
+<p><strong>Over 10,000 campgrounds, one toggle.</strong> State parks, national forest campgrounds, and RV parks from coast to coast are now searchable right inside the app you're already using to plan your route.</p>
+</div>
+
+<p>Like every layer on the Grover map, this one is entirely optional. Turn it on when you're scouting a new stretch of road, turn it off when you just want to see where the community has been. Your map, your call.</p>
+</section>
+
+<section id="detail-cards">
+<h2>Detail Cards Built for the Questions You Actually Ask</h2>
+
+Tap a Campflare pin and a full detail card slides up, not a name and a phone number. Right at the top you'll see a status badge telling you whether the campground is open, closed, or seasonal, plus a price range so you know what you're working with before you commit — anywhere from free to a nightly rate. Elevation, city, and state are all right there too, alongside a description you can expand with "Show more" when you want the full picture.
+
+Real photos of the campground sit inside the card, so you're looking at the actual place instead of imagining it from a listing. Below that is an amenities section built as simple tags: WiFi, Water, Showers, Electric, Toilets, Pets OK, Fires OK, Dump Station. One glance tells you whether this is a rustic pull-off or a fully equipped stop.
+
+<div class="screenshot-frame">
+<img src="../../img/blog-photos/campflare-campground-detailed.jpeg" alt="Detailed Campflare campground card in the Grover app for Wahweap Campground and RV Park in Page, Arizona, showing an open status badge, description, two photos, and an amenities grid" loading="lazy">
+</div>
+<p class="screenshot-caption">A full Campflare detail card — amenities, photos, and everything you'd want to know before you roll up.</p>
+
+<p>For vanlifers, the details keep going. Each card includes a Cell Service section with signal strength bars for AT&T, Verizon, and T-Mobile, so you can plan around dead zones before you're actually in one. Check-in and check-out times are listed clearly, and if you're rolling in something bigger, you'll find the max rig length and whether the campground is friendly to big rigs and pull-through sites. Every card also names the agency that manages the campground, so you always know who's looking after the land.</p>
+
+<p>It's the kind of depth that used to mean cross-referencing three or four sources before you ever left home. Now it's just a tap away, right where you were already looking at the map. Found a campground worth remembering for a future trip? It's an easy add to your <a href="../grover-bucket-list-pin-matching" class="cta-link">bucket list</a>, so it's waiting for you next time you're in the area. Planning a group trip? <a href="../grover-circles-club-sharing" class="cta-link">Share the find with your Circle</a> before someone else claims the last pull-through site.</p>
+</section>
+
+<section id="whats-next">
+<h2>Coming Soon: Availability Before You Roll Up</h2>
+
+Here's what we're building next, and we can't wait to turn it on. A live availability calendar is on its way for Campflare campgrounds, showing real, day-by-day status for each site — open or reserved — so you can check before you commit to the drive.
+
+To be clear, this isn't live yet. The detail cards you see today are already rich with information, but the availability calendar is still in the pipeline for a future update. When it lands, you'll be able to glance at a calendar and know whether a campground has room for you this weekend or next, all without leaving Grover.
+
+<p>In the meantime, everything else described above is live right now. Open the map, toggle on the Campflare layer, and start exploring. And if you're mid-drive and just want to know what's nearby, ask Grover's <a href="../grover-chat-knows-where-you-are" class="cta-link">chat about your current location</a> and it'll help you find a Campflare campground without you ever pulling over to check a map.</p>
+</section>
+
+<p>Great trips are built on good information, and this partnership hands you a mountain of it. Whether you're chasing a specific state park or just want a reliable stop for the night, the Campflare layer is ready to help you find it. Pair it with a solid <a href="../perfect-van-trip-planning" class="cta-link">trip plan</a> and you'll spend a lot less time wondering where you'll sleep.</p>
+
+<section class="related-articles" style="margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 15px; border-left: 4px solid #66AEC0;">
+<h3 style="color: #66AEC0; margin-bottom: 20px;">More from The Joy Ride Journal</h3>
+<div style="display: grid; gap: 15px;">
+<div>
+<h4 style="margin-bottom: 5px;"><a href="../grover-landtrust-places-layer" class="cta-link">Explore More Land: Grover Now Shows LandTrust Properties on Your Map</a></h4>
+<p style="margin: 0; color: #666; font-size: 0.9rem;">Our other major map-layer partnership, bringing recreational private land right onto the Grover map.</p>
+</div>
+<div>
+<h4 style="margin-bottom: 5px;"><a href="../grover-bucket-list-pin-matching" class="cta-link">Grover's Bucket List Just Got Smarter</a></h4>
+<p style="margin: 0; color: #666; font-size: 0.9rem;">Found a Campflare campground worth revisiting? See how Grover matches your bucket list to the right pin.</p>
+</div>
+<div>
+<h4 style="margin-bottom: 5px;"><a href="../perfect-van-trip-planning" class="cta-link">How to Plan the Perfect Van Trip: A Step-by-Step Guide</a></h4>
+<p style="margin: 0; color: #666; font-size: 0.9rem;">From route-building to finding overnight spots, this guide walks through the full trip planning process.</p>
+</div>
+<div>
+<h4 style="margin-bottom: 5px;"><a href="../grover-chat-knows-where-you-are" class="cta-link">Grover Chat Now Knows Where You Are</a></h4>
+<p style="margin: 0; color: #666; font-size: 0.9rem;">Ask Grover what's nearby and get answers built around your actual location, including campgrounds up ahead.</p>
+</div>
+<div>
+<h4 style="margin-bottom: 5px;"><a href="../grover-circles-club-sharing" class="cta-link">Your People, Your Pins: Introducing Club Circles on Grover</a></h4>
+<p style="margin: 0; color: #666; font-size: 0.9rem;">Found a great campground? Share it with your Circle in one tap so your crew knows about it too.</p>
+</div>
+</div>
+</section>
+
+<p><strong>Don't have this yet?</strong> Make sure automatic updates are turned on in the App Store or Google Play so Grover updates itself the moment new features ship — no need to check back and update manually.</p>
+
+<div class="cta-box">
+<h3>Ready to Find Your Next Campsite?</h3>
+<p>Download Grover and turn on the Campflare layer. Over 10,000 campgrounds are waiting for you on the map.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
+<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
+</div>
+</div>
+</article>
+</main>

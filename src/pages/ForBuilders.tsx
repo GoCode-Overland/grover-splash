@@ -87,13 +87,16 @@ const ForBuilders = () => {
   });
 
   useEffect(() => {
-    if (!document.getElementById("hs-forms-script")) {
-      const script = document.createElement("script");
-      script.id = "hs-forms-script";
-      script.src = "https://js.hsforms.net/forms/embed/48485789.js";
-      script.defer = true;
-      document.body.appendChild(script);
-    }
+    // Owned signup component (public/js/signup.js). Re-appending the script
+    // re-runs its mount pass; already-mounted containers are skipped via the
+    // data-grover-signup-mounted guard, so client-side revisits work too.
+    const script = document.createElement("script");
+    script.src = "/js/signup.js";
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      script.remove();
+    };
   }, []);
 
   return (
@@ -171,7 +174,7 @@ const ForBuilders = () => {
             </div>
           </div>
 
-          {/* HubSpot form CTA — skewed yellow card */}
+          {/* Partner-interest signup CTA — skewed yellow card */}
           <div className="relative px-4 md:px-10 pt-16 pb-12 max-w-4xl mx-auto bg-[#f8e5c1] md:bg-transparent rounded-xl">
             {/* Skewed background (desktop only) */}
             <div className="hidden md:block">
@@ -199,14 +202,14 @@ const ForBuilders = () => {
               <h2 className="text-2xl md:text-3xl font-bold font-heading leading-snug mb-3">
                 From one adventurer to another, the journey is better together.
               </h2>
-              <p className="text-muted-foreground">Fill this out to see your brand on Grover.</p>
+              <p className="text-muted-foreground">Drop your email and we'll follow up about getting your brand on Grover.</p>
             </div>
 
             <div
-              className="hs-form-frame max-w-2xl mx-auto"
-              data-region="na1"
-              data-form-id="b9b0c3c9-eaf9-499f-a05a-ab15791be026"
-              data-portal-id="48485789"
+              className="grover-signup max-w-2xl mx-auto"
+              data-grover-signup
+              data-endpoint="https://ops.getgrover.ai/api/public/contacts/subscribe"
+              data-button-label="Get in touch"
             />
 
             <p className="text-center text-sm text-muted-foreground mt-6">

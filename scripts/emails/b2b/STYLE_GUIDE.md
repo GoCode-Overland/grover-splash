@@ -90,7 +90,7 @@ Keep to 3 items per issue on the weekly cadence. Don't pad. If a week is thin, h
 
 ## CTA
 
-- One button only: **"Schedule a Success Call"**, links to `https://meetings.hubspot.com/will858/grover-success`.
+- One button only: **"Schedule a Success Call"**, links to `https://calendar.google.com/calendar/appointments/schedules/AcZssZ3ldSy_AEw42s-B6jkxp4B8fUxvEZqEy3hEl8987tGJVJU5ldW9OHsAkX1JHtP2EUbvYHX7Z5vr` (Google Calendar booking page — use this plain link, never the `?gv=true` embed version).
 - No app store download links in this newsletter, that's Joyride Journal's CTA, not this one.
 - Optionally pair with a one-line reassurance ("Takes a few minutes, pick whatever slot works.").
 - Email clients can't embed live calendar availability (no iframes), so this is always a link-out button, never an embed.

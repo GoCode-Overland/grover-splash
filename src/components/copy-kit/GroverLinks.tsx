@@ -75,11 +75,11 @@ export default function GroverLinks() {
           📅 Book a Grover Success Meeting
         </h3>
         <p className="mb-4 text-sm text-muted-foreground">
-          Schedule time with co-founders Will and Josh to discuss your Circle's success.
+          Schedule time with co-founder Will to discuss your Circle's success.
         </p>
         <div className="overflow-hidden rounded-md bg-white">
           <iframe
-            src="https://meetings.hubspot.com/will858/grover-success-with-josh?embed=true"
+            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3ldSy_AEw42s-B6jkxp4B8fUxvEZqEy3hEl8987tGJVJU5ldW9OHsAkX1JHtP2EUbvYHX7Z5vr?gv=true"
             title="Book a Grover Success Meeting"
             width="100%"
             height="650"

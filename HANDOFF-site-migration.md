@@ -134,34 +134,20 @@ change. `dist/lp/` passthrough confirmed intact.
    plan, ideally as a grover-chat MCP tool rather than the original
    cross-repo dispatch.
 
-### Blocked on Will: Google Calendar appointment schedules (rest of U4)
+### U4 resolution (Will's call, 2026-07-29)
 
-The two remaining HubSpot Meetings links can't be swapped until two
-appointment schedules exist. Steps (in Google Calendar, will@getgrover.ai):
-
-1. Create → "Appointment schedule" → **"Grover Success Call"** (add Josh as
-   co-host). Open Share → "Website embed" → "Inline booking page" → copy the
-   iframe URL (shape
-   `https://calendar.google.com/calendar/appointments/schedules/<ID>?gv=true`).
-2. Create a second schedule → **"Grover Discovery and Demo"**. Open Share →
-   "Link" tab → copy the plain booking-page URL (no embed needed — all
-   usages are plain links).
-
-Then the code change is mechanical (ready to apply on request):
-- `GroverLinks.tsx:82`: iframe `src` → the Success embed URL.
-- `ForBuilders.tsx`, `ForOems.tsx`, `Navigation.tsx`, `Footer.tsx`: rename
-  `HUBSPOT_BOOKING_URL` → `DISCOVERY_CALL_URL` with the new plain URL
-  (consider hoisting to one shared `src/lib/links.ts` while at it — it's
-  currently duplicated four times).
-- Regression check afterward: `grep -ri hubspot src/` must return nothing.
-
-### Other HubSpot stragglers surfaced (out of this plan's scope)
-
-- `scripts/emails/b2b/in-the-grover-2026-07-17.tsx`, `...-07-28.tsx`, and
-  `scripts/emails/b2b/STYLE_GUIDE.md` hard-code a **third** HubSpot meeting
-  link (`meetings.hubspot.com/will858/grover-success`). The style guide
-  means every future In the Grove issue will re-introduce it — update it
-  alongside the U4 swap (probably to the Success schedule URL).
-- Reminder from HANDOFF-business-os.md still standing: the HubSpot portal
-  itself, SPF cleanup, and DMARC tightening wait until all of the above is
-  live.
+- **Success call**: the `/partners/copy-kit` iframe now points at Will's
+  Google Calendar appointment schedule (solo — Josh is deliberately not on
+  it; card copy updated to match). The B2B email style guide
+  (`scripts/emails/b2b/STYLE_GUIDE.md`) now uses the same schedule's plain
+  booking-page URL (never the `?gv=true` embed — email clients can't iframe).
+- **Discovery and demo**: intentionally **staying on HubSpot** for now
+  (`meetings.hubspot.com/will858/grover-discovery-and-demo` in
+  `ForBuilders.tsx`, `ForOems.tsx`, `Navigation.tsx`, `Footer.tsx` — note
+  the last two were missed by the plan's file list). Not fully off HubSpot
+  yet, and that's deliberate. When that schedule does move to Google
+  Calendar later, it's a constant-value swap in those four files (consider
+  hoisting to one shared `src/lib/links.ts` while at it), then
+  `grep -ri hubspot src/ scripts/` as the regression check.
+- Consequence: the HubSpot portal deletion / SPF / DMARC steps from
+  HANDOFF-business-os.md remain deferred until the discovery link moves too.

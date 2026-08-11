@@ -1,4 +1,16 @@
+# Secrets. Bare `.env` alone is not enough: a sibling like `.env.bak` or
+# `.env.local` slips straight past it and lands in `git status` as committable.
 .env
+.env.*
+!.env.example
+!.env.sample
+
+# Stray copies that tend to appear next to a file being edited.
+*.bak
+*.backup
+*.orig
+*.save
+
 .DS_Store
 .vercel
 node_modules/

@@ -242,7 +242,7 @@ node scripts/build-blog.js --index --sitemap
 
 ## 9. Blog Index Card Pattern
 
-The index card grid is generated — cards come from each post's frontmatter (`card_excerpt`, `card_tags`, `card_image`, etc. — see `_template.md`), sorted by `date` descending. State-guide posts use `card_section: state` + `card_color`. The featured hero is the post with `featured: true` (plus `read_time` and `featured_excerpt`). No HTML to write.
+The index card grid is generated — cards come from each post's frontmatter (`card_excerpt`, `card_section`, `card_title`, `card_color`, etc. — see `_template.md` for the authoritative list), sorted by `date` descending. Note there is no `card_image` field despite earlier versions of this guide claiming one; `build-blog.js` does not read it and no post sets it. Index cards are text only. State-guide posts use `card_section: state` + `card_color`. The featured hero is the post with `featured: true` (plus `read_time` and `featured_excerpt`). No HTML to write.
 
 ---
 

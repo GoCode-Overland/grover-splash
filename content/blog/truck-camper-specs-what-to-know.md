@@ -53,6 +53,9 @@ styles: |
           blockquote { border-left: 4px solid #66AEC0; padding-left: 20px; margin: 30px 0; font-style: italic; color: #34495e; }
           .feature-highlight { background: #f0f8fb; border-left: 4px solid #66AEC0; padding: 20px 25px; border-radius: 0 12px 12px 0; margin: 30px 0; }
           .feature-highlight p { margin-bottom: 0; }
+          .rig-figure { margin: 0 0 32px 0; }
+          .rig-figure img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; display: block; }
+          .rig-figure figcaption { color: #666; font-size: 0.95rem; margin: 12px 0 0 0; text-align: center; }
           table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 1rem; }
           table th, table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
           table th { background-color: #f8f9fa; font-weight: bold; }
@@ -93,6 +96,11 @@ styles: |
 </header>
 
 <article class="blog-content">
+
+<figure class="rig-figure">
+<img src="../../img/blog-photos/dif-rossmonster-truck-camper.webp" alt="A grey Ford Super Duty crew cab carrying a flatbed pop-top truck camper, parked at a gravel campsite among juniper trees, with oversized off-road tires, a front brush guard, and a spare tire mounted on the camper's side" style="object-position: center 38%;" loading="lazy">
+<figcaption>Dif's Rossmonster, parked up at camp. Shared with permission.</figcaption>
+</figure>
 
 <p>Van owners get asked how tall their van is. Truck camper owners get asked something harder: what does the whole thing weigh, and is the truck under it rated to carry that?</p>
 

@@ -53,6 +53,9 @@ styles: |
           blockquote { border-left: 4px solid #66AEC0; padding-left: 20px; margin: 30px 0; font-style: italic; color: #34495e; }
           .feature-highlight { background: #f0f8fb; border-left: 4px solid #66AEC0; padding: 20px 25px; border-radius: 0 12px 12px 0; margin: 30px 0; }
           .feature-highlight p { margin-bottom: 0; }
+          .rig-figure { margin: 0 0 32px 0; }
+          .rig-figure img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; display: block; }
+          .rig-figure figcaption { color: #666; font-size: 0.95rem; margin: 12px 0 0 0; text-align: center; }
           table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 1rem; }
           table th, table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
           table th { background-color: #f8f9fa; font-weight: bold; }
@@ -93,6 +96,11 @@ styles: |
 </header>
 
 <article class="blog-content">
+
+<figure class="rig-figure">
+<img src="../../img/blog-photos/anthony-aeonrv-class-c.webp" alt="A white AEONrv coach on a Transit cutaway chassis parked on wet sand at dusk, with a roof mounted air conditioner on the rear wall, a pennant flag on an antenna, and a hammock strung between the rig and a driftwood post" style="object-position: center 62%;" loading="lazy">
+<figcaption>Anthony's AEONrv, parked out on the sand. Shared with permission.</figcaption>
+</figure>
 
 <p>A Class C is two vehicles that were introduced to each other at a factory. Underneath is a cutaway chassis built by Ford, Ram, or Chevrolet. On top is a house built by somebody else entirely. Your specs live in both places, and the two sets rarely appear on the same piece of paper.</p>
 

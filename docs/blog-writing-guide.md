@@ -91,6 +91,21 @@ Use `https://getgrover.ai/img/og.png` for all OG images unless a post-specific i
 - **Tags line** under the date: comma-separated phrases in brand teal (`color: #66AEC0`)
 - **Canonical URL** must exactly match the deployed URL
 
+### Broadening beyond vans: siblings, not duplicates
+
+Vans remain the primary SEO play and `van-build-specs-what-to-know` is the pillar of the
+rig-specs series. When covering a new rig type, **never rewrite the van post with the noun
+swapped.** Near-duplicate posts compete with each other, Google picks one, and the pillar
+loses authority it already earned.
+
+A sibling post earns its own slot only when the *questions are genuinely different*:
+- `truck-camper-specs-what-to-know` leads on payload and wet weight, which the van post never covers
+- `class-c-rv-specs-what-to-know` leads on cargo carrying capacity and the cutaway chassis
+
+Each sibling links back to the pillar and across to the others. `article_section: Rig Guides`
+groups the series. Towables were deliberately skipped: one owner, no examples to draw on, and
+the material is well covered elsewhere.
+
 ---
 
 ## 5. Images
@@ -164,7 +179,7 @@ Every post must have at least one download CTA box with **both** iOS and Android
     <h3>Ready to [action]?</h3>
     <p>[1–2 sentences of motivation tied to post topic]</p>
     <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-        <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" 
+        <a href="https://apps.apple.com/app/id6742468326" 
            class="cta-button" style="margin-top: 0;">Download on the App Store</a>
         <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" 
            class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
@@ -173,8 +188,18 @@ Every post must have at least one download CTA box with **both** iOS and Android
 ```
 
 **URLs (do not change these):**
-- iOS: `https://apps.apple.com/us/app/grover-van-life/id6742468326`
+- iOS: `https://apps.apple.com/app/id6742468326`
 - Android: `https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app`
+
+The iOS link is the **bare app ID**, with no name slug. Apple's slug URLs embed the app's
+name (`/grover-van-life/`), which went stale when the app was renamed to
+**Grover: Camping and Community**. The bare ID never goes stale. Posts written before
+August 2026 still carry the old slug form; both resolve, so it is not a bug, but new
+posts use the bare ID.
+
+**Never use a gradient on `.cta-box`.** Use the solid warm cream (`#f8e5c1` background,
+`#66AEC0` text) that current posts use. A gradient CTA reads as an "AI tell" and was
+deliberately removed sitewide in July 2026. Copy the `.cta-box` rules from a recent post.
 
 ### Inline prose links
 Use `class="cta-link"` for in-paragraph references to the app or to other blog posts. These remain single links — do not turn them into dual buttons.
@@ -285,9 +310,9 @@ A post is one commit touching one file: `content/blog/[slug].md` (plus any new i
 |---|---|
 | GA4 Property | `G-LN0EK30SS7` |
 | Brand teal | `#66AEC0` |
-| Gradient (CTA box) | `linear-gradient(135deg, #66AEC0, #8B5CF6)` |
+| CTA box background | `#f8e5c1` solid warm cream. Never a gradient (see §6) |
 | Body font | `'Plantin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif` |
-| iOS App Store | `https://apps.apple.com/us/app/grover-van-life/id6742468326` |
+| iOS App Store | `https://apps.apple.com/app/id6742468326` |
 | Google Play | `https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app` |
 | OG image | `https://getgrover.ai/img/og.png` |
 | Blog base URL | `https://getgrover.ai/blog/` |

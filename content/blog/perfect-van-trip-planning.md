@@ -618,13 +618,13 @@ After years of van trip planning and countless conversations with experienced va
 
 Van trip planning has evolved dramatically, but the best tools feel natural and intuitive rather than overwhelming. We've moved from the days of juggling multiple apps, websites, and paper maps to having intelligent conversations about our travel dreams.
 
-<p><a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Grover</a> represents the next evolution in vanlife trip planning - a community-powered platform that understands the unique needs of van travelers. Instead of generic travel advice, we get personalized recommendations based on our specific rig, travel style, and current conditions.</p>
+<p><a href="https://apps.apple.com/app/id6742468326" class="cta-link">Grover</a> represents the next evolution in vanlife trip planning - a community-powered platform that understands the unique needs of van travelers. Instead of generic travel advice, we get personalized recommendations based on our specific rig, travel style, and current conditions.</p>
 
 The integration of real vanlife expertise with modern technology means we can plan van adventures that are both thoroughly researched and genuinely exciting. We're not just finding places to park for the night; we're discovering experiences that create lasting memories and connections.
 
 Whether you're planning your first weekend van trip or your fiftieth cross-country adventure, the principles remain the same: know your goals, use reliable tools, stay flexible, and contribute back to the community that makes this lifestyle so special.
 
-<p>Ready to transform your van trip planning? <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Download Grover</a> today and discover how natural conversation can replace complicated planning processes. If you're new to Grover, start with our <a href="../getting-started-with-grover-guide" class="cta-link">complete getting started guide</a> to set up your account. Then dive into our <a href="../your-first-chat-grover-guide" class="cta-link">guide to your first chat with Grover</a> to unlock the full potential of AI-powered trip planning. Your next epic adventure is just a chat away. 🚐✨</p>
+<p>Ready to transform your van trip planning? <a href="https://apps.apple.com/app/id6742468326" class="cta-link">Download Grover</a> today and discover how natural conversation can replace complicated planning processes. If you're new to Grover, start with our <a href="../getting-started-with-grover-guide" class="cta-link">complete getting started guide</a> to set up your account. Then dive into our <a href="../your-first-chat-grover-guide" class="cta-link">guide to your first chat with Grover</a> to unlock the full potential of AI-powered trip planning. Your next epic adventure is just a chat away. 🚐✨</p>
 
 Join thousands of vanlifers who've already discovered that the best van trip planner feels less like work and more like dreaming with a knowledgeable friend who happens to have access to all the best information.
 
@@ -654,7 +654,7 @@ Join thousands of vanlifers who've already discovered that the best van trip pla
 <h3>Ready to Plan Your Perfect Van Adventure?</h3>
 <p>Stop spending hours researching and start having expert conversations about your trip. Grover's chat-based planning makes it easy to create amazing van adventures.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -713,7 +713,7 @@ We get tons of questions about van trip planning, so we've gathered the most com
 </section>
 
 <footer>
-<p><em>This guide is based on real experiences from thousands of successful van trips planned through community platforms and expert recommendations. For personalized trip planning and expert support, <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">download the Grover app</a>.</em></p>
+<p><em>This guide is based on real experiences from thousands of successful van trips planned through community platforms and expert recommendations. For personalized trip planning and expert support, <a href="https://apps.apple.com/app/id6742468326" class="cta-link">download the Grover app</a>.</em></p>
 </footer>
 </article>
 </main>

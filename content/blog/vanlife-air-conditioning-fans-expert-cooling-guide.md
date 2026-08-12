@@ -742,7 +742,7 @@ Based on manufacturer troubleshooting guides, here's your step-by-step diagnosti
 <h4 style="color: #0c4a6e; margin-bottom: 12px; font-size: 18px;">💡 Ask Grover to Run AC Troubleshooting</h4>
 <p style="color: #0369a1; margin-bottom: 16px;">"Walk me through troubleshooting my AC system step-by-step"</p>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" style="background: #0ea5e9; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" style="background: #0ea5e9; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" style="background: #0ea5e9; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Get it on Google Play</a>
 </div>
 </div>
@@ -835,7 +835,7 @@ Based on manufacturer troubleshooting guides, here's your step-by-step diagnosti
 <h4 style="color: #92400e; margin-bottom: 12px; font-size: 18px;">🌞 Ask Grover for Summer Cooling Tips</h4>
 <p style="color: #d97706; margin-bottom: 16px;">"How do I stay cool in the summertime with my AC setup?"</p>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" style="background: #f59e0b; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" style="background: #f59e0b; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" style="background: #f59e0b; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Get it on Google Play</a>
 </div>
 </div>
@@ -1268,7 +1268,7 @@ The vanlife cooling solutions we've covered here represent the best available te
 <h3>Ready to Master Your Van's Cooling System?</h3>
 <p>Join thousands of vanlifers who use Grover for expert AC troubleshooting, installation guidance, and manufacturer-backed cooling solutions. Get instant access to the knowledge you need to stay cool on the road.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

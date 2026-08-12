@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
-const IOS_APP_URL = "https://apps.apple.com/us/app/grover-van-life/id6742468326";
+const IOS_APP_URL = "https://apps.apple.com/app/id6742468326";
 
 const NotFound = () => {
   const location = useLocation();

@@ -191,7 +191,7 @@ If you're already part of Adventure Together, here's how to join them on Grover:
 <h3>Find Your People, or Bring Them With You</h3>
 <p>Download Grover to request to join Adventure Together if you're already part of that community, or start a Circle of your own with the people you actually travel with.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

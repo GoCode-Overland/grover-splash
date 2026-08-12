@@ -133,6 +133,8 @@ styles: |
 
 <p>Tap <strong>Rig</strong>, then <strong>Specs</strong>. There are eight sections, and the tile keeps a running count of how many have something in them. Your rig assistant has been reading that sheet all along, so the more of it you fill in, the more its answers describe your rig instead of rigs in general. That effect has never depended on your rig being a van.</p>
 
+<p>Saving the sheet does one more thing worth knowing about. Grover re-runs the match against the documentation available for your rig right then, so new manuals show up under <strong>Suggested</strong> in your <a href="../grover-glovebox-document-recommendations" class="cta-link">Glovebox</a> on their own. Confirm the ones you want and your assistant starts answering from them too.</p>
+
 <div class="feature-highlight">
 <p><strong>If your rig is not a van,</strong> the fields still fit better than you would guess. Fill in what applies, skip what does not, and put anything unusual in Custom Equipment. A partly filled sheet beats a perfect one you never start.</p>
 </div>

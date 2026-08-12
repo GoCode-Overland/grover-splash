@@ -4,8 +4,8 @@ const LINKS = [
   {
     icon: "📱",
     title: "App Store",
-    url: "https://apps.apple.com/us/app/grover-van-life/id6742468326",
-    display: "apps.apple.com/us/app/grover-van-life",
+    url: "https://apps.apple.com/app/id6742468326",
+    display: "apps.apple.com/app/id6742468326",
   },
   {
     icon: "🏠",

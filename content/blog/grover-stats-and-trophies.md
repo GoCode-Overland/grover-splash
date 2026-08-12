@@ -166,7 +166,7 @@ Open it after a trip. Open it before planning the next one. Share it with someon
 <h3>Start Building Your Vanlife Story</h3>
 <p>Download Grover, get out there, and let the Stats page keep track of how far you've roamed.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

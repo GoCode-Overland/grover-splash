@@ -545,7 +545,7 @@ If you told Grover where you were located, the assistant could also plan and hel
 <p>Whether you're researching your first van or you're a seasoned traveler looking for better community connections, Grover brings together real experiences, expert knowledge, and genuine support. Our platform helps you separate vanlife fantasy from reality and build the adventure that actually works for your life.</p>
 <p>Join thousands of vanlifers who've discovered that the best adventures happen when you're prepared, connected, and supported by people who truly understand the lifestyle.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

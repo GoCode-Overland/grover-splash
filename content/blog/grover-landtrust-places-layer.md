@@ -165,7 +165,7 @@ We've seen too many "surprise discovery" moments turn into disappointments becau
 <h3>Ready to Find Your Next Adventure?</h3>
 <p>Download Grover and open the LandTrust layer on your map. Thousands of properties across the country are waiting to be explored.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

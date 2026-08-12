@@ -196,7 +196,7 @@ That's the gap this feature closes. It doesn't ask you to remember your own plan
 <h3>Let Grover Catch the Moment</h3>
 <p>Download Grover, build out your bucket list, and let the app close the loop the instant you get there — whether you remember to tap the marker or not.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

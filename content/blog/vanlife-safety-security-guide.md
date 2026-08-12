@@ -404,7 +404,7 @@ Here are the vanlife security tips our Grover community swears by:
 <li>24-hour truck stops and travel centers (Flying J, Pilot, Love's)</li>
 <li>Established campgrounds and RV parks (highest security level)</li>
 <li>Rest areas in safe locations (check state regulations)</li>
-<li>Community-verified spots through apps like <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Grover</a></li>
+<li>Community-verified spots through apps like <a href="https://apps.apple.com/app/id6742468326" class="cta-link">Grover</a></li>
 <li>Casino parking lots (many welcome RVs)</li>
 <li>Some 24-hour gyms (Planet Fitness, LA Fitness with permission)</li>
 </ul>
@@ -598,7 +598,7 @@ We built Grover with safety as a core feature because we know that feeling secur
 <h3>Ready to Travel Safely with Confidence?</h3>
 <p>Join thousands of vanlifers who use Grover for community-verified safety information, expert security advice, and real-time support from experienced travelers who prioritize safe adventures.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

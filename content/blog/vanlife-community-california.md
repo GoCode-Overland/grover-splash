@@ -375,7 +375,7 @@ The state's geography—from deserts to mountains to coastline—means that vanl
 <h3>Ready to Connect with California's Vanlife Community?</h3>
 <p>Join the largest vanlife community in the world. Connect with thousands of California vanlifers through Grover's real-time platform designed for life on the road.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -562,7 +562,7 @@ California has created the world's first true "tech vanlife" ecosystem, where so
 <h3>Join California's Tech Vanlife Community</h3>
 <p>Connect with software engineers, entrepreneurs, and digital nomads who've mastered the art of high-earning vanlife. Get career advice, find co-working buddies, and discover the best tech-friendly camping spots.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -656,7 +656,7 @@ Many California vanlifers offset high costs by earning higher salaries, especial
 <h3>Ready to Join California's Vanlife Community?</h3>
 <p>Connect with the world's largest and most diverse vanlife community. From Slab City to Silicon Valley, California's vanlifers are waiting to welcome you to the Golden State.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -682,7 +682,7 @@ Many California vanlifers offset high costs by earning higher salaries, especial
 <ul>
 <li><a href="https://www.facebook.com/groups/vanlife" target="_blank">Join the Vanlife Facebook Group</a></li>
 <li><a href="https://www.reddit.com/r/VanLife/" target="_blank">Connect on Reddit r/VanLife</a></li>
-<li><a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" target="_blank">Download Grover App</a></li>
+<li><a href="https://apps.apple.com/app/id6742468326" target="_blank">Download Grover App</a></li>
 <li><a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" target="_blank">Download Grover on Google Play</a></li>
 <li><a href="https://www.parks.ca.gov/" target="_blank">California State Parks</a></li>
 </ul>

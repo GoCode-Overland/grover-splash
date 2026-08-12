@@ -368,7 +368,7 @@ What makes Alabama's vanlife community special is the genuine Southern hospitali
 <h3>Ready to Connect with Alabama's Vanlife Community?</h3>
 <p>Don't navigate Alabama's vanlife scene alone. Join thousands of vanlifers who use Grover to find real-time community support, local events, and instant connections wherever they roam.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -514,7 +514,7 @@ Alabama's climate presents unique opportunities and challenges for vanlifers thr
 <h3>Get Real-Time Weather and Community Updates</h3>
 <p>Stay connected with Alabama's vanlife community year-round. Get weather alerts, seasonal tips, and community support through Grover's real-time platform.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -571,7 +571,7 @@ Alabama is generally van-friendly, but regulations vary by city and county. Most
 <h3>Ready to Connect with Alabama's Vanlife Community?</h3>
 <p>Don't explore Alabama's vanlife scene alone. Join thousands of vanlifers who use Grover to find real-time community support, discover hidden gems, and build lasting friendships on the road.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -597,7 +597,7 @@ Alabama is generally van-friendly, but regulations vary by city and county. Most
 <ul>
 <li><a href="https://www.facebook.com/groups/vanlife" target="_blank">Join the Vanlife Facebook Group</a></li>
 <li><a href="https://www.reddit.com/r/VanLife/" target="_blank">Connect on Reddit r/VanLife</a></li>
-<li><a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" target="_blank">Download Grover App</a></li>
+<li><a href="https://apps.apple.com/app/id6742468326" target="_blank">Download Grover App</a></li>
 <li><a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" target="_blank">Download Grover on Google Play</a></li>
 <li><a href="https://www.alapark.com/" target="_blank">Alabama State Parks</a></li>
 </ul>

@@ -317,7 +317,7 @@ Florida's vanlife community is particularly strong when it comes to supporting n
 <h3>Ready to Connect with Florida's Vanlife Community?</h3>
 <p>Join thousands of Florida vanlifers who rely on Grover to stay connected across the state's diverse landscapes and communities.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -422,7 +422,7 @@ The state's year-round warm weather means your furry friend can enjoy beach walk
 <h3>Connect with Florida's Dog-Friendly Vanlife Community</h3>
 <p>Join thousands of pet-loving vanlifers who have made Florida their home base. Get real-time updates on dog beach conditions, pet-friendly events, and connect with fellow dog owners across the state.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -526,7 +526,7 @@ The snowbird phenomenon in Florida is unique in its scale and organization. Unli
 <h3>Join Florida's Legendary Snowbird Community</h3>
 <p>Connect with returning snowbirds who know the best spots, events, and traditions. Get insider knowledge about reservations, community customs, and seasonal patterns.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -748,7 +748,7 @@ Florida's climate is one of its greatest assets for vanlifers, but understanding
 <h3>Navigate Florida's Seasons with Confidence</h3>
 <p>Connect with local vanlifers who know Florida's seasonal patterns. Get real-time weather updates, evacuation advice, and seasonal community information through Grover.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -810,7 +810,7 @@ Florida's springs offer year-round 72-degree water and are incredibly popular wi
 <h3>Ready to Join Florida's Vanlife Community?</h3>
 <p>Connect with thousands of Florida vanlifers who share your passion for coastal living, free camping, and the nomadic lifestyle. From the Keys to the Panhandle, Florida's vanlife community is ready to welcome you.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -838,7 +838,7 @@ Florida's springs offer year-round 72-degree water and are incredibly popular wi
 <ul>
 <li><a href="https://www.facebook.com/groups/vanlife" target="_blank">Join the Vanlife Facebook Group</a></li>
 <li><a href="https://www.reddit.com/r/VanLife/" target="_blank">Connect on Reddit r/VanLife</a></li>
-<li><a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" target="_blank">Download Grover App</a></li>
+<li><a href="https://apps.apple.com/app/id6742468326" target="_blank">Download Grover App</a></li>
 <li><a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" target="_blank">Download Grover on Google Play</a></li>
 <li><a href="https://www.floridastateparks.org/" target="_blank">Florida State Parks</a></li>
 <li><a href="https://www.fs.usda.gov/ocala" target="_blank">Ocala National Forest</a></li>

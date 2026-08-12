@@ -200,7 +200,9 @@ styles: |
 
 <p>The Specs tile also shows you where you stand at a glance, in the form <strong>N of 8 sections filled</strong>, plus a badge telling you whether you are still on the <strong>Template</strong> or running your own numbers. Your assistant was always reading that sheet. Seeing how much of it is still blank is the part that finally gets anyone to go fill it in. One filled field counts a whole section, so progress comes faster than you would expect.</p>
 
-<p>Fill in a few sections, then come back to the Glovebox and see what turned up. That is the loop. The more Grover knows about your build, the better the pile of suggestions gets, and the better your assistant answers.</p>
+<p>Fill in a few sections, then come back to the Glovebox and see what turned up. That is the loop, and it runs on its own. Every time you save your spec sheet, Grover re-runs the match against the documents available for your rig right then, so anything new lands under <strong>Suggested</strong> without you asking for it. You do not have to wait for anything or tap a refresh button.</p>
+
+<p>The one part that stays in your hands is the accepting. A suggestion sits there doing nothing until you confirm it, which is what the <em>"Not used until you add it"</em> note is telling you. Confirm it and it moves into <strong>Personalized Knowledge</strong>, and from that point your assistant is answering from it too. So the full loop is: add specs, new suggestions appear on their own, and you decide which ones your assistant gets to use.</p>
 </section>
 
 <p>The Glovebox is quiet by design. It is not a screen you will open every day. Most days you will just ask a question and get an answer built on paperwork you never had to think about. The Glovebox is where you see that paperwork, and where you add to it before the day you need it, parked somewhere with one bar of service and a heater that will not light.</p>
@@ -233,7 +235,7 @@ styles: |
 <h3>Ready to Get the Right Manual in Your Glovebox?</h3>
 <p>Fill in your specs, check the Recommendations tab, and add the documentation that actually matches your build.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

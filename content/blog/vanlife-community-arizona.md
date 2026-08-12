@@ -310,7 +310,7 @@ The community's emphasis on sustainability and Leave No Trace principles has als
 <h3>Ready to Join Arizona's Desert Vanlife Community?</h3>
 <p>Connect with thousands of Arizona vanlifers through Grover's real-time platform designed for desert living and seasonal communities.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -400,7 +400,7 @@ The community maintains active WhatsApp groups, Discord servers, and Facebook co
 <h3>Join Arizona's Inclusive Desert Community</h3>
 <p>Connect with Arizona's welcoming LGBTQ+ vanlife community through Grover. Find inclusive events, safe spaces, and authentic connections in the desert.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -529,7 +529,7 @@ Quartzsite isn't just a destination—it's a phenomenon. For over 50 years, this
 <h3>Experience Quartzsite with Grover</h3>
 <p>Navigate Quartzsite's massive winter community with Grover's real-time connections. Find your perfect camp spot, discover events, and connect with fellow desert dwellers.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -673,7 +673,7 @@ Sedona's vanlife community is unlike any other in Arizona—it's a gathering of 
 <h3>Connect with Sedona's Spiritual Vanlife Community</h3>
 <p>Join Arizona's most transformative vanlife community in Sedona. Connect with like-minded spiritual seekers and find your path to wellness and growth.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -832,7 +832,7 @@ Understanding Arizona's geographic regions is essential for vanlifers who want t
 <h3>Explore Arizona's Geographic Diversity</h3>
 <p>Discover vanlife communities across Arizona's incredible landscapes. From desert gatherings to mountain retreats, find your perfect Arizona adventure.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -954,7 +954,7 @@ These values create a foundation for meaningful connections that extend far beyo
 <h3>Connect with Arizona's Inclusive Vanlife Community</h3>
 <p>Join the Southwest's most welcoming and diverse vanlife community. Connect with like-minded nomads who share your values and support your desert adventures.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1144,7 +1144,7 @@ Arizona's snowbird migration isn't just about weather—it's about community, co
 <h3>Join Arizona's Snowbird Migration</h3>
 <p>Become part of one of North America's greatest seasonal migrations. Connect with established snowbird communities and discover the warmth of Arizona's winter desert experience.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1328,7 +1328,7 @@ This guide represents the collective wisdom of Arizona's vanlife community, focu
 <h3>Master Arizona Desert Survival</h3>
 <p>Connect with Arizona's experienced vanlife community to learn essential desert survival skills. Your safety depends on knowledge, preparation, and community support.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1501,7 +1501,7 @@ This comprehensive guide represents Arizona's commitment to breaking down barrie
 <h3>Join Arizona's Inclusive Vanlife Community</h3>
 <p>Connect with Arizona's welcoming, accessible vanlife community. Everyone deserves to experience the freedom and adventure of desert living.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1596,7 +1596,7 @@ Arizona's vanlife community is known for its inclusivity, diversity, and strong 
 <h3>Ready to Join Arizona's Desert Vanlife Community?</h3>
 <p>Connect with the Southwest's most welcoming and diverse vanlife community. From Quartzsite's massive gatherings to Sedona's spiritual circles, Arizona's vanlifers are ready to welcome you to the desert.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1624,7 +1624,7 @@ The desert may seem challenging, but Arizona's vanlife community has developed t
 <ul>
 <li><a href="https://www.facebook.com/groups/vanlife" target="_blank">Join Arizona Vanlife Facebook Groups</a></li>
 <li><a href="https://www.reddit.com/r/VanLife/" target="_blank">Connect on Reddit r/VanLife</a></li>
-<li><a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" target="_blank">Download Grover App</a></li>
+<li><a href="https://apps.apple.com/app/id6742468326" target="_blank">Download Grover App</a></li>
 <li><a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" target="_blank">Download Grover on Google Play</a></li>
 <li><a href="https://azstateparks.com/" target="_blank">Arizona State Parks</a></li>
 <li><a href="https://www.blm.gov/arizona" target="_blank">Arizona BLM Camping</a></li>

@@ -316,11 +316,11 @@ Let's get into the nitty-gritty numbers. Our Grover community has shared thousan
 
 <p><strong>Camping & Accommodation: $0 - $1,500/month</strong></p>
 <ul>
-<li><a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Free dispersed camping</a>: $0 (but limited to 14-day stays)</li>
+<li><a href="https://apps.apple.com/app/id6742468326" class="cta-link">Free dispersed camping</a>: $0 (but limited to 14-day stays)</li>
 <li>State/national parks: $15-35/night</li>
 <li>Private campgrounds with hookups: $30-80/night</li>
-<li><a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Urban camping solutions</a>: Varies widely</li>
-<li>Private land (book private land via Land Trust in <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Grover</a>): Varies widely</li>
+<li><a href="https://apps.apple.com/app/id6742468326" class="cta-link">Urban camping solutions</a>: Varies widely</li>
+<li>Private land (book private land via Land Trust in <a href="https://apps.apple.com/app/id6742468326" class="cta-link">Grover</a>): Varies widely</li>
 </ul>
 
 <p><strong>Food: $300 - $800/month</strong></p>
@@ -402,7 +402,7 @@ We can't stress this enough: have at least $5,000 set aside for van emergencies.
 
 ### Use Technology to Your Advantage
 
-<p><a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Apps like Grover help you find free camping</a>, track expenses, and connect with other vanlifers who share money-saving tips. The community knowledge in our platform has saved our users thousands of dollars through shared resources and recommendations.</p>
+<p><a href="https://apps.apple.com/app/id6742468326" class="cta-link">Apps like Grover help you find free camping</a>, track expenses, and connect with other vanlifers who share money-saving tips. The community knowledge in our platform has saved our users thousands of dollars through shared resources and recommendations.</p>
 </section>
 
 <section id="real-stories">
@@ -480,7 +480,7 @@ Understanding the real vanlife cost is the first step toward a successful life o
 
 Don't let budget surprises derail your vanlife dreams. With proper planning, community support, and realistic expectations, you can make vanlife work for your financial situation.
 
-<p>Download <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Grover</a> and start planning your budget-smart vanlife adventure with thousands of experienced travelers who've been exactly where you are now.</p>
+<p>Download <a href="https://apps.apple.com/app/id6742468326" class="cta-link">Grover</a> and start planning your budget-smart vanlife adventure with thousands of experienced travelers who've been exactly where you are now.</p>
 
 <p><em>Ready to turn your vanlife dreams into a financially sustainable reality? Our community is here to help you every step of the way.</em></p>
 </article>

@@ -442,7 +442,7 @@ styles: |
 
 Last week, Sarah messaged us from a remote campsite in Utah. Her batteries weren't charging, her solar wasn't working, and she had no idea where to start with her van battery issues. Sound familiar?
 
-<p>We've transformed van electrical troubleshooting from guesswork into systematic problem-solving using real manufacturer documentation. Whether you're dealing with a simple fuse issue or complex solar power for vans integration problems, <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Grover</a> gives you instant access to the same technical manuals and procedures that professional support teams use for vanlife electrical system repairs.</p>
+<p>We've transformed van electrical troubleshooting from guesswork into systematic problem-solving using real manufacturer documentation. Whether you're dealing with a simple fuse issue or complex solar power for vans integration problems, <a href="https://apps.apple.com/app/id6742468326" class="cta-link">Grover</a> gives you instant access to the same technical manuals and procedures that professional support teams use for vanlife electrical system repairs.</p>
 
 <section id="the-problem">
 <h2>Why Most Van Electrical Troubleshooting Fails You 😤</h2>
@@ -556,7 +556,7 @@ From the technical documentation we've compiled from certified installers:
 <h3>Don't Let Van Electrical Problems Ruin Your Adventure</h3>
 <p>Get instant access to manufacturer documentation and expert troubleshooting guidance with Grover. Join thousands of vanlifers who never get stuck again.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -786,11 +786,11 @@ Our knowledge bases include manufacturer-recommended maintenance schedules and p
 
 Don't let van battery issues or vanlife electrical system problems ruin your adventures. Our community has access to the official documents of YOUR rig's electrical manufacturer.
 
-<p>Whether you're troubleshooting a dead battery in Death Valley, diagnosing inverter issues in Colorado, or optimizing your solar system for maximum efficiency, <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Grover</a> gives you instant access to the same expert knowledge that professional van builders and manufacturer support teams use every day.</p>
+<p>Whether you're troubleshooting a dead battery in Death Valley, diagnosing inverter issues in Colorado, or optimizing your solar system for maximum efficiency, <a href="https://apps.apple.com/app/id6742468326" class="cta-link">Grover</a> gives you instant access to the same expert knowledge that professional van builders and manufacturer support teams use every day.</p>
 
 Stop wasting hours on forums and outdated YouTube videos. Get manufacturer-backed solutions from the engineers who designed your systems. Join the vanlife community that's revolutionizing how we handle electrical troubleshooting on the road.
 
-<p><strong>Download <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Grover</a>, save time, save money, maybe save a friend.</strong></p>
+<p><strong>Download <a href="https://apps.apple.com/app/id6742468326" class="cta-link">Grover</a>, save time, save money, maybe save a friend.</strong></p>
 </section>
 
 <section class="related-articles" style="margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 15px; border-left: 4px solid #66AEC0;">
@@ -815,7 +815,7 @@ Stop wasting hours on forums and outdated YouTube videos. Get manufacturer-backe
 <h3>Ready to Access Expert Van Electrical Troubleshooting?</h3>
 <p>Join thousands of vanlifers who use Grover for manufacturer-backed electrical solutions. Get instant access to the same technical documentation that professional support teams use.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

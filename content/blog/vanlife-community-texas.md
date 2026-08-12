@@ -350,7 +350,7 @@ Texas stands out as the premier state for business-minded vanlifers due to its e
 <h3>Ready to Maximize Your Vanlife Earnings in Texas?</h3>
 <p>Connect with business-minded vanlifers who've successfully established Texas residency and built profitable remote businesses. Get real-world advice from entrepreneurs living the dream.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -681,7 +681,7 @@ Texas leads the nation in energy production, creating unique opportunities for v
 <h3>Connect with Energy Industry Vanlifers</h3>
 <p>Join the network of high-earning energy workers who've mastered the vanlife lifestyle. Get insider access to job opportunities, business connections, and the best parking spots near work sites.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -882,7 +882,7 @@ The community's strength lies in its diversity of high-earning professionals who
 <h3>Ready to Join the Highest-Earning Vanlife Community?</h3>
 <p>Connect with business-minded vanlifers who've achieved financial success while living the dream. Access exclusive business opportunities, networking events, and wealth-building strategies through Texas's elite vanlife network.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -955,7 +955,7 @@ The community's strength lies in its diversity of high-earning professionals who
 <h3>Access Texas's Elite Vanlife Business Network</h3>
 <p>Join the most profitable vanlife community in America. Connect with energy executives, tech entrepreneurs, and business owners who've achieved financial freedom on the road.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1105,7 +1105,7 @@ Texas has become the premier destination for high-earning digital nomad vanlifer
 <h3>Join Texas's Elite Digital Nomad Network</h3>
 <p>Connect with the highest-earning digital nomad vanlifers in America. Access exclusive opportunities, business partnerships, and wealth-building strategies reserved for Texas's elite nomadic professionals.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1145,7 +1145,7 @@ Whether you're seeking the highest-paying energy industry opportunities, connect
 <h3>Transform Your Vanlife into a Wealth-Building Machine</h3>
 <p>Join the most financially successful vanlife community in America. Access exclusive business opportunities, high-paying positions, and wealth-building strategies that only Texas's elite vanlife network can provide.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1188,7 +1188,7 @@ Yes! Texas has accountants specializing in nomadic businesses, legal services fo
 <h3>Ready to Maximize Your Texas Vanlife Business Success?</h3>
 <p>Get answers to your specific business questions from successful Texas vanlife entrepreneurs. Access exclusive resources, tax strategies, and business opportunities through our elite network.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1198,7 +1198,7 @@ Yes! Texas has accountants specializing in nomadic businesses, legal services fo
 <h3>Ready to Join America's Most Profitable Vanlife Community?</h3>
 <p>Connect with the highest-earning vanlife professionals in America. From energy executives to tech entrepreneurs, Texas vanlifers have mastered the art of building wealth on the road.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1222,7 +1222,7 @@ Yes! Texas has accountants specializing in nomadic businesses, legal services fo
 <div class="highlight-box">
 <h4>Essential Resources for Texas Business Vanlife:</h4>
 <ul>
-<li><a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" target="_blank">Download Grover - Elite Business Network</a></li>
+<li><a href="https://apps.apple.com/app/id6742468326" target="_blank">Download Grover - Elite Business Network</a></li>
 <li><a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" target="_blank">Download Grover on Google Play</a></li>
 <li><a href="https://www.sos.state.tx.us/corp/" target="_blank">Texas Business Formation</a></li>
 <li><a href="https://comptroller.texas.gov/" target="_blank">Texas Comptroller - Tax Information</a></li>

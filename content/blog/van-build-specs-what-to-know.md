@@ -261,7 +261,7 @@ style="width: 100%; border-radius: 12px; margin: 20px 0; max-height: 400px; obje
 
 <p>Grover keeps that sheet inside the app. The <strong>Rig</strong> button opens Rig Hub, and the <strong>Specs</strong> tile holds a sheet organized into the same eight sections this guide follows, from Vehicle Details through Custom Equipment. Fill in what you know, leave the rest for later, and the tile shows how many of the eight have something in them.</p>
 
-<p>Your rig assistant has been reading that sheet all along. What Rig Hub adds is the view. The tile puts a number on how much of your own build you have actually written down, and that number is usually what gets people to go fill in the rest. A fuller sheet means more specific answers, and it gives Grover more to match against when it points you at <a href="../grover-glovebox-document-recommendations" class="cta-link">the documentation that exists for your rig</a>. Your spec sheet is the thing being read, which is this whole post in one sentence.</p>
+<p>Your rig assistant has been reading that sheet all along. What Rig Hub adds is the view. The tile puts a number on how much of your own build you have actually written down, and that number is usually what gets people to go fill in the rest. A fuller sheet means more specific answers, and it gives Grover more to match against when it points you at <a href="../grover-glovebox-document-recommendations" class="cta-link">the documentation that exists for your rig</a>. That match re-runs every time you save the sheet, so new manuals turn up under <strong>Suggested</strong> in your Glovebox on their own, and the ones you confirm join what your assistant answers from. Your spec sheet is the thing being read, which is this whole post in one sentence.</p>
 
 <p>Our <a href="../grover-rig-hub" class="cta-link">walkthrough of Rig Hub</a> covers what lives behind each tile, <a href="../getting-started-with-grover-guide" class="cta-link">the getting started guide</a> is the shortest path in, and <a href="../ultimate-guide-vanlife-apps" class="cta-link">our ultimate guide to vanlife apps</a> puts it in context.</p>
 </section>
@@ -311,7 +311,7 @@ style="width: 100%; border-radius: 12px; margin: 20px 0; max-height: 400px; obje
 <h3>Ready to put your numbers in one place?</h3>
 <p>Grover gives your build a spec sheet across all eight sections, then uses it to make answers about heaters, power, water, and tires specific to your van instead of generic.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

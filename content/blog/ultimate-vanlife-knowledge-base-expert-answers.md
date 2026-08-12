@@ -566,7 +566,7 @@ Stop wasting time searching through outdated forums and conflicting advice. Get 
 
 Download Grover today and join thousands of vanlifers who've discovered the joy of having expert answers at their fingertips. Whether you're troubleshooting a system, planning an upgrade, or just want to learn more about your van, we're here to help you reach vanlife joy faster.
 
-<p>🚐 <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Download Grover Now</a> and experience the difference expert knowledge makes on the road.</p>
+<p>🚐 <a href="https://apps.apple.com/app/id6742468326" class="cta-link">Download Grover Now</a> and experience the difference expert knowledge makes on the road.</p>
 
 <p><em>Ready to dive deeper into specific van systems? Explore our comprehensive guides on electrical troubleshooting, heating system maintenance, and water system repairs—all backed by the same expert knowledge that powers Grover's vanlife knowledge base. Don't forget to check out our</em> <a href="/blog/" class="cta-link"><em>complete collection of vanlife resources</em></a> <em>for everything from trip planning to community connection.</em></p>
 </section>
@@ -593,7 +593,7 @@ Download Grover today and join thousands of vanlifers who've discovered the joy 
 <h3>Ready to Access Expert Vanlife Knowledge?</h3>
 <p>Join thousands of vanlifers who use Grover for expert troubleshooting, maintenance tips, and professional guidance. Get manufacturer-backed answers for every system in your van.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

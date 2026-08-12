@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 
-const IOS_APP_URL = "https://apps.apple.com/us/app/grover-van-life/id6742468326";
+const IOS_APP_URL = "https://apps.apple.com/app/id6742468326";
 const ANDROID_APP_URL = "https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app";
 
 const Hero = () => {

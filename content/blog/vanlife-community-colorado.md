@@ -319,7 +319,7 @@ Colorado's vanlife community is particularly known for its emphasis on environme
 <h3>Ready to Connect with Colorado's Vanlife Community?</h3>
 <p>Join Colorado's rapidly growing vanlife community and discover the mountain vanlife lifestyle. Connect with fellow outdoor enthusiasts through Grover's real-time platform.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -552,7 +552,7 @@ What makes Colorado's climbing vanlife community extraordinary is the seamless i
 <h3>Connect with Colorado's Climbing Vanlife Community</h3>
 <p>Join over 2,000 climbing vanlifers who've made Colorado their adventure base. Access local beta, find climbing partners, and connect with the most active climbing vanlife scene in North America.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -652,7 +652,7 @@ The Colorado vanlife community has developed comprehensive knowledge and best pr
 <h3>Master Colorado High-Altitude Vanlife</h3>
 <p>Connect with experienced Colorado vanlifers who've mastered high-altitude living. Access altitude-specific tips, emergency support, and community knowledge that keeps you safe and comfortable in the mountains.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -776,7 +776,7 @@ Colorado has developed the most comprehensive vanlife business ecosystem designe
 <h3>Connect with Colorado's Vanlife Business Network</h3>
 <p>Access Colorado's specialized vanlife business directory and connect with companies that understand adventure sports and high-altitude living. Get recommendations from experienced vanlifers and find the right services for your Colorado adventure.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -891,7 +891,7 @@ This sophisticated understanding of Colorado's microclimates and seasonal patter
 <h3>Master Colorado's Seasonal Migration Patterns</h3>
 <p>Join Colorado's experienced vanlife community and learn the advanced migration strategies that turn Colorado's challenging geography into your ultimate adventure playground. Access real-time migration information and connect with altitude-experienced vanlifers.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -976,7 +976,7 @@ The combination of Denver's booming tech industry and Colorado's outdoor culture
 <h3>Connect with Denver's Tech Vanlife Community</h3>
 <p>Join Denver's thriving tech vanlife community and discover how to build a successful tech career while living the van life dream. Network with like-minded professionals and find opportunities that support your adventure lifestyle.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1085,7 +1085,7 @@ What makes Boulder special for vanlifers is its complete integration of outdoor 
 <h3>Experience Boulder's Adventure Sports Vanlife Culture</h3>
 <p>Join Boulder's world-class adventure sports vanlife community and connect with professional athletes, outdoor industry professionals, and serious adventurers who've made Boulder their base for the ultimate outdoor lifestyle.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1241,7 +1241,7 @@ The Adventure Van Expo Evergreen stands as Colorado's flagship vanlife event, bu
 <h3>Stay Connected to Colorado's Vanlife Event Calendar</h3>
 <p>Never miss Colorado's unique vanlife events and gatherings. Connect with the community and get real-time updates on Adventure Van Expo Evergreen, climbing meetups, and seasonal gatherings throughout the state.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1311,7 +1311,7 @@ Colorado vanlife requires specialized emergency preparedness including altitude 
 <h3>Ready to Join Colorado's Adventure Sports Vanlife Community?</h3>
 <p>Connect with North America's most concentrated adventure sports vanlife community and discover the ultimate integration of mobile living with world-class outdoor recreation. From professional climbers in Boulder to tech entrepreneurs in Denver, Colorado's vanlifers represent the pinnacle of adventure lifestyle achievement.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>
@@ -1337,7 +1337,7 @@ Colorado vanlife requires specialized emergency preparedness including altitude 
 <ul>
 <li><a href="https://www.facebook.com/groups/ColoradoVanlife" target="_blank">Join the Colorado Vanlife Facebook Group</a></li>
 <li><a href="https://www.reddit.com/r/VanLife/" target="_blank">Connect on Reddit r/VanLife</a></li>
-<li><a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" target="_blank">Download Grover App</a></li>
+<li><a href="https://apps.apple.com/app/id6742468326" target="_blank">Download Grover App</a></li>
 <li><a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" target="_blank">Download Grover on Google Play</a></li>
 <li><a href="https://cpw.state.co.us/" target="_blank">Colorado Parks & Wildlife</a></li>
 </ul>

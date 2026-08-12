@@ -784,7 +784,7 @@ We've helped our community through just about every fridge problem you can imagi
 <h4 style="color: #0c4a6e; margin-bottom: 12px; font-size: 18px;">🔧 Ask Grover for Fridge Troubleshooting</h4>
 <p style="color: #0369a1; margin-bottom: 16px;">"Help me troubleshoot my van fridge that won't start"</p>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" style="background: #0ea5e9; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" style="background: #0ea5e9; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" style="background: #0ea5e9; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Get it on Google Play</a>
 </div>
 </div>
@@ -1050,7 +1050,7 @@ Download Grover now and join the community that's redefining how vanlifers plan,
 <h3>Ready to Master Your Van's Refrigeration System?</h3>
 <p>Join thousands of vanlifers who use Grover for expert fridge troubleshooting, installation guidance, and manufacturer-backed cooling solutions. Get instant access to the knowledge you need to keep your food fresh on the road.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

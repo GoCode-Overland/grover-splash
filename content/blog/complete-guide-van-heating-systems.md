@@ -823,7 +823,7 @@ Our partnership with Rixens and other heating manufacturers means Grover users g
 
 Ready to master your van heating system?
 
-<p><a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-link">Download Grover today</a> and get instant access to:</p>
+<p><a href="https://apps.apple.com/app/id6742468326" class="cta-link">Download Grover today</a> and get instant access to:</p>
 
 <ul>
 <li>Manufacturer-specific troubleshooting guides</li>
@@ -876,7 +876,7 @@ Don't let heating problems cut your adventures short. Join thousands of vanlifer
 <h3>Ready to Master Your Van Heating System?</h3>
 <p>Join thousands of vanlifers who use Grover for manufacturer-backed heating solutions. Get instant access to official troubleshooting procedures and expert support when you need it most.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px;">
-<a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
+<a href="https://apps.apple.com/app/id6742468326" class="cta-button" style="margin-top: 0;">Download on the App Store</a>
 <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="cta-button" style="margin-top: 0;">Get it on Google Play</a>
 </div>
 </div>

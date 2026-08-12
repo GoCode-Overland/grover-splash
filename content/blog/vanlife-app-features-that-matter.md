@@ -4,7 +4,7 @@ title: Vanlife App Features That Actually Matter: A User's Guide to Smart Trip P
 og_title: Vanlife App Features That Actually Matter: A User's Guide to Smart Trip Planning
 description: Discover which vanlife app features provide real value for smart trip planning. Expert analysis of essential vs. nice-to-have features in 2025.
 keywords: vanlife app features, trip planning app features, best vanlife apps, vanlife app review, van trip planner features, smart trip planning
-og_image: https://apps.apple.com/us/app/grover-van-life/id6742468326/img/og.png
+og_image: https://getgrover.ai/img/og.png
 date: 2025-06-26
 date_modified: 2025-06-26
 draft: false
@@ -23,23 +23,23 @@ jsonld: |
           "author": {
               "@type": "Organization",
               "name": "Grover",
-              "url": "https://apps.apple.com/us/app/grover-van-life/id6742468326"
+              "url": "https://apps.apple.com/app/id6742468326"
           },
           "publisher": {
               "@type": "Organization",
               "name": "Grover",
               "logo": {
                   "@type": "ImageObject",
-                  "url": "https://apps.apple.com/us/app/grover-van-life/id6742468326/logo.png"
+                  "url": "https://getgrover.ai/img/grover-combomark-white.svg"
               }
           },
           "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://apps.apple.com/us/app/grover-van-life/id6742468326/blog/vanlife-app-features-that-matter"
+              "@id": "https://getgrover.ai/blog/vanlife-app-features-that-matter"
           },
           "image": {
               "@type": "ImageObject",
-              "url": "https://apps.apple.com/us/app/grover-van-life/id6742468326/images/vanlife-app-features-guide.jpg",
+              "url": "https://getgrover.ai/img/og.png",
               "width": 1200,
               "height": 630
           }

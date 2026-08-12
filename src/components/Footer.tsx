@@ -25,7 +25,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">For You</h3>
             <ul className="space-y-2 text-sm text-background/70">
               <li>
-                <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                <a href="https://apps.apple.com/app/id6742468326" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                   Download for iOS
                 </a>
               </li>

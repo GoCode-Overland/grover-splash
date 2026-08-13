@@ -12,6 +12,28 @@ target-repo: grover-splash
 
 # feat: Circle invite landing page + app links
 
+> **DECISIONS RESOLVED 2026-08-11 — read before starting.**
+>
+> - **D2 = move this site to Vercel, then do full fidelity.** The code-first
+>   recommendation in this plan is now the *fallback*, not the plan. Full-fidelity
+>   unfurls, `.well-known` serving and a real 200 for `/c/...` all come from the
+>   hosting move rather than from three separate workarounds.
+> - **The hosting move is a prerequisite, not part of B7.** It lands and is
+>   verified on its own; then U2/U3 follow. U1 and U4 are hosting-agnostic and can
+>   be built either side of it.
+> - **U2's open question is answered: `.nojekyll` is absent** from `public/` and
+>   the deploy workflow never adds one — so under GitHub Pages, `.well-known/*`
+>   would build locally and 404 in production. Verified, not assumed. On Vercel
+>   the question disappears.
+>
+> The migration must preserve: the `CNAME`/DNS cutover for `getgrover.ai`, the
+> blog build and its sitemap, the existing `/join/:slug` route, and — least
+> obvious — **`public/lp/`**, which grover-chat writes into via the GitHub
+> Contents API. That keeps working because it's a commit into the repo rather
+> than a Pages feature, but verify it after the move.
+>
+> Master plan: `grover-chat` `docs/plans/2026-08-11-001-feat-circles-membership-model-master-plan.md`
+
 ## Summary
 
 Two things B7 bundles together, and this plan keeps them structurally separate

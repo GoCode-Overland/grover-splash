@@ -52,6 +52,12 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
     gtag('js', new Date());
     gtag('config', 'G-LN0EK30SS7', { send_page_view: false });
     let gaLoaded = false;
@@ -73,6 +79,9 @@
       document.addEventListener(e, loadGA, { once: true, passive: true });
     });
   </script>
+
+  <!-- Cookie consent banner: reads/applies stored choice, wires Accept/Decline to the consent defaults above -->
+  <script src="/js/consent.js"></script>
 
   <!-- Grova Chat init -->
   <script>

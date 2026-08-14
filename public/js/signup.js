@@ -183,6 +183,16 @@
           message.textContent = "You're on the list. Welcome aboard.";
           message.className = 'grover-signup__message grover-signup__message--success';
           form.reset();
+          // Push straight to dataLayer rather than calling gtag() directly:
+          // this component mounts on pages (blog posts, landing pages,
+          // tutorials) that don't all carry the GA4 inline snippet, so
+          // gtag may not be defined yet or at all. dataLayer is just an
+          // array gtag.js drains once it loads, so this can't throw.
+          (window.dataLayer = window.dataLayer || []).push(['event', 'sign_up', {
+            method: 'newsletter',
+            cta_label: submit.textContent,
+            page_path: window.location.pathname
+          }]);
         })
         .catch(function () {
           message.textContent = 'Something went wrong. Please try again in a moment.';

@@ -362,10 +362,10 @@ ${states.map(stateCard).join('\n')}
                 Join thousands of vanlifers who use Grover for expert trip planning, camping spots, and community support. Start planning your perfect van journey today.
               </p>
               <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 8px;">
-                <a href="https://apps.apple.com/us/app/grover-van-life/id6742468326" class="inline-block bg-yellow-accent text-primary font-heading font-bold py-3 px-8 rounded-full hover:bg-yellow-300 transition-colors" style="min-width: 180px; text-align: center;">
+                <a href="https://apps.apple.com/app/id6742468326" onclick="gtag('event', 'app_download_click', { store: 'ios', page_location: window.location.href, transport_type: 'beacon' });" class="inline-block bg-yellow-accent text-primary font-heading font-bold py-3 px-8 rounded-full hover:bg-yellow-300 transition-colors" style="min-width: 180px; text-align: center;">
                   Download on the App Store
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" class="inline-block bg-yellow-accent text-primary font-heading font-bold py-3 px-8 rounded-full hover:bg-yellow-300 transition-colors" style="min-width: 180px; text-align: center;">
+                <a href="https://play.google.com/store/apps/details?id=ai.getgrover.grover_mobile_app" onclick="gtag('event', 'app_download_click', { store: 'android', page_location: window.location.href, transport_type: 'beacon' });" class="inline-block bg-yellow-accent text-primary font-heading font-bold py-3 px-8 rounded-full hover:bg-yellow-300 transition-colors" style="min-width: 180px; text-align: center;">
                   Get it on Google Play
                 </a>
               </div>

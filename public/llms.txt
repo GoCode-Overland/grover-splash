@@ -47,7 +47,7 @@ Grover is an AI-powered vanlife assistant that helps van owners, RVers, and aspi
 ## Most Important Pages
 
 ### Primary App & Getting Started
-- App Download: https://apps.apple.com/us/app/grover-van-life/id6742468326
+- App Download: https://apps.apple.com/app/id6742468326
 - Getting Started Guide: https://getgrover.ai/blog/getting-started-with-grover-guide.html
 - First Chat Guide: https://getgrover.ai/blog/your-first-chat-grover-guide.html
 
@@ -113,7 +113,7 @@ Grover works directly with:
 
 - **Website**: https://getgrover.ai
 - **Blog**: https://getgrover.ai/blog/
-- **iOS App**: https://apps.apple.com/us/app/grover-van-life/id6742468326
+- **iOS App**: https://apps.apple.com/app/id6742468326
 - **Instagram**: @getgrover.ai
 
 ## Key Differentiators
